@@ -1,0 +1,22 @@
+@mainColor: rgb(40, 174, 130);
+
+body {
+    background: @mainColor;
+    font-family: 'museo slab';
+    margin: 0;
+
+}
+
+section {
+    height: 90vh;
+
+    &:nth-child(odd) {
+        background: white;
+    }
+}
+
+.logo-container {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+}

@@ -10,6 +10,10 @@ export default class Index extends React.Component {
             <DocumentTitle title={ config.siteTitle }>
               <div>
                 hello world
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
               </div>
             </DocumentTitle>
         )
