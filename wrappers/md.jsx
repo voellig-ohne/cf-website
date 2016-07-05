@@ -1,35 +1,22 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
-import SitePost from '../components/SitePost'
-import SitePage from '../components/SitePage'
 import { config } from 'config'
 
-class MarkdownWrapper extends React.Component {
-    render() {
-        const {route} = this.props
-        const post = route.page.data
-        let layout, template
-
-        layout = post.layout
-
-        if (layout != 'page') {
-            template = <SitePost {...this.props}/>
-        } else {
-            template = <SitePage {...this.props}/>
-        }
-
-        return (
-            <DocumentTitle title={ `${post.title} - ${config.siteTitle}` }>
-              <div>
-                { template }
-              </div>
-            </DocumentTitle>
-            );
+module.exports = React.createClass({
+  propTypes () {
+    return {
+      router: React.PropTypes.object,
     }
-}
-
-MarkdownWrapper.propTypes = {
-    route: React.PropTypes.object,
-}
-
-export default MarkdownWrapper
+  },
+  render () {
+    const post = this.props.route.page.data
+    return (
+      <DocumentTitle title={`${config.siteTitle} | ${post.title}`}>
+        <div className="markdown">
+          <h1>{post.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: post.body }} />
+        </div>
+      </DocumentTitle>
+    )
+  },
+})
