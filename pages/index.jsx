@@ -11,8 +11,6 @@ export default class Index extends React.Component {
         return (
             <DocumentTitle title={ config.siteTitle }>
               <div>
-                hello world
-                <Illustration illustration="wald" />
                 <section></section>
                 <section></section>
                 <section></section>
