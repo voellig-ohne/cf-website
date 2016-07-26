@@ -8,8 +8,6 @@ module.exports = React.createClass({
     render () {
         const svg = require('./' + this.props.illustration + '.svg')
 
-        console.log(svg)
-
         return (
             <div dangerouslySetInnerHTML={{ __html: svg }}>
             </div>
