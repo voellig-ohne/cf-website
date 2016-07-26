@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import Logo from '../components/Logo'
+import ForrestAnimation from '../components/ForrestAnimation'
 
 import 'style/main.less'
 
@@ -15,7 +15,7 @@ module.exports = React.createClass({
         return (
             <div>
                 {this.props.children}
-                <Logo className="logo-container" />
+                <ForrestAnimation className="logo-container" />
             </div>
         )
     },

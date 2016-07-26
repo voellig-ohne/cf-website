@@ -42,7 +42,7 @@ module.exports = React.createClass({
     },
     render () {
         return (
-            <div className={this.props.className + ' logo'}>
+            <div className={this.props.className + ' forrest'}>
                 <Row rows={this.state.logoString} />
             </div>
         )
