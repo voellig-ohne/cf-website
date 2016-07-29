@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import LogoContainer from '../components/LogoContainer'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 import 'style/main.less'
 
@@ -17,6 +18,7 @@ module.exports = React.createClass({
             <div>
                 {this.props.children}
                 <Navigation />
+                <Footer />
                 <LogoContainer className="logo-container" />
             </div>
         )
