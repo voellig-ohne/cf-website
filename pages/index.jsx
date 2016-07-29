@@ -10,7 +10,7 @@ export default class Index extends React.Component {
     render() {
         return (
             <DocumentTitle title={ config.siteTitle }>
-              <div>
+              <main>
                 <section className="intro">
                     <Illustration illustration="fuchs"
                             className="intro-fuchs" />
@@ -58,7 +58,7 @@ export default class Index extends React.Component {
                     </div>
                 </section>
                 <section className="section_content"></section>
-              </div>
+              </main>
             </DocumentTitle>
         )
     }
