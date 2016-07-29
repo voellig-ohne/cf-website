@@ -17,9 +17,14 @@ export default class Index extends React.Component {
                     <Illustration illustration="wald"
                             className="intro-wald" />
                 </section>
-                <section></section>
-                <section></section>
-                <section></section>
+                <section className="section_content">
+                    <div className="">
+                        <h1>Alles für e-Mail Marketing.</h1>
+                        <p>Ein Paragraph.</p>
+                    </div>
+                </section>
+                <section className="section_content"></section>
+                <section className="section_content"></section>
               </div>
             </DocumentTitle>
         )

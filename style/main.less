@@ -1,3 +1,7 @@
+@import "typography";
+@import "sections";
+@import "intro";
+
 @mainColor: rgb(40, 174, 130);
 
 body {
@@ -5,39 +9,4 @@ body {
     font-weight: 100;
     margin: 0;
 
-}
-
-section {
-    height: 100vh;
-
-    &:nth-child(even) {
-        background: white;
-    }
-}
-
-.intro {
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-
-    &-fuchs, &-wald {
-        flex: 0 0 50%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    &-fuchs {
-        svg {
-            width: 3rem;
-        }
-    }
-
-    &-wald {
-        svg {
-            width: 5rem;
-        }
-        background: @mainColor;
-    }
 }

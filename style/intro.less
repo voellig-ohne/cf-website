@@ -1,0 +1,26 @@
+.intro {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    &-fuchs, &-wald {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &-fuchs {
+        svg {
+            width: 3rem;
+        }
+    }
+
+    &-wald {
+        svg {
+            width: 5rem;
+        }
+        background: @mainColor;
+    }
+}
