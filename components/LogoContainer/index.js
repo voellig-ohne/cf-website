@@ -6,25 +6,39 @@ module.exports = React.createClass({
     componentDidMount () {
         if (typeof window !== 'undefined') {
             this.containerHeight = this._logoContainer.offsetHeight
+            this.footer = document.getElementById('footer')
             this.scrollChange()
+            this.calculateResize()
             window.addEventListener('scroll', this.scrollChange)
+            window.addEventListener('resize', this.calculateResize)
         }
+    },
+    calculateResize () {
+        this.footerTop = this.footer.offsetTop
+        this.windowHeight = window.innerHeight
     },
     getInitialState : function() {
         return {
-            isFixed: false
+            isFixedTop: false,
+            isFixedBottom: false
         }
     },
     scrollChange() {
-        const isFixed = window.scrollY > this.containerHeight
+        const scrollY = window.scrollY
+        const isFixedTop = scrollY > this.containerHeight
+        const isFixedBottom = this.footerTop < this.windowHeight + scrollY
 
-        if (this.state.isFixed !== isFixed) {
-            this.setState({isFixed: isFixed})
+        if (this.state.isFixedTop !== isFixedTop) {
+            this.setState({isFixedTop: isFixedTop})
+        }
+        if (this.state.isFixedBottom !== isFixedBottom) {
+            this.setState({isFixedBottom: isFixedBottom})
         }
     },
     render () {
         let containerClasses = 'logo-container'
-        containerClasses += this.state.isFixed ? ' logo-container--fixed' : ''
+        containerClasses += !this.state.isFixedTop ? ' logo-container--fixedTop' : ''
+        containerClasses += this.state.isFixedBottom ? ' logo-container--fixedBottom' : ''
 
         return (
             <div className={containerClasses}

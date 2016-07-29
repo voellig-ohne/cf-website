@@ -9,15 +9,20 @@
     }
 
     &-container {
-        position: absolute;
-        top: 100vh;
         left: 0;
         width: 100%;
+        position: fixed;
+        bottom: 0;
 
-        &--fixed {
-            position: fixed;
-            bottom: 0;
-            top: auto;
+        &--fixedTop {
+            position: absolute;
+            top: 100vh;
+            bottom: auto;
+        }
+
+        &--fixedBottom {
+            position: absolute;
+            bottom: 50vh;
         }
     }
 }
