@@ -17,6 +17,9 @@ export default class Index extends React.Component {
                     <Illustration illustration="wald"
                             className="intro-wald" />
                 </section>
+                <section className="section_hero">
+                    <h1>...mehr als E-Mail Marketing.</h1>
+                </section>
                 <section className="section_content">
                     <div className="section_content-main">
                         <h1>Eine knackige Überschrift.</h1>
