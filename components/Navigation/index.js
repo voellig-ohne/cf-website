@@ -24,7 +24,8 @@ module.exports = React.createClass({
                 <ul className="navigation-list">
                     {links.map((link) => {
                         return (
-                            <li className="navigation-item">
+                            <li className="navigation-item"
+                                    key={link.link}>
                                 <a href="{link.link}"
                                         className="navigation-link">
                                     {link.title}
