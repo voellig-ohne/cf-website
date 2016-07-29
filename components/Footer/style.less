@@ -1,7 +1,56 @@
 @import '~style/vars';
 
 .footer {
-    height: 50vh;
+    min-height: 50vh;
     background: @dark;
     color: @bright;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+
+    &-section {
+        flex: 1 1 (@sideMinWidth / 2);
+        max-width: (@contentWidth / 2);
+        margin:  2rem;
+    }
+
+    input, textarea, button {
+        background: transparent;
+        border-width: 0 0 3px;
+        border-color: @bright;
+        border-style: solid;
+        display: block;
+        font-size: inherit;
+        font-family: inherit;
+        margin: 0 0 1rem;
+        width: 100%;
+        padding: .5rem;
+        color: @bright;
+
+        &:focus {
+            outline: none;
+            border-color: @green;
+        }
+    }
+
+    button {
+        border-width: 3px;
+        width: auto;
+
+        &:hover {
+            background: @bright;
+            color: @dark;
+            cursor: pointer;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    &-button_container {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
