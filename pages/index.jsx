@@ -19,7 +19,7 @@ export default class Index extends React.Component {
                 </section>
                 <section className="section_content">
                     <div className="section_content-main">
-                        <h1>Alles für e-Mail Marketing.</h1>
+                        <h1>Eine knackige Überschrift.</h1>
                         <p>
                             Wir sehen E-Mail Marketing langfristig. Eine
                             Zusammenwirkung zwischen Marketing/CRM und
@@ -47,7 +47,7 @@ export default class Index extends React.Component {
                         </div>
                     </div>
                     <div className="section_content-main">
-                        <h1>Alles für e-Mail Marketing.</h1>
+                        <h1>Noch eine tolle Aussage.</h1>
                         <p>
                             Wir sehen E-Mail Marketing langfristig. Eine
                             Zusammenwirkung zwischen Marketing/CRM und
