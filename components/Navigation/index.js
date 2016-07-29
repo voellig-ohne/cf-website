@@ -14,6 +14,9 @@ module.exports = React.createClass({
                 link: '/arbeitsweise/',
                 title: 'arbeitsweise'
             },{
+                link: '/usecases/',
+                title: 'use cases'
+            },{
                 link: '/kontakt/',
                 title: 'kontakt'
             }
