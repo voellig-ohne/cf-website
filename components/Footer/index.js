@@ -9,7 +9,7 @@ module.exports = React.createClass({
                 id="footer">
                 <section className="footer-section"></section>
                 <section className="footer-section">
-                    <h2>kontakt</h2>
+                    <h2>schreib mir.</h2>
                     <input type="text" placeholder="name"/>
                     <input type="text" placeholder="anliegen"/>
                     <input type="text" placeholder="mail"/>
