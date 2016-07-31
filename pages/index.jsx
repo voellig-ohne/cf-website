@@ -68,6 +68,8 @@ export default class Index extends React.Component {
                             Atur alicatur a del is eum natis maio. Itam explaut
                             quibus et asperciendam rendus delectus que nonsequi
                             doluptius, idellessit acesto quo molum dello et, sus.
+                            <br />
+                            <Link to="/leistungen/">mehr...</Link>
                         </p>
                     </div>
                     <div className="section_content-secondary">
