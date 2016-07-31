@@ -29,7 +29,7 @@ module.exports = React.createClass({
                         return (
                             <li className="navigation-item"
                                     key={link.link}>
-                                <a href="{link.link}"
+                                <a href={link.link}
                                         className="navigation-link">
                                     {link.title}
                                 </a>
