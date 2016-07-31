@@ -16,11 +16,16 @@ module.exports = React.createClass({
     calculateResize () {
         this.footerTop = this.footer.offsetTop
         this.windowHeight = window.innerHeight
+
+        this.setState({
+            bottomDistance: this.footer.offsetHeight
+        })
     },
     getInitialState : function() {
         return {
             isFixedTop: false,
-            isFixedBottom: false
+            isFixedBottom: false,
+            bottomDistance: 0
         }
     },
     scrollChange() {
@@ -40,8 +45,11 @@ module.exports = React.createClass({
         containerClasses += !this.state.isFixedTop ? ' logo-container--fixedTop' : ''
         containerClasses += this.state.isFixedBottom ? ' logo-container--fixedBottom' : ''
 
+        const style = this.state.isFixedBottom ? {bottom: this.state.bottomDistance} : undefined
+
         return (
             <div className={containerClasses}
+                style={style}
                 ref={(c) => this._logoContainer = c}>
                 <Illustration illustration="logo"
                     className="logo" />
