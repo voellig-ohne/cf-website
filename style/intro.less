@@ -1,3 +1,5 @@
+@import '~style/vars';
+
 .intro {
     background: white;
     display: flex;
@@ -23,5 +25,29 @@
             width: 5rem;
         }
         background: @green;
+    }
+}
+
+.sub_intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &-image {
+        flex-grow: 1;
+        object-fit: cover;
+        object-position: top left;
+        overflow: hidden;
+    }
+
+    &-heading {
+        height: 5rem;
+        color: @green;
+        text-align: center;
+
+        em {
+            color: @red;
+            font-style: normal;
+        }
     }
 }
