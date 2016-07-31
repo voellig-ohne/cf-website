@@ -22,7 +22,7 @@ export default class Index extends React.Component {
                 </section>
                 <section className="section_content">
                     <div className="section_content-main">
-                        <h1>Eine knackige Überschrift.</h1>
+                        <h1>Es ist mehr als nur eine E-Mail.</h1>
                         <p>
                             Wir sehen E-Mail Marketing langfristig. Eine
                             Zusammenwirkung zwischen Marketing/CRM und
@@ -32,35 +32,111 @@ export default class Index extends React.Component {
                         </p>
                     </div>
                     <div className="section_content-secondary">
-                        <div className="section_content-placehoder_graphic">
-                            <div>
-                                <p>eine grafik:</p>
-                                <p>Umsetzung, Beratung, Workshops.</p>
+                        <div className="circles">
+                            <div className="circles-circle">
+                                <img src="intro-analyse.png"
+                                    className="circles-image"/>
+                                <span className="circles-title">
+                                    Analyse
+                                </span>
+                            </div>
+                            <div className="circles-circle">
+                                <img src="intro-beratung.png"
+                                    className="circles-image"/>
+                                <span className="circles-title">
+                                    Problemlösung
+                                </span>
+                            </div>
+                            <div className="circles-circle">
+                                <img src="intro-loesung.png"
+                                    className="circles-image"/>
+                                <span className="circles-title">
+                                    Beratung + Workshops
+                                </span>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section className="section_content">
+                    <div className="section_content-main">
+                        <h1>Wir finden den richtigen Weg durch den Wald.</h1>
+                        <p>
+                            (LEISTUNGEN) Analyse Umsetzung Template-
+                            Programmierung Projektmanagement Design
+                            Versandunterstützung Seminare & Workshops Es
+                            id quibusdam quam aut quia volum fugia culloriat.
+                            Atur alicatur a del is eum natis maio. Itam explaut
+                            quibus et asperciendam rendus delectus que nonsequi
+                            doluptius, idellessit acesto quo molum dello et, sus.
+                        </p>
+                    </div>
                     <div className="section_content-secondary">
-                        <div className="section_content-placehoder_graphic">
-                            <div>
-                                <p>eine grafik:</p>
-                                <p>Umsetzung, Beratung, Workshops.</p>
-                            </div>
+                        <div className="section_content-graphic">
+                            <img src="intro-durch-den-wald.png"
+                                className="section_content-graphic-image"/>
+                        </div>
+                    </div>
+                </section>
+                <section className="section_content">
+                    <div className="section_content-secondary">
+                        <div className="section_content-graphic">
+                            <img src="intro-kennt-sich-aus.png"
+                                className="section_content-graphic-image"/>
                         </div>
                     </div>
                     <div className="section_content-main">
-                        <h1>Noch eine tolle Aussage.</h1>
+                        <h1>Der Fuchs kennt sich aus.</h1>
                         <p>
-                            Wir sehen E-Mail Marketing langfristig. Eine
-                            Zusammenwirkung zwischen Marketing/CRM und
-                            IT-Abteilung. Zielgenaue Kommunikation mit dem
-                            Kunden. Weniger ist mehr. Dafür passender und
-                            wertvoller.
+                            (Arbeitsweise) Analyse Umsetzung Template-
+                            Programmierung Projektmanagement Design
+                            Versandunterstützung Seminare & Workshops Es
+                            id quibusdam quam aut quia volum fugia culloriat.
+                            Atur alicatur a del is eum natis maio. Itam explaut
+                            quibus et asperciendam rendus delectus que nonsequi
+                            doluptius, idellessit acesto quo molum dello et, sus.
                         </p>
                     </div>
                 </section>
-                <section className="section_content"></section>
+                <section className="section_content">
+                    <div className="section_content-main">
+                        <h1>Für jeden Wald der richtige Fuchs.</h1>
+                        <p>
+                            (Arbeitsweise) Analyse Umsetzung Template-
+                            Programmierung Projektmanagement Design
+                            Versandunterstützung Seminare & Workshops Es
+                            id quibusdam quam aut quia volum fugia culloriat.
+                            Atur alicatur a del is eum natis maio. Itam explaut
+                            quibus et asperciendam rendus delectus que nonsequi
+                            doluptius, idellessit acesto quo molum dello et, sus.
+                        </p>
+                    </div>
+                    <div className="section_content-secondary">
+                        <div className="section_content-graphic">
+                            <img src="intro-jeder-wald-richtiger-fuchs.png"
+                                className="section_content-graphic-image"/>
+                        </div>
+                    </div>
+                </section>
+                <section className="section_content">
+                    <div className="section_content-secondary">
+                        <div className="section_content-graphic">
+                            <img src="intro-jeder-kann-fuchs.png"
+                                className="section_content-graphic-image"/>
+                        </div>
+                    </div>
+                    <div className="section_content-main">
+                        <h1>Jeder kann ein Fuchs sein.</h1>
+                        <p>
+                            (Arbeitsweise) Analyse Umsetzung Template-
+                            Programmierung Projektmanagement Design
+                            Versandunterstützung Seminare & Workshops Es
+                            id quibusdam quam aut quia volum fugia culloriat.
+                            Atur alicatur a del is eum natis maio. Itam explaut
+                            quibus et asperciendam rendus delectus que nonsequi
+                            doluptius, idellessit acesto quo molum dello et, sus.
+                        </p>
+                    </div>
+                </section>
               </main>
             </DocumentTitle>
         )
