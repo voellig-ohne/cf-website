@@ -20,7 +20,7 @@ export default class Index extends React.Component {
                 <section className="section_hero">
                     <h1>...mehr als E-Mail Marketing.</h1>
                 </section>
-                <section className="section_content">
+                <section className="section_content section_content--argument">
                     <div className="section_content-main">
                         <h1>Es ist mehr als nur eine E-Mail.</h1>
                         <p>
@@ -83,7 +83,7 @@ export default class Index extends React.Component {
                     <div className="section_content-secondary">
                         <div className="section_content-graphic">
                             <img src="intro-kennt-sich-aus.png"
-                                className="section_content-graphic-image"/>
+                                className="section_content-graphic-image section_content-graphic-image--fuchs"/>
                         </div>
                     </div>
                     <div className="section_content-main">
@@ -123,7 +123,7 @@ export default class Index extends React.Component {
                     <div className="section_content-secondary">
                         <div className="section_content-graphic">
                             <img src="intro-jeder-kann-fuchs.png"
-                                className="section_content-graphic-image"/>
+                                className="section_content-graphic-image section_content-graphic-image--fuchse"/>
                         </div>
                     </div>
                     <div className="section_content-main">
