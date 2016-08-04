@@ -37,7 +37,7 @@ export default class Forrest extends React.Component {
         }
 
         const gridDimentions = this.getGridDimentions(windowSize, ELEMENT_SIZE)
-        const foxPosition = this.generateFoxPosition(gridDimentions)
+        const foxPosition = this.generateFoxPositionTopHalf(gridDimentions)
         const grid = this.generateGrid(gridDimentions)
 
         this.setState({
@@ -54,10 +54,10 @@ export default class Forrest extends React.Component {
             })
         })
     }
-    generateFoxPosition(gridDimentions) {
+    generateFoxPositionTopHalf(gridDimentions) {
         return {
-            row: Math.round(gridDimentions.width * Math.random()),
-            column: Math.round(gridDimentions.height * Math.random())
+            row:    Math.round(((gridDimentions.width - 5) * Math.random()) + 2),
+            column: Math.round((gridDimentions.height * Math.random()) / 2 + 1)
         }
     }
     getGridDimentions(windowSize, elementSize) {
@@ -69,9 +69,9 @@ export default class Forrest extends React.Component {
     onMouseEnter() {
     }
     isFox(currentPosition, foxPosition) {
-        return currentPosition.row === foxPosition.row &&
-                (currentPosition.column === foxPosition.column ||
-                currentPosition.column + 1 === foxPosition.column)
+        return currentPosition.column === foxPosition.column &&
+                (currentPosition.row === foxPosition.row ||
+                currentPosition.row + 1 === foxPosition.row)
     }
     render () {
         const { className } = this.props
@@ -88,7 +88,7 @@ export default class Forrest extends React.Component {
                                     map(row, (element, idxElement) => {
 
                                         const isFox = this.isFox(
-                                            { row: idxRow, column: idxElement},
+                                            { row: idxElement, column: idxRow },
                                             this.state.foxPosition
                                         )
 
