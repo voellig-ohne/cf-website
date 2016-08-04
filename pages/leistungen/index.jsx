@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
+import Forrest from 'components/Forrest'
 
 export default class Index extends React.Component {
     render() {
@@ -10,11 +11,12 @@ export default class Index extends React.Component {
             <DocumentTitle title={ config.siteTitle }>
                 <main>
                     <section className="sub_intro">
-                        <img src="header.png"
-                            className="sub_intro-image"/>
-                        <h1 className="sub_intro-heading">
-                            Wir finden den richtigen <em>Weg</em> durch den Wald.
-                        </h1>
+                        <Forrest className="sub_intro-forrest" />
+                        <header className="sub_intro-header">
+                            <h1 className="sub_intro-heading">
+                                Wir finden den richtigen Weg durch den Wald.
+                            </h1>
+                        </header>
                     </section>
 
                     <section className="section_hero section_hero--has_text">
