@@ -8,6 +8,14 @@
     &-row {
         display: flex;
         justify-content: space-between;
+
+        &:nth-child(odd) {
+            transform: translateX(-3px);
+        }
+
+        &:nth-child(even) {
+            transform: translateX(3px);
+        }
     }
 
     &-element {
