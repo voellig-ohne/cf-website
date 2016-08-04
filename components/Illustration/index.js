@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.less'
 
-module.exports = React.createClass({
+export default class Illustration extends React.Component {
     render () {
         const svg = require('./' + this.props.illustration + '.svg')
 
@@ -11,4 +11,4 @@ module.exports = React.createClass({
             </div>
         )
     }
-})
+}
