@@ -6,7 +6,7 @@ module.exports = React.createClass({
     render () {
         const links = [
             {
-                link: '/uber/',
+                link: '/',
                 title: 'über uns'
             },{
                 link: '/leistungen/',
