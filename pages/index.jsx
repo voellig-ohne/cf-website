@@ -4,7 +4,7 @@ import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import Illustration from '../components/Illustration'
-
+import Hero from '../components/Hero'
 
 export default class Index extends React.Component {
     render() {
@@ -17,10 +17,9 @@ export default class Index extends React.Component {
                     <Illustration illustration="wald"
                             className="intro-wald" />
                 </section>
-                <section className="section_hero">
-                    <img className="section_hero-image" src="/img/wald_2.jpg" />
-                    <h1>...mehr als E-Mail Marketing.</h1>
-                </section>
+                
+                <Hero image="/img/wald_2.jpg" title="...mehr als E-Mail Marketing." />
+
                 <section className="section_content section_content--argument">
                     <div className="section_content-main">
                         <h1>Es ist mehr als nur eine E-Mail.</h1>

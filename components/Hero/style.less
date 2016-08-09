@@ -1,0 +1,43 @@
+@import '~style/vars';
+
+.hero {
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    position: relative;
+
+    &--has_text {
+        justify-content: flex-start;
+    }
+
+    &-text {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        color: @bright;
+
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+
+        > div {
+            padding: 2rem;
+            max-width: (@contentWidth / 2);
+        }
+    }
+
+    &-image {
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}

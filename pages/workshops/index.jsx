@@ -20,24 +20,19 @@ export default class Index extends React.Component {
                         </header>
                     </section>
 
-                    <section className="section_hero section_hero--has_text">
-                        <img src="/img/wald_1.jpg" className="section_hero-image"/>
-                        <div className="section_hero-text">
-                            <div>
-                                <h1>...mehr als E-Mail Marketing.</h1>
-                                <p>
-                                    (LEISTUNGEN) Analyse Umsetzung Template-
-                                    Programmierung Projektmanagement Design
-                                    Versandunterstützung Seminare & Workshops Es id
-                                    quibusdam quam aut quia volum fugia culloriat.
-                                    Atur alicatur a del is eum natis maio. Itam
-                                    explaut quibus et asperciendam rendus delectus
-                                    que nonsequi doluptius, idellessit acesto quo
-                                    molum dello et, sus.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+                    <Hero title="...mehr als E-Mail Marketing."
+                            image="/img/wald_1.jpg">
+                        <p>
+                            (LEISTUNGEN) Analyse Umsetzung Template-
+                            Programmierung Projektmanagement Design
+                            Versandunterstützung Seminare & Workshops Es id
+                            quibusdam quam aut quia volum fugia culloriat.
+                            Atur alicatur a del is eum natis maio. Itam
+                            explaut quibus et asperciendam rendus delectus
+                            que nonsequi doluptius, idellessit acesto quo
+                            molum dello et, sus.
+                        </p>
+                    </Hero>
                 </main>
             </DocumentTitle>
         )
