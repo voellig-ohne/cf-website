@@ -20,6 +20,7 @@ export default class Index extends React.Component {
                     </section>
 
                     <section className="section_hero section_hero--has_text">
+                        <img src="wald_1.jpg" className="section_hero-image"/>
                         <div className="section_hero-text">
                             <div>
                                 <h1>...mehr als E-Mail Marketing.</h1>

@@ -46,13 +46,13 @@
 
 .section_hero {
     height: 80vh;
-    background-image: url("/placeholder-christian.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 5rem;
+    position: relative;
 
     &--has_text {
         justify-content: flex-start;
@@ -62,7 +62,7 @@
         width: 50%;
         display: flex;
         justify-content: flex-end;
-
+        color: @bright;
 
         @media (max-width: 600px) {
             width: 100%;
@@ -72,6 +72,15 @@
             padding: 2rem;
             max-width: (@contentWidth / 2);
         }
+    }
+
+    &-image {
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
     }
 }
 
