@@ -18,7 +18,7 @@ export default class Index extends React.Component {
                             className="intro-wald" />
                 </section>
                 <section className="section_hero">
-                    <img className="section_hero-image" src="wald_2.jpg" />
+                    <img className="section_hero-image" src="/img/wald_2.jpg" />
                     <h1>...mehr als E-Mail Marketing.</h1>
                 </section>
                 <section className="section_content section_content--argument">
