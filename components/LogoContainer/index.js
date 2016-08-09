@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.less'
 import Illustration from 'components/Illustration'
+import { Link } from 'react-router'
 
 export default class LogoContainer extends React.Component{
     constructor(props) {
@@ -53,8 +54,10 @@ export default class LogoContainer extends React.Component{
             <div className={containerClasses}
                 style={style}
                 ref={(c) => this._logoContainer = c}>
-                <Illustration illustration="logo"
-                    className="logo" />
+                <Link to={'/'}>
+                    <Illustration illustration="logo"
+                        className="logo" />
+                </Link>
             </div>
         )
     }
