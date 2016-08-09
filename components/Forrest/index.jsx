@@ -1,13 +1,18 @@
 import Illustration from 'components/Illustration'
 import React from 'react'
 import './style.less'
-import { map } from 'lodash'
+import { map, find } from 'lodash'
 import classNames from 'classNames'
 
 const ELEMENT_SIZE = {
     width: 30,
     height: 28
 }
+
+const MANY_FREQUENCY = 5;
+
+const MODE_SINGLE = 'single'
+const MODE_MANY = 'many'
 
 export default class Forrest extends React.Component {
     constructor(props) {
@@ -18,10 +23,10 @@ export default class Forrest extends React.Component {
                 height: 0,
                 width: 0
             },
-            foxPosition: {
+            foxPositions: [{
                 row: 0,
                 column: 0
-            }
+            }]
         }
     }
     componentDidMount() {
@@ -33,13 +38,14 @@ export default class Forrest extends React.Component {
     onResize() {
         const gridDimentions = this.getGridDimentions(ELEMENT_SIZE)
 
-        const foxPosition = this.generateFoxPositionTopHalf(gridDimentions)
+        const foxPositions = (this.props.mode === MODE_MANY) ? [] : [this.generateFoxPositionTopHalf(gridDimentions)]
+
         const grid = this.generateGrid(gridDimentions)
 
         this.setState({
             gridDimentions,
             grid,
-            foxPosition
+            foxPositions
         })
     }
     generateGrid(gridDimentions) {
@@ -69,18 +75,31 @@ export default class Forrest extends React.Component {
         }
     }
     rePositionFox() {
-        const foxPosition = this.generateFoxPositionTopHalf(this.state.gridDimentions)
-        this.setState({ foxPosition })
+        const foxPositions = [this.generateFoxPositionTopHalf(this.state.gridDimentions)]
+        this.setState({ foxPositions })
     }
-    onMouseEnter(isFox) {
-        if (isFox) {
+    addFox(currentPosition) {
+        const foxPositions = this.state.foxPositions
+        foxPositions.push(currentPosition)
+        this.setState({ foxPositions })
+    }
+    onMouseEnter(isFox, currentPosition) {
+        if (isFox && this.props.mode === MODE_SINGLE) {
             this.rePositionFox()
         }
+        if (this.props.mode === MODE_MANY) {
+            this.hoverCount = this.hoverCount ? this.hoverCount + 1 : 1
+            if (this.hoverCount % MANY_FREQUENCY === 1) {
+                this.addFox(currentPosition)
+            }
+        }
     }
-    isFox(currentPosition, foxPosition) {
-        return currentPosition.column === foxPosition.column &&
+    isFox(currentPosition, foxPositions) {
+        return !!find(foxPositions, (foxPosition) => {
+            return currentPosition.column === foxPosition.column &&
                 (currentPosition.row === foxPosition.row ||
                 currentPosition.row + 1 === foxPosition.row)
+        })
     }
     render () {
         const { className } = this.props
@@ -95,10 +114,11 @@ export default class Forrest extends React.Component {
                                     className="forrest-row">
                                 {
                                     map(row, (element, idxElement) => {
+                                        const currentPosition = { row: idxElement, column: idxRow }
 
                                         const isFox = this.isFox(
-                                            { row: idxElement, column: idxRow },
-                                            this.state.foxPosition
+                                            currentPosition,
+                                            this.state.foxPositions
                                         )
 
                                         const classes = classNames(
@@ -113,7 +133,7 @@ export default class Forrest extends React.Component {
                                             <Illustration illustration="element"
                                                 className={classes}
                                                 key={idxElement}
-                                                onMouseEnter={this.onMouseEnter.bind(this, isFox)} />
+                                                onMouseEnter={this.onMouseEnter.bind(this, isFox, currentPosition)} />
                                         )
                                     })
                                 }
