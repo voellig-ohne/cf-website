@@ -31,16 +31,15 @@ export default class Forrest extends React.Component {
         }
     }
     onResize() {
-        const windowSize = {
-            height: this.container.offsetHeight,
-            width: this.container.offsetWidth
-        }
+        console.log('resize')
 
-        const gridDimentions = this.getGridDimentions(windowSize, ELEMENT_SIZE)
+        const gridDimentions = this.getGridDimentions(ELEMENT_SIZE)
+
         const foxPosition = this.generateFoxPositionTopHalf(gridDimentions)
         const grid = this.generateGrid(gridDimentions)
 
         this.setState({
+            gridDimentions,
             grid,
             foxPosition
         })
@@ -60,13 +59,25 @@ export default class Forrest extends React.Component {
             column: Math.round((gridDimentions.height * Math.random()) / 2 + 1)
         }
     }
-    getGridDimentions(windowSize, elementSize) {
+    getGridDimentions(elementSize) {
+        const windowSize = {
+            height: this.container.offsetHeight,
+            width: this.container.offsetWidth
+        }
+
         return {
             height: windowSize.height / elementSize.height,
             width: windowSize.width / elementSize.width
         }
     }
-    onMouseEnter() {
+    rePositionFox() {
+        const foxPosition = this.generateFoxPositionTopHalf(this.state.gridDimentions)
+        this.setState({ foxPosition })
+    }
+    onMouseEnter(isFox) {
+        if (isFox) {
+            this.rePositionFox()
+        }
     }
     isFox(currentPosition, foxPosition) {
         return currentPosition.column === foxPosition.column &&
@@ -104,7 +115,7 @@ export default class Forrest extends React.Component {
                                             <Illustration illustration="element"
                                                 className={classes}
                                                 key={idxElement}
-                                                onMouseEnter={this.onMouseEnter.bind(this)} />
+                                                onMouseEnter={this.onMouseEnter.bind(this, isFox)} />
                                         )
                                     })
                                 }
