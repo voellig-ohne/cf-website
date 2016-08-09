@@ -29,11 +29,11 @@ module.exports = React.createClass({
                     </p>
                 </section>
                 <section className="footer-section">
-                    <h2>schreib mir.</h2>
+                    <h2>kontakt</h2>
                     <input type="text" placeholder="name"/>
-                    <input type="text" placeholder="anliegen"/>
-                    <input type="text" placeholder="mail"/>
-                    <textarea></textarea>
+                    <input type="text" placeholder="betreff"/>
+                    <input type="text" placeholder="absender"/>
+                    <textarea placeholder="nachricht"></textarea>
                     <div className="footer-button_container">
                         <button>senden.</button>
                     </div>

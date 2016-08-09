@@ -8,6 +8,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
+    -webkit-font-smoothing: antialiased;
+
+    h2 {
+        margin-top: 0;
+    }
 
     &-section {
         flex: 1 1 (@sideMinWidth / 2);
@@ -20,7 +25,6 @@
         font-weight: 500;
         font-size: @font-size-m;
         line-height: 1.2;
-        -webkit-font-smoothing: antialiased;
 
         p {
             margin: .5em 0;
@@ -32,36 +36,42 @@
     }
 
     input, textarea, button {
-        background: transparent;
-        border-width: 0 0 3px;
-        border-color: @bright;
-        border-style: solid;
+        background: @bright;
+        border: none;
         display: block;
         font-size: inherit;
         font-family: inherit;
         margin: 0 0 1rem;
         width: 100%;
-        padding: .5rem 0;
-        color: @bright;
+        padding: .5rem .5rem .3rem;
+        color: @dark;
 
         &::-webkit-input-placeholder {
-            color: darken(@bright, 50);
+            color: darken(@bright, 20);
         }
 
         &:-moz-placeholder {
-            color: darken(@bright, 50);
+            color: darken(@bright, 20);
         }
 
         &:focus {
             outline: none;
             border-color: @green;
         }
+
+        &:hover {
+            background: lighten(@red, 20);
+        }
+
+        &:focus {
+            background: @green;
+            color: @bright;
+        }
     }
 
     button {
         border-width: 3px;
         width: auto;
-        padding: .5rem;
 
         &:hover {
             background: @bright;
@@ -72,6 +82,7 @@
 
     textarea {
         resize: vertical;
+        min-height: 5rem;
     }
 
     &-button_container {
