@@ -31,8 +31,6 @@ export default class Forrest extends React.Component {
         }
     }
     onResize() {
-        console.log('resize')
-
         const gridDimentions = this.getGridDimentions(ELEMENT_SIZE)
 
         const foxPosition = this.generateFoxPositionTopHalf(gridDimentions)
