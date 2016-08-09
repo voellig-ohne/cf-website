@@ -7,19 +7,19 @@ module.exports = React.createClass({
         const links = [
             {
                 link: '/uber/',
-                title: 'über'
+                title: 'über uns'
             },{
                 link: '/leistungen/',
-                title: 'leistungen'
+                title: 'unsere leistungen'
             },{
-                link: '/arbeitsweise/',
-                title: 'arbeitsweise'
+                link: '/arbeitsweisen/',
+                title: 'arbeitsweisen'
             },{
                 link: '/usecases/',
                 title: 'use cases'
             },{
-                link: '/kontakt/',
-                title: 'kontakt'
+                link: '/workshops/',
+                title: 'beratung & workshops'
             }
         ]
 
