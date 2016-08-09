@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.less'
+import { Link } from 'react-router'
 
 module.exports = React.createClass({
     render () {
@@ -29,10 +30,10 @@ module.exports = React.createClass({
                         return (
                             <li className="navigation-item"
                                     key={link.link}>
-                                <a href={link.link}
+                                <Link to={link.link}
                                         className="navigation-link">
                                     {link.title}
-                                </a>
+                                </Link>
                             </li>
                         )
                     })}
