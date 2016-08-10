@@ -4,6 +4,7 @@ import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import Forrest from 'components/Forrest'
+import Hero from 'components/Hero'
 
 export default class Index extends React.Component {
     render() {
