@@ -110,38 +110,48 @@ export default class Forrest extends React.Component {
                 {
                     map(this.state.grid, (row, idxRow) => {
                         return (
-                            <div key={idxRow}
-                                    className="forrest-row">
-                                {
-                                    map(row, (element, idxElement) => {
-                                        const currentPosition = { row: idxElement, column: idxRow }
-
-                                        const isFox = this.isFox(
-                                            currentPosition,
-                                            this.state.foxPositions
-                                        )
-
-                                        const classes = classNames(
-                                            'forrest-element',
-                                            {
-                                                'forrest-element--active': element.isActive,
-                                                'forrest-element--fox': isFox
-                                            }
-                                        )
-
-                                        return (
-                                            <Illustration illustration="element"
-                                                className={classes}
-                                                key={idxElement}
-                                                onMouseEnter={this.onMouseEnter.bind(this, isFox, currentPosition)} />
-                                        )
-                                    })
-                                }
-                            </div>
+                            <Row key={idxRow}
+                                row={row}
+                                idxRow={idxRow}
+                                onMouseEnter={this.onMouseEnter.bind(this)}
+                                foxPositions={this.state.foxPositions}
+                                isFoxFn={this.isFox} />
                         )
                     })
                 }
             </div>
         )
     }
+}
+
+function Row ({ row, idxRow, onMouseEnter, foxPositions, isFoxFn }) {
+    return (
+        <div className="forrest-row">
+            {
+                map(row, (element, idxElement) => {
+                    const currentPosition = { row: idxElement, column: idxRow }
+
+                    const isFox = isFoxFn(
+                        currentPosition,
+                        foxPositions
+                    )
+
+                    const classes = classNames(
+                        'forrest-element',
+                        {
+                            'forrest-element--active': element.isActive,
+                            'forrest-element--fox': isFox
+                        }
+                    )
+
+                    return (
+                        <Illustration illustration="element"
+                            className={classes}
+                            key={idxElement}
+                            onMouseEnter={onMouseEnter.bind(null, isFox, currentPosition)} />
+                    )
+                })
+            }
+        </div>
+    )
 }
