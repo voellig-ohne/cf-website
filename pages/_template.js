@@ -5,6 +5,7 @@ import LogoContainer from '../components/LogoContainer'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
+import 'fonts/fuchs.css'
 import 'style/main.less'
 
 module.exports = React.createClass({
