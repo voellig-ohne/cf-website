@@ -17,7 +17,7 @@ export default class Index extends React.Component {
                     <Illustration illustration="wald"
                             className="intro-wald" />
                 </section>
-                
+
                 <Hero image="/img/wald_2.jpg" title="...mehr als E-Mail Marketing." />
 
                 <section className="section_content section_content--argument">
@@ -34,21 +34,21 @@ export default class Index extends React.Component {
                     <div className="section_content-secondary">
                         <div className="circles">
                             <div className="circles-circle">
-                                <img src="intro-analyse.png"
-                                    className="circles-image"/>
+                                <Illustration illustration="ANALYSE"
+                                    className="circles-image" />
                                 <span className="circles-title">
                                     Analyse
                                 </span>
                             </div>
                             <div className="circles-circle">
-                                <img src="intro-beratung.png"
-                                    className="circles-image"/>
+                                <Illustration illustration="PROBLEMLOSUNG"
+                                    className="circles-image" />
                                 <span className="circles-title">
                                     Problemlösung
                                 </span>
                             </div>
                             <div className="circles-circle">
-                                <img src="intro-loesung.png"
+                                <Illustration illustration="BERATUNG"
                                     className="circles-image"/>
                                 <span className="circles-title">
                                     Beratung + Workshops

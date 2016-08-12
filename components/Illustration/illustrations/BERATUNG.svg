@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="283.5px" height="283.5px" viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve"
+	>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="0" width="283.5" height="283.5"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<path style="clip-path:url(#SVGID_2_);fill:#2DAC82;" d="M141.7,282.6c77.8,0,140.9-63.1,140.9-140.9S219.5,0.9,141.7,0.9
+		S0.9,63.9,0.9,141.7S63.9,282.6,141.7,282.6"/>
+	<circle style="clip-path:url(#SVGID_2_);fill:none;stroke:#2DAC82;" cx="141.7" cy="141.7" r="140.9"/>
+	<path style="clip-path:url(#SVGID_2_);fill:#FFFFFF;" d="M155.1,114.7c0-22.5-26.5-40.7-59.3-40.7s-59.3,18.2-59.3,40.7
+		c0,12.9,8.7,24.3,22.3,31.8c-0.4,4.2-2.1,10.1-8.6,11.2c0,0,14.4,2.9,26.1-4.6c6.1,1.5,12.6,2.3,19.5,2.3
+		C128.6,155.4,155.1,137.1,155.1,114.7"/>
+	<path style="clip-path:url(#SVGID_2_);fill:#E74914;" d="M126.8,186.8c0-22.5,26.5-40.7,59.3-40.7s59.3,18.2,59.3,40.7
+		c0,12.9-8.7,24.3-22.3,31.8c0.4,4.2,2.1,10.1,8.6,11.2c0,0-14.4,2.9-26.1-4.6c-6.1,1.5-12.6,2.3-19.5,2.3
+		C153.4,227.5,126.8,209.3,126.8,186.8"/>
+</g>
+</svg>
