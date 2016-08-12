@@ -11,7 +11,8 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gatsby develop",
-    "deploy": "rsync -avzc --del public/ voellig@antares.uberspace.de:/var/www/virtual/voellig/fuchs.xn--vlligohne-07a.de/"
+    "deploy-beta": "rsync -avzc --del public/ voellig@antares.uberspace.de:/var/www/virtual/voellig/fuchs.xn--vlligohne-07a.de/",
+    "deploy": "rsync -avzc --del public/ fuchs@avior.uberspace.de:/home/fuchs/html/"
   },
   "keywords": [
     "gatsby",
