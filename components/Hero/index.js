@@ -14,8 +14,6 @@ export default class Hero extends React.Component{
             title
         } = this.props
 
-        console.log(this.props.children)
-
         const className = classNames(
             this.props.classNames,
             'hero',
