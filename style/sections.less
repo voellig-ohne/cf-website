@@ -38,7 +38,7 @@
     }
 
     &-main, &-secondary {
-        flex: 1 1 (@sideMinWidth / 2);
+        flex: 1 1 (@sideMinWidth);
         max-width: (@contentWidth / 2);
         margin: .5rem 2rem;
     }
@@ -49,10 +49,12 @@
     margin: -.5rem;
     text-align: center;
     flex-wrap: wrap;
+    justify-content: center;
 
     &-circle {
-        flex: 1 1 auto;
+        flex: 0 1 auto;
         width: 33%;
+        min-width: 120px;
         padding: .5rem;
     }
 
