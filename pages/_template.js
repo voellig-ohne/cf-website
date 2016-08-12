@@ -18,7 +18,6 @@ module.exports = React.createClass({
         return (
             <div>
                 {this.props.children}
-                <Navigation />
                 <Footer />
                 <LogoContainer className="logo-container" />
             </div>

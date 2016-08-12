@@ -19,8 +19,6 @@ export default class Index extends React.Component {
                             className="intro-wald" />
                 </section>
 
-                <Hero image="/img/wald_2.jpg" title="...mehr als E-Mail Marketing." />
-
                 <section className="section_content section_content--argument">
                     <div className="section_content-main">
                         <h1>Es ist mehr als nur eine E-Mail.</h1>
@@ -58,40 +56,6 @@ export default class Index extends React.Component {
                         </div>
                     </div>
                 </section>
-                <IntroSection
-                        cta={{link: '/leistungen/', text: 'leistungen'}}
-                        illustration={(<Forrest
-                            mode="single"
-                            className="section_content-graphic-image"/>)}>
-                    <h1>Wir finden den richtigen Weg durch den Wald.</h1>
-                    <p>
-                        (LEISTUNGEN) Analyse Umsetzung Template-
-                        Programmierung Projektmanagement Design
-                        Versandunterstützung Seminare & Workshops Es
-                        id quibusdam quam aut quia volum fugia culloriat.
-                        Atur alicatur a del is eum natis maio. Itam explaut
-                        quibus et asperciendam rendus delectus que nonsequi
-                        doluptius, idellessit acesto quo molum dello et, sus.
-                    </p>
-                </IntroSection>
-
-                <IntroSection
-                        cta={{link: '/workshops/', text: 'mehr über workshops'}}
-                        illustration={(<Forrest
-                            mode="many"
-                            className="section_content-graphic-image"/>)}>
-                    <h1>Jeder kann ein Fuchs sein.</h1>
-
-                    <p>
-                        (Arbeitsweise) Analyse Umsetzung Template-
-                        Programmierung Projektmanagement Design
-                        Versandunterstützung Seminare & Workshops Es
-                        id quibusdam quam aut quia volum fugia culloriat.
-                        Atur alicatur a del is eum natis maio. Itam explaut
-                        quibus et asperciendam rendus delectus que nonsequi
-                        doluptius, idellessit acesto quo molum dello et, sus.
-                    </p>
-                </IntroSection>
               </main>
             </DocumentTitle>
         )
