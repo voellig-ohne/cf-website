@@ -18,14 +18,14 @@ module.exports = React.createClass({
                         +49 (0) 162 24 16 317
                     </p>
                     <p>
-                        fuchs@undwald.de
+                        <a href="mailto:christian@undwald.de">
+                            christian@undwald.de
+                        </a>
                     </p>
                     <p>
-                        St.-Nr.: 16/123/12345<br />
-                        Iban: DE34 12094995873 7366473
-                    </p>
-                    <p>
-                        fuchs.undwald.de
+                        <a href="http://fuchs.undwald.de">
+                            fuchs.undwald.de
+                        </a>
                     </p>
                 </section>
                 <section className="footer-section">
