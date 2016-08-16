@@ -59,6 +59,7 @@ export default class Index extends React.Component {
                     </div>
                 </section>
                 <IntroSection
+                        cta={{link: '/leistungen/', text: 'leistungen'}}
                         illustration={(<Forrest
                             mode="single"
                             className="section_content-graphic-image"/>)}>
@@ -71,12 +72,11 @@ export default class Index extends React.Component {
                         Atur alicatur a del is eum natis maio. Itam explaut
                         quibus et asperciendam rendus delectus que nonsequi
                         doluptius, idellessit acesto quo molum dello et, sus.
-                        <br />
-                        <Link to="/leistungen/">mehr...</Link>
                     </p>
                 </IntroSection>
 
                 <IntroSection
+                        cta={{link: '/workshops/', text: 'mehr über workshops'}}
                         illustration={(<Forrest
                             mode="many"
                             className="section_content-graphic-image"/>)}>
@@ -100,12 +100,17 @@ export default class Index extends React.Component {
 
 class IntroSection extends React.Component {
     render() {
-        const { illustration } = this.props
+        const { illustration, cta } = this.props
         console.log(this)
         return (
             <section className="section_content">
                 <div className="section_content-main">
                     { this.props.children }
+
+                    <Link to={cta.link}
+                        className="cta">
+                        {cta.text}
+                    </Link>
                 </div>
                 <div className="section_content-secondary">
                     <div className="section_content-graphic">
