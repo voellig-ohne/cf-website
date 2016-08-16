@@ -1,9 +1,8 @@
 import React from 'react'
 import './style.less'
 
-module.exports = React.createClass({
-    render () {
-
+export default class Footer extends React.Component {
+    render() {
         return (
             <footer className="footer"
                 id="footer">
@@ -41,4 +40,4 @@ module.exports = React.createClass({
             </footer>
         )
     }
-})
+}

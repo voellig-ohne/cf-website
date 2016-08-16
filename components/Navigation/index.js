@@ -2,7 +2,7 @@ import React from 'react'
 import './style.less'
 import { Link } from 'react-router'
 
-module.exports = React.createClass({
+export default class Navigation extends React.Component {
     render () {
         const links = [
             {
@@ -41,4 +41,4 @@ module.exports = React.createClass({
             </nav>
         )
     }
-})
+}
