@@ -75,6 +75,23 @@ export default class Index extends React.Component {
                         <Link to="/leistungen/">mehr...</Link>
                     </p>
                 </IntroSection>
+
+                <IntroSection
+                        illustration={(<Forrest
+                            mode="many"
+                            className="section_content-graphic-image"/>)}>
+                    <h1>Jeder kann ein Fuchs sein.</h1>
+
+                    <p>
+                        (Arbeitsweise) Analyse Umsetzung Template-
+                        Programmierung Projektmanagement Design
+                        Versandunterstützung Seminare & Workshops Es
+                        id quibusdam quam aut quia volum fugia culloriat.
+                        Atur alicatur a del is eum natis maio. Itam explaut
+                        quibus et asperciendam rendus delectus que nonsequi
+                        doluptius, idellessit acesto quo molum dello et, sus.
+                    </p>
+                </IntroSection>
               </main>
             </DocumentTitle>
         )
