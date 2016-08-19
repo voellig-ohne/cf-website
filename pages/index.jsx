@@ -35,24 +35,24 @@ export default class Index extends React.Component {
                     <div className="section_content-secondary">
                         <div className="circles">
                             <div className="circles-circle">
-                                <Illustration illustration="ANALYSE"
+                                <Illustration illustration="PLANUNG"
                                     className="circles-image" />
                                 <span className="circles-title">
-                                    Analyse
+                                    Planung
                                 </span>
                             </div>
                             <div className="circles-circle">
-                                <Illustration illustration="PROBLEMLOSUNG"
+                                <Illustration illustration="PROGRAMMIERUNG"
                                     className="circles-image" />
                                 <span className="circles-title">
-                                    Problemlösung
+                                    Programmierung
                                 </span>
                             </div>
                             <div className="circles-circle">
                                 <Illustration illustration="BERATUNG"
                                     className="circles-image"/>
                                 <span className="circles-title">
-                                    Beratung + Workshops
+                                    Beratung
                                 </span>
                             </div>
                         </div>
@@ -101,7 +101,6 @@ export default class Index extends React.Component {
 class IntroSection extends React.Component {
     render() {
         const { illustration, cta } = this.props
-        console.log(this)
         return (
             <section className="section_content">
                 <div className="section_content-main">
