@@ -29,13 +29,9 @@ export default class Footer extends React.Component {
                 </section>
                 <section className="footer-section">
                     <h2>kontakt</h2>
-                    <input type="text" placeholder="name"/>
-                    <input type="text" placeholder="betreff"/>
-                    <input type="text" placeholder="absender"/>
-                    <textarea placeholder="nachricht"></textarea>
-                    <div className="footer-button_container">
-                        <button>senden.</button>
-                    </div>
+                    <a href="mailto:kontakt@undwald.de" className="cta">
+                        Projektanfrage senden
+                    </a>
                 </section>
             </footer>
         )
