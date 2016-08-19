@@ -1,18 +1,25 @@
 @import "vars";
 
+@break: (@contentWidth / 2);
+
 .section_content {
     padding: 2rem 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
 
-    &:nth-of-type(odd) {
-        flex-direction: row-reverse;
+    @media (min-width: @break) {
+        align-items: center;
+        flex-direction: row;
+
+        &:nth-of-type(even) {
+            flex-direction: row-reverse;
+        }
     }
 
     &--argument {
-        @media screen and (min-width: 500px) {
+        @media (min-width: @break) {
             padding: 10rem 0;
         }
     }
@@ -34,8 +41,12 @@
         &-image {
             width: 100%;
             object-fit: cover;
-            height: 40rem;
+            height: 30vh;
             max-height: 80vh;
+
+            @media (min-width: @break) {
+                height: 40rem;
+            }
 
             &--fuchs, &--fuchse {
                 object-fit: contain;
@@ -44,8 +55,11 @@
     }
 
     &-main, &-secondary {
-        flex: 1 1 (@sideMinWidth);
-        margin: .5rem 2rem;
+        margin: .5rem 1rem;
+
+        @media (min-width: @break) {
+            flex: 1 1 (@sideMinWidth);
+        }
     }
 
     &-main {
@@ -53,7 +67,9 @@
     }
 
     &-secondary {
-        max-width: ~"calc(50% - 3rem)";
+        @media (min-width: @break) {
+            max-width: ~"calc(50% - 2rem)";
+        }
     }
 }
 
@@ -63,6 +79,7 @@
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: (@contentWidth / 2);
 
     &-circle {
         flex: 0 1 auto;
