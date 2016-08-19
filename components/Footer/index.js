@@ -17,8 +17,8 @@ export default class Footer extends React.Component {
                         +49 (0) 162 24 16 317
                     </p>
                     <p>
-                        <a href="mailto:christian@undwald.de">
-                            christian@undwald.de
+                        <a href="mailto:fuchs@undwald.de">
+                            fuchs@undwald.de
                         </a>
                     </p>
                     <p>
