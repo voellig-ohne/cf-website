@@ -13,7 +13,6 @@ module.exports = React.createClass({
     render() {
         const {body, route} = this.props
         const title = DocumentTitle.rewind()
-        const font = <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
         let css
         if (process.env.NODE_ENV === 'production') {
             css = <style dangerouslySetInnerHTML={ {    __html: require('!raw!postcss!./public/styles.css')} } />
@@ -28,7 +27,6 @@ module.exports = React.createClass({
               <title>
                 { title }
               </title>
-              { font }
               { css }
             </head>
             <body>
