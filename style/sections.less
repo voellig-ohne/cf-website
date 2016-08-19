@@ -4,7 +4,7 @@
     padding: 2rem 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 
     &:nth-of-type(odd) {
@@ -45,8 +45,15 @@
 
     &-main, &-secondary {
         flex: 1 1 (@sideMinWidth);
-        max-width: (@contentWidth / 2);
         margin: .5rem 2rem;
+    }
+
+    &-main {
+        max-width: (@contentWidth / 2);
+    }
+
+    &-secondary {
+        max-width: ~"calc(50% - 3rem)";
     }
 }
 
