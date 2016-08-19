@@ -9,7 +9,7 @@ export default class Footer extends React.Component {
                 <section className="footer-section footer-imprint">
                     <p>
                         fuchs+wald<br />
-                        <em>digitaldialoge</em>
+                        <em>Digitaldialoge</em>
                     </p>
                     <p>
                         Sonnenallee 206<br />
