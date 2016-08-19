@@ -1,8 +1,47 @@
 import React from 'react'
+import { map } from 'lodash'
 import './style.less'
 
 export default class Footer extends React.Component {
     render() {
+        const infoList = [
+            {
+                title: 'phone',
+                value: '+49 (0) 162 24 16 317'
+            }, {
+                title: 'mail',
+                value: (
+                    <a href="mailto:fuchs@undwald.de">
+                        fuchs@undwald.de
+                    </a>
+                )
+            }, {
+                title: 'twitter',
+                value: (
+                    <a href="https://twitter.com/FuchsUndWald">
+                        @FuchsUndWald
+                    </a>
+                )
+            }, {
+                title: 'xing',
+                value: (
+                    <a href="http://xing.to/christianfuchs">
+                        christianfuchs
+                    </a>
+                )
+            }, {
+                title: 'USt-ID',
+                value: 'DE296427768'
+            }, {
+                title: 'web',
+                value: (
+                    <a href="http://fuchs.undwald.de">
+                        fuchs.undwald.de
+                    </a>
+                )
+            },
+        ]
+
         return (
             <footer className="footer"
                 id="footer">
@@ -13,19 +52,22 @@ export default class Footer extends React.Component {
                     </p>
                     <p>
                         Sonnenallee 206<br />
-                        12059 Berlin<br />
-                        +49 (0) 162 24 16 317
+                        12059 Berlin
                     </p>
-                    <p>
-                        <a href="mailto:fuchs@undwald.de">
-                            fuchs@undwald.de
-                        </a>
-                    </p>
-                    <p>
-                        <a href="http://fuchs.undwald.de">
-                            fuchs.undwald.de
-                        </a>
-                    </p>
+
+                    <dl>
+                    {
+                        map(infoList, (info, idx) => {
+                            return (
+                                <div key={ idx }>
+                                    <dt>{ info.title }</dt>
+                                    <dd>{ info.value }</dd>
+                                </div>
+                            )
+                        })
+                    }
+                    </dl>
+
                 </section>
                 <section className="footer-section">
                     <h2>kontakt</h2>
