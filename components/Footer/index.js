@@ -1,6 +1,7 @@
 import React from 'react'
 import { map } from 'lodash'
 import './style.less'
+import { Link } from 'react-router'
 
 export default class Footer extends React.Component {
     render() {
@@ -67,6 +68,9 @@ export default class Footer extends React.Component {
                         })
                     }
                     </dl>
+                    <Link className="footer-link_impressum" to="/haftungsausschluss/">
+                        Impressum
+                    </Link>
 
                 </section>
                 <section className="footer-section">
