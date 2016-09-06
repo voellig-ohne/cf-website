@@ -3,18 +3,13 @@ import { Link } from 'react-router'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
+import { map } from 'lodash'
 import MiniForrest from 'components/MiniForrest'
 import Hero from 'components/Hero'
+import classNames from 'classNames'
+import forrests from './_forrests.js'
+import style from './style.module.less'
 
-const f = 'f'
-const t = 't'
-const e = 'e'
-
-const forrest = [
-    [t, t, t],
-    [t, f, f],
-    [t, t, t]
-]
 
 export default class UseCases extends React.Component {
     render() {
@@ -22,8 +17,16 @@ export default class UseCases extends React.Component {
             <DocumentTitle title={ config.siteTitle }>
                 <main>
                     <section className="sub_intro">
-                        <MiniForrest className="sub_intro-forrest"
-                            forrest={forrest}/>
+                        <div className={classNames(style.forrests, 'sub_intro-forrest')}>
+                            {
+                                map(forrests, (forrest, idx) => {
+                                    return (
+                                        <MiniForrest className={style.forrest}
+                                            forrest={forrest}/>
+                                    )
+                                })
+                            }
+                        </div>
                         <header className="sub_intro-header">
                             <h1 className="sub_intro-heading">
                                 Für jeden Wald der richtige Fuchs.
