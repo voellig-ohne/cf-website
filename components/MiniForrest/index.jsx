@@ -11,7 +11,6 @@ const EMPTY = 'e'
 export default class miniForrest extends React.Component {
     constructor(props) {
         super(props)
-        console.log(style)
     }
     render () {
         const { className, forrest } = this.props
@@ -19,11 +18,12 @@ export default class miniForrest extends React.Component {
         return (
             <div className={ classNames(style.forrest, className) }>
                 {
-                    map(forrest, (row) => {
+                    map(forrest, (row, rowIdx) => {
                         return (
-                            <div className={style.row}>
+                            <div className={style.row}
+                                    key={rowIdx}>
                                 {
-                                    map(row, (cell) => {
+                                    map(row, (cell, cellIdx) => {
                                         const classes = classNames(
                                             style.element,
                                             {
@@ -34,13 +34,15 @@ export default class miniForrest extends React.Component {
 
                                         if (cell === EMPTY) {
                                             return (
-                                                <div className={ classes } />
+                                                <div className={ classes }
+                                                    key={cellIdx} />
                                             )
                                         }
 
                                         return (
                                             <Illustration illustration="element"
-                                                className={ classes } />
+                                                className={ classes }
+                                                key={cellIdx} />
                                         )
                                     })
                                 }
