@@ -15,16 +15,18 @@ const forrests = [
         [e, t, e, e, t]
     ],
     [
-        [e, e, e, t, e],
-        [t, e, f, f, t],
-        [t, t, t, t, t],
-        [e, t, e, e, t]
+        [t],
+        [f],
+        [f],
+        [t],
     ],
     [
-        [e, e, e, t, e],
-        [t, e, f, f, t],
-        [t, t, t, t, t],
-        [e, t, e, e, t]
+        [t, t, t, t, t, t, t],
+        [t, t, t, t, t, t, t],
+        [t, t, t, t, t, t, t],
+        [t, t, t, t, t, t, t],
+        [t, t, t, t, t, t, t],
+        [t, t, t, t, t, f, f],
     ],
     [
         [e, e, e, t, e],
