@@ -21,6 +21,7 @@ export default class LogoContainer extends React.Component{
             this.calculateResize()
             window.addEventListener('scroll', this.scrollChange.bind(this))
             window.addEventListener('resize', this.calculateResize.bind(this))
+            window.addEventListener('routeChange', this.calculateResize.bind(this))
         }
     }
     calculateResize() {
