@@ -6,7 +6,7 @@ import { config } from 'config'
 import Forrest from 'components/Forrest'
 import Hero from 'components/Hero'
 
-export default class Index extends React.Component {
+export default class Workshops extends React.Component {
     render() {
         return (
             <DocumentTitle title={ config.siteTitle }>

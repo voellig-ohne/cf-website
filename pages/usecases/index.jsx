@@ -6,20 +6,12 @@ import { config } from 'config'
 import Forrest from 'components/Forrest'
 import Hero from 'components/Hero'
 
-export default class Leistungen extends React.Component {
+export default class UseCases extends React.Component {
     render() {
         return (
             <DocumentTitle title={ config.siteTitle }>
                 <main>
-                    <section className="sub_intro">
-                        <Forrest className="sub_intro-forrest"
-                            mode="single"/>
-                        <header className="sub_intro-header">
-                            <h1 className="sub_intro-heading">
-                                Wir finden den richtigen Weg durch den Wald.
-                            </h1>
-                        </header>
-                    </section>
+                    ...use cases here.
 
                     <Hero title="...mehr als E-Mail Marketing."
                             image="/img/wald_1.jpg">
