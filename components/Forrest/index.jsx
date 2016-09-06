@@ -28,12 +28,17 @@ export default class Forrest extends React.Component {
                 column: 0
             }]
         }
+
+        this.boundResize = this.onResize.bind(this)
     }
     componentDidMount() {
         if (typeof window !== 'undefined') {
             this.onResize()
-            window.addEventListener('resize', this.onResize.bind(this))
+            window.addEventListener('resize', this.boundResize)
         }
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.boundResize)
     }
     onResize() {
         const gridDimentions = this.getGridDimentions(ELEMENT_SIZE)
