@@ -3,15 +3,33 @@ import { Link } from 'react-router'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
-import Forrest from 'components/Forrest'
+import MiniForrest from 'components/MiniForrest'
 import Hero from 'components/Hero'
+
+const f = 'f'
+const t = 't'
+const e = 'e'
+
+const forrest = [
+    [t, t, t],
+    [t, f, f],
+    [t, t, t]
+]
 
 export default class UseCases extends React.Component {
     render() {
         return (
             <DocumentTitle title={ config.siteTitle }>
                 <main>
-                    ...use cases here.
+                    <section className="sub_intro">
+                        <MiniForrest className="sub_intro-forrest"
+                            forrest={forrest}/>
+                        <header className="sub_intro-header">
+                            <h1 className="sub_intro-heading">
+                                Für jeden Wald der richtige Fuchs.
+                            </h1>
+                        </header>
+                    </section>
 
                     <Hero title="...mehr als E-Mail Marketing."
                             image="/img/wald_1.jpg">
