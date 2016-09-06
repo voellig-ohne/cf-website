@@ -13,10 +13,18 @@ export default class miniForrest extends React.Component {
         super(props)
     }
     render () {
-        const { className, forrest } = this.props
+        const { className, forrest, background } = this.props
+        console.log(background)
+        const classes = classNames(
+            style.forrest,
+            className,
+            {
+                [style.green]: background === 'green'
+            }
+        )
 
         return (
-            <div className={ classNames(style.forrest, className) }>
+            <div className={ classes }>
                 {
                     map(forrest, (row, rowIdx) => {
                         return (

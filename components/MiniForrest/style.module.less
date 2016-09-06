@@ -5,6 +5,34 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    &:hover {
+        background: @green;
+
+        .fox {
+            fill: @red;
+        }
+
+        .tree {
+            fill: @bright;
+        }
+    }
+}
+
+.green {
+    background: @green;
+
+    .tree, .fox {
+        fill: @bright;
+    }
+
+    &:hover {
+        background: @bright;
+
+        .tree {
+            fill: @green;
+        }
+    }
 }
 
 .row {
@@ -15,12 +43,8 @@
 
 }
 
-.tree {
+.tree, .fox {
     fill: @green;
-}
-
-.fox {
-    fill: @red;
 }
 
 .element {

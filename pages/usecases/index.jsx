@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
-import { map } from 'lodash'
+import { map, includes } from 'lodash'
 import MiniForrest from 'components/MiniForrest'
 import Hero from 'components/Hero'
 import classNames from 'classNames'
@@ -13,6 +13,8 @@ import style from './style.module.less'
 
 export default class UseCases extends React.Component {
     render() {
+        const greenBackground = [1,3,4,6]
+
         return (
             <DocumentTitle title={ config.siteTitle }>
                 <main>
@@ -20,9 +22,12 @@ export default class UseCases extends React.Component {
                         <div className={classNames(style.forrests, 'sub_intro-forrest')}>
                             {
                                 map(forrests, (forrest, idx) => {
+
                                     return (
                                         <MiniForrest className={style.forrest}
-                                            forrest={forrest}/>
+                                            forrest={forrest}
+                                            background={includes(greenBackground, idx) ? 'green' : 'white'}
+                                            key={idx} />
                                     )
                                 })
                             }
