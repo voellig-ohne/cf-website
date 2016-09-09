@@ -30,6 +30,8 @@ export default class Forrest extends React.Component {
         }
 
         this.boundResize = this.onResize.bind(this)
+
+        this.density = props.density || .8
     }
     componentDidMount() {
         if (typeof window !== 'undefined') {
@@ -57,7 +59,7 @@ export default class Forrest extends React.Component {
         return Array.apply(null, {length: gridDimentions.height}).map((row, rowIndex) => {
             return Array.apply(null, {length: gridDimentions.width}).map((column, columnIndex) => {
                 return {
-                    isActive: Math.random() < .8
+                    isActive: Math.random() < this.density
                 }
             })
         })
