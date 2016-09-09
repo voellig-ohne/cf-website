@@ -9,7 +9,7 @@ import Hero from 'components/Hero'
 export default class Workshops extends React.Component {
     render() {
         return (
-            <DocumentTitle title={ config.siteTitle }>
+            <DocumentTitle title={ config.siteTitle  + ' | workshops' }>
                 <main>
                     <section className="sub_intro">
                         <Forrest className="sub_intro-forrest"

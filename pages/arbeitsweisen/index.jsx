@@ -9,7 +9,7 @@ import Hero from 'components/Hero'
 export default class Arbeitsweisen extends React.Component {
     render() {
         return (
-            <DocumentTitle title={ config.siteTitle }>
+            <DocumentTitle title={ config.siteTitle + ' | arbeitsweisen'  }>
                 <main>
                     ...arbeitsweisen here.
 

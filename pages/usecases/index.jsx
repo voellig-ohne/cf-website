@@ -16,7 +16,7 @@ export default class UseCases extends React.Component {
         const greenBackground = [1,3,4,6]
 
         return (
-            <DocumentTitle title={ config.siteTitle }>
+            <DocumentTitle title={ config.siteTitle + ' | use cases' }>
                 <main>
                     <section className="sub_intro">
                         <div className={classNames(style.forrests, 'sub_intro-forrest')}>
