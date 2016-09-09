@@ -6,7 +6,6 @@ import { config } from 'config'
 import { map, includes } from 'lodash'
 import MiniForrestGroup from 'components/MiniForrestGroup'
 import Hero from 'components/Hero'
-import classNames from 'classNames'
 
 export default class UseCases extends React.Component {
     render() {
@@ -14,9 +13,7 @@ export default class UseCases extends React.Component {
             <DocumentTitle title={ config.siteTitle + ' | use cases' }>
                 <main>
                     <section className="sub_intro">
-                        <div className={classNames('sub_intro-forrest')}>
-                            <MiniForrestGroup />
-                        </div>
+                        <MiniForrestGroup className="sub_intro-forrest" />
                         <header className="sub_intro-header">
                             <h1 className="sub_intro-heading">
                                 Für jeden Wald der richtige Fuchs.

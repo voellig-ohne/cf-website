@@ -6,6 +6,7 @@ import { config } from 'config'
 import Illustration from '../components/Illustration'
 import Hero from '../components/Hero'
 import Forrest from '../components/Forrest'
+import MiniForrestGroup from '../components/MiniForrestGroup'
 
 export default class Index extends React.Component {
     render() {
@@ -63,7 +64,7 @@ export default class Index extends React.Component {
                         cta={{link: '/leistungen/', text: 'leistungen'}}
                         illustration={(<Forrest
                             mode="single"
-                            className="section_content-graphic-image"/>)}>
+                            className="section_content-graphic-image" />)}>
                     <h1>Wir finden den richtigen Weg durch den Wald.</h1>
                     <p>
                         (LEISTUNGEN) Analyse Umsetzung Template-
@@ -81,11 +82,28 @@ export default class Index extends React.Component {
                         illustration={(<Forrest
                             mode="many"
                             density="0"
-                            className="section_content-graphic-image"/>)}>
+                            className="section_content-graphic-image" />)}>
                     <h1>Jeder kann ein Fuchs sein.</h1>
 
                     <p>
                         (Arbeitsweise) Analyse Umsetzung Template-
+                        Programmierung Projektmanagement Design
+                        Versandunterstützung Seminare & Workshops Es
+                        id quibusdam quam aut quia volum fugia culloriat.
+                        Atur alicatur a del is eum natis maio. Itam explaut
+                        quibus et asperciendam rendus delectus que nonsequi
+                        doluptius, idellessit acesto quo molum dello et, sus.
+                    </p>
+                </IntroSection>
+
+                <IntroSection
+                        cta={{link: '/usecases/', text: 'alle usecases'}}
+                        illustration={(<MiniForrestGroup
+                            className="section_content-graphic-image" />)}>
+                    <h1>Für jeden Wald der richtige Fuchs.</h1>
+
+                    <p>
+                        (Use Cases) Analyse Umsetzung Template-
                         Programmierung Projektmanagement Design
                         Versandunterstützung Seminare & Workshops Es
                         id quibusdam quam aut quia volum fugia culloriat.
