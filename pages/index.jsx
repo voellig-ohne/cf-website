@@ -80,6 +80,7 @@ export default class Index extends React.Component {
                         cta={{link: '/workshops/', text: 'mehr über workshops'}}
                         illustration={(<Forrest
                             mode="many"
+                            density="0"
                             className="section_content-graphic-image"/>)}>
                     <h1>Jeder kann ein Fuchs sein.</h1>
 
