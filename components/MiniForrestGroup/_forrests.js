@@ -56,6 +56,12 @@ const forrests = [
         [t, e, f, f, t],
         [t, t, t, t, t],
         [e, t, e, e, t]
+    ],
+    [
+        [e, e, e, t, e],
+        [t, e, f, f, t],
+        [t, t, t, t, t],
+        [e, t, e, e, t]
     ]
 ]
 
