@@ -1,7 +1,7 @@
 import Illustration from 'components/Illustration'
 import React from 'react'
 import style from './style.module.less'
-import { map, includes } from 'lodash'
+import { map } from 'lodash'
 import classNames from 'classNames'
 
 import forrests from './_forrests.js'
@@ -12,15 +12,10 @@ export default class miniForrest extends React.Component {
         super(props)
     }
     render () {
-        const greenBackground = [1,3,4,6]
-
         const { className, forrest, background } = this.props
         const classes = classNames(
             style.forrests,
-            className,
-            {
-                [style.green]: background === 'green'
-            }
+            className
         )
 
         return (
@@ -30,7 +25,6 @@ export default class miniForrest extends React.Component {
                         return (
                             <MiniForrest className={style.forrest}
                                 forrest={forrest}
-                                background={includes(greenBackground, idx) ? 'green' : 'white'}
                                 key={idx} />
                         )
                     })
