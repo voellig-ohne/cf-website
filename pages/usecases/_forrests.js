@@ -30,8 +30,8 @@ const forrests = [
     ],
     [
         [e, e, e, t, e],
-        [t, e, f, f, t],
-        [t, t, t, t, t],
+        [t, e, t, t, t],
+        [f, f, t, t, t],
         [e, t, e, e, t]
     ],
     [
@@ -41,10 +41,15 @@ const forrests = [
         [e, t, e, e, t]
     ],
     [
-        [e, e, e, t, e],
-        [t, e, f, f, t],
-        [t, t, t, t, t],
-        [e, t, e, e, t]
+        [e, e, e, e, e, t, e, e],
+        [e, e, e, e, e, t, e, e],
+        [e, e, e, e, e, t, t, e],
+        [e, e, e, t, t, t, t, e],
+        [e, t, t, t, t, t, t, t],
+        [e, t, f, f, t, t, t, t],
+        [t, t, t, t, t, t, t, t],
+        [t, t, t, t, t, t, t, t],
+        [t, t, t, t, t, t, t, t]
     ],
     [
         [e, e, e, t, e],
