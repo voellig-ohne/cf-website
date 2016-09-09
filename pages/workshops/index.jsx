@@ -13,7 +13,8 @@ export default class Workshops extends React.Component {
                 <main>
                     <section className="sub_intro">
                         <Forrest className="sub_intro-forrest"
-                            mode="many"/>
+                            mode="many"
+                            density="0" />
                         <header className="sub_intro-header">
                             <h1 className="sub_intro-heading">
                                 Jeder kann ein Fuchs sein.
