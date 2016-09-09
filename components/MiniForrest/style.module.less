@@ -82,6 +82,18 @@
     height: 2rem;
     width: 2rem;
 
+    @media (max-width: 800px), (max-height: 800px) {
+        padding: .1rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    @media (max-width: 500px), (max-height: 500px) {
+        padding: .05rem;
+        height: 1rem;
+        width: 1rem;
+    }
+
     &:nth-child(even) {
         transform: translateY(-.2rem);
     }
