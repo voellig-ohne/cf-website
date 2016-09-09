@@ -4,33 +4,18 @@ import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import { map, includes } from 'lodash'
-import MiniForrest from 'components/MiniForrest'
+import MiniForrestGroup from 'components/MiniForrestGroup'
 import Hero from 'components/Hero'
 import classNames from 'classNames'
-import forrests from './_forrests.js'
-import style from './style.module.less'
-
 
 export default class UseCases extends React.Component {
     render() {
-        const greenBackground = [1,3,4,6]
-
         return (
             <DocumentTitle title={ config.siteTitle + ' | use cases' }>
                 <main>
                     <section className="sub_intro">
-                        <div className={classNames(style.forrests, 'sub_intro-forrest')}>
-                            {
-                                map(forrests, (forrest, idx) => {
-
-                                    return (
-                                        <MiniForrest className={style.forrest}
-                                            forrest={forrest}
-                                            background={includes(greenBackground, idx) ? 'green' : 'white'}
-                                            key={idx} />
-                                    )
-                                })
-                            }
+                        <div className={classNames('sub_intro-forrest')}>
+                            <MiniForrestGroup />
                         </div>
                         <header className="sub_intro-header">
                             <h1 className="sub_intro-heading">

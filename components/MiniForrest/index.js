@@ -14,7 +14,6 @@ export default class miniForrest extends React.Component {
     }
     render () {
         const { className, forrest, background } = this.props
-        console.log(background)
         const classes = classNames(
             style.forrest,
             className,
