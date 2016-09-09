@@ -149,10 +149,17 @@ function Row ({ row, idxRow, onMouseEnter, foxPositions, isFoxFn }) {
                         }
                     )
 
+                    if (element.isActive || isFox) {
+                        return (
+                            <Illustration illustration="element"
+                                className={classes}
+                                key={idxElement}
+                                onMouseEnter={onMouseEnter.bind(null, isFox, currentPosition)} />
+                        )
+                    }
+
                     return (
-                        <Illustration illustration="element"
-                            className={classes}
-                            key={idxElement}
+                        <div className={classes}
                             onMouseEnter={onMouseEnter.bind(null, isFox, currentPosition)} />
                     )
                 })
