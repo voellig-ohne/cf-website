@@ -45,7 +45,9 @@ export default class Forrest extends React.Component {
     onResize() {
         const gridDimentions = this.getGridDimentions(ELEMENT_SIZE)
 
-        const foxPositions = (this.props.mode === MODE_MANY) ? [] : [this.generateFoxPositionTopHalf(gridDimentions)]
+        const foxPositions = (this.props.mode === MODE_MANY) ?
+            [this.generateFoxPositionCenter(gridDimentions)] : 
+            [this.generateFoxPositionTopHalf(gridDimentions)]
 
         const grid = this.generateGrid(gridDimentions)
 
@@ -68,6 +70,12 @@ export default class Forrest extends React.Component {
         return {
             row:    Math.round(((gridDimentions.width - 5) * Math.random()) + 2),
             column: Math.round((gridDimentions.height * Math.random()) / 2 + 1)
+        }
+    }
+    generateFoxPositionCenter(gridDimentions) {
+        return {
+            row:    Math.round(gridDimentions.width / 2),
+            column: Math.round(gridDimentions.height / 2)
         }
     }
     getGridDimentions(elementSize) {
