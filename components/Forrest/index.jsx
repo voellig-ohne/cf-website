@@ -46,7 +46,7 @@ export default class Forrest extends React.Component {
         const gridDimentions = this.getGridDimentions(ELEMENT_SIZE)
 
         const foxPositions = (this.props.mode === MODE_MANY) ?
-            [this.generateFoxPositionCenter(gridDimentions)] : 
+            [this.generateFoxPositionCenter(gridDimentions)] :
             [this.generateFoxPositionTopHalf(gridDimentions)]
 
         const grid = this.generateGrid(gridDimentions)
@@ -120,20 +120,22 @@ export default class Forrest extends React.Component {
         const { className } = this.props
 
         return (
-            <div className={ classNames('forrest', className) }
-                ref={(c) => this.container = c}>
-                {
-                    map(this.state.grid, (row, idxRow) => {
-                        return (
-                            <Row key={idxRow}
-                                row={row}
-                                idxRow={idxRow}
-                                onMouseEnter={this.onMouseEnter.bind(this)}
-                                foxPositions={this.state.foxPositions}
-                                isFoxFn={this.isFox} />
-                        )
-                    })
-                }
+            <div className={ classNames('forrest-wrapper', className) }>
+                <div className="forrest"
+                    ref={(c) => this.container = c}>
+                    {
+                        map(this.state.grid, (row, idxRow) => {
+                            return (
+                                <Row key={idxRow}
+                                    row={row}
+                                    idxRow={idxRow}
+                                    onMouseEnter={this.onMouseEnter.bind(this)}
+                                    foxPositions={this.state.foxPositions}
+                                    isFoxFn={this.isFox} />
+                            )
+                        })
+                    }
+                </div>
             </div>
         )
     }
