@@ -172,6 +172,7 @@ function Row ({ row, idxRow, onMouseEnter, foxPositions, isFoxFn }) {
 
                     return (
                         <div className={classes}
+                            key={idxElement}
                             onMouseEnter={onMouseEnter.bind(null, isFox, currentPosition)} />
                     )
                 })
