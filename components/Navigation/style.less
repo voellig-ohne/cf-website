@@ -17,10 +17,15 @@
         padding: 0;
         margin: 0 0 0 0;
         width: 50%;
+
+        @media (max-width: (@contentWidth / 2)) {
+            width: 100%;
+        }
     }
 
     &-item {
-        margin-left: 1rem;
+        margin: .5rem 1rem;
+        line-height: .8;
     }
 
     &-link {
