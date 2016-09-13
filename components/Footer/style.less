@@ -30,6 +30,10 @@
         flex: 1 1 (@sideMinWidth / 2);
         max-width: (@contentWidth / 2);
         margin:  2rem;
+
+        @media (max-width: (@contentWidth / 2)) {
+            margin: 1rem;
+        }
     }
 
     &-imprint {
