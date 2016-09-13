@@ -1,31 +1,46 @@
 @import "~style/vars";
 
 .section {
-    padding: 2rem 0;
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    @media (min-width: @break) {
-
+    @media (max-width: @break) {
+        display: block;
+        margin: 4rem 0;
     }
 }
 
 .illustration-wrap, .text {
-    width: (@contentWidth / 2);
+    flex: 0 1 (@contentWidth / 2);
     margin: 2rem 1rem;
 }
+
+@illustrationBreak: 400px;
 
 .illustration-wrap {
     display: flex;
     align-items: center;
+
+    @media (max-width: @illustrationBreak) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.title {
+    @media (max-width: @illustrationBreak) {
+        margin-bottom: 0;
+    }
 }
 
 .illustration {
     width: 33%;
     flex: 0 0 auto;
-}
 
-.illustration {
-    margin-right: 1rem;
+    @media (min-width: @illustrationBreak) {
+        flex-direction: column;
+        margin-right: 1rem;
+    }
 }
