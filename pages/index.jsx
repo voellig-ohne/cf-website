@@ -34,21 +34,21 @@ export default class Index extends React.Component {
                     <div className="section_content-secondary">
                         <div className="circles">
                             <div className="circles-circle">
-                                <Illustration illustration="PLANUNG"
+                                <Illustration illustration="icon_planung"
                                     className="circles-image" />
                                 <span className="circles-title">
                                     Planung
                                 </span>
                             </div>
                             <div className="circles-circle">
-                                <Illustration illustration="PROGRAMMIERUNG"
+                                <Illustration illustration="icon_programmierung"
                                     className="circles-image" />
                                 <span className="circles-title">
                                     Programmierung
                                 </span>
                             </div>
                             <div className="circles-circle">
-                                <Illustration illustration="BERATUNG"
+                                <Illustration illustration="icon_beratung"
                                     className="circles-image"/>
                                 <span className="circles-title">
                                     Beratung
