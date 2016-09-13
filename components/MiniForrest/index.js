@@ -13,10 +13,11 @@ export default class miniForrest extends React.Component {
         super(props)
     }
     render () {
-        const { className, forrest, background } = this.props
+        const { className, forrest, background, isSmall } = this.props
         const classes = classNames(
             style.forrest,
-            className
+            className,
+            { [style['forrest-small']]: isSmall }
         )
 
         return (
@@ -32,7 +33,8 @@ export default class miniForrest extends React.Component {
                                             style.element,
                                             {
                                                 [style.tree]: cell === TREE,
-                                                [style.fox]: cell === FOX
+                                                [style.fox]: cell === FOX,
+                                                [style['element-small']]: isSmall
                                             }
                                         )
 

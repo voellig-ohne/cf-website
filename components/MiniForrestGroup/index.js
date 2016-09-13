@@ -12,7 +12,7 @@ export default class miniForrest extends React.Component {
         super(props)
     }
     render () {
-        const { className, forrest, background } = this.props
+        const { className, forrest, background, isSmall } = this.props
         const classes = classNames(
             style.forrests,
             className
@@ -25,6 +25,7 @@ export default class miniForrest extends React.Component {
                         return (
                             <MiniForrest className={style.forrest}
                                 forrest={forrest}
+                                isSmall={isSmall}
                                 key={idx} />
                         )
                     })

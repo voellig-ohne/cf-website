@@ -36,6 +36,15 @@
         &:nth-child(6) ~ &:nth-child(-2n+8) {
             .green();
         }
+
+        &-small {
+            height: 50%;
+
+            &:nth-child(4) ~ & {
+                display: none;
+            }
+        }
+
     }
 
     // squarish screen
@@ -83,15 +92,19 @@
     width: 2rem;
 
     @media (max-width: 800px), (max-height: 800px) {
-        padding: .1rem;
-        height: 1.5rem;
-        width: 1.5rem;
+        .small();
     }
 
     @media (max-width: 500px), (max-height: 500px) {
-        padding: .05rem;
-        height: 1rem;
-        width: 1rem;
+        .tiny();
+    }
+
+    &-small {
+        .small();
+
+        @media (max-width: 1000px), (max-height: 1000px) {
+            .tiny();
+        }
     }
 
     &:nth-child(even) {
@@ -101,4 +114,16 @@
     &:nth-child(odd) {
         transform: translateY(.2rem);
     }
+}
+
+.small {
+    padding: .1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.tiny {
+    padding: .05rem;
+    height: 1rem;
+    width: 1rem;
 }
