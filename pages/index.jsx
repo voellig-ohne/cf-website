@@ -58,7 +58,7 @@ export default class Index extends React.Component {
                     </div>
                 </section>
 
-                <Hero image="/img/mails.jpg" title="...mehr als E-Mail Marketing." />
+                <Hero image="/img/wald_briefe.jpg" title="...mehr als E-Mail Marketing." />
 
                 <IntroSection
                         cta={{link: '/leistungen/', text: 'leistungen'}}

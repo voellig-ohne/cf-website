@@ -23,7 +23,7 @@ export default class Leistungen extends React.Component {
                     </section>
 
                     <Hero title="...mehr als E-Mail Marketing."
-                            image="/img/weg.jpg">
+                            image="/img/wald_seile.jpg">
                         <p>
                             (LEISTUNGEN) Analyse Umsetzung Template-
                             Programmierung Projektmanagement Design
