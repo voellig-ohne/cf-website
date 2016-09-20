@@ -39,6 +39,15 @@ export default class Footer extends React.Component {
                     <a href="http://fuchs.undwald.de">
                         fuchs.undwald.de
                     </a>
+                ), 
+            }, {                
+                title: 'anschrift',
+                value: (
+                    <span>
+                        Christian Fuchs<br />
+                        Sonnenallee 206<br />
+                        12059 Berlin
+                    </span>
                 )
             },
         ]
@@ -51,11 +60,6 @@ export default class Footer extends React.Component {
                         fuchs+wald<br />
                         <em>Digitaldialoge</em>
                     </p>
-                    <p>
-                        Sonnenallee 206<br />
-                        12059 Berlin
-                    </p>
-
                     <dl>
                     {
                         map(infoList, (info, idx) => {
