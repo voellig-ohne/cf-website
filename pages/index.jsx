@@ -58,8 +58,6 @@ export default class Index extends React.Component {
                     </div>
                 </section>
 
-                <Hero image="/img/wald_briefe.jpg" title="...mehr als E-Mail Marketing." />
-
                 <IntroSection
                         cta={{link: '/leistungen/', text: 'leistungen'}}
                         illustration={(<Forrest
@@ -113,6 +111,13 @@ export default class Index extends React.Component {
                         doluptius, idellessit acesto quo molum dello et, sus.
                     </p>
                 </IntroSection>
+
+                <Hero image="/img/wald_seile.jpg">
+                    <Link className="cta" to="/leistungen/">
+                        Finden Sie mit uns durch den Wald
+                    </Link>
+                </Hero>
+                
               </main>
             </DocumentTitle>
         )

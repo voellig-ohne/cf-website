@@ -1,8 +1,6 @@
 @import '~style/vars';
 
 .cta {
-    background: @green;
-    color: @bright;
     padding: 1rem 1rem .8rem;
     margin-top: .5rem;
     display: inline-block;
@@ -10,4 +8,13 @@
     font-family: @heading-font;
     -webkit-font-smoothing: antialiased;
     font-size: @font-size-m;
+    cursor: pointer;
+    background: @bright;
+    border: .3rem @green solid;
+    color: @dark;
+
+    &:hover {
+        background: @green;
+        color: @bright;
+    }
 }
