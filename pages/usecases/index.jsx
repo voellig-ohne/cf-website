@@ -20,19 +20,11 @@ export default class UseCases extends React.Component {
                             </h1>
                         </header>
                     </section>
-
-                    <Hero title="...mehr als E-Mail Marketing."
-                            image="/img/wald_1.jpg">
-                        <p>
-                            (LEISTUNGEN) Analyse Umsetzung Template-
-                            Programmierung Projektmanagement Design
-                            Versandunterstützung Seminare & Workshops Es id
-                            quibusdam quam aut quia volum fugia culloriat.
-                            Atur alicatur a del is eum natis maio. Itam
-                            explaut quibus et asperciendam rendus delectus
-                            que nonsequi doluptius, idellessit acesto quo
-                            molum dello et, sus.
-                        </p>
+                    
+                    <Hero image="/img/wald_workshop.jpg">
+                        <Link to="/workshops/" className="cta">
+                            Werden Sie zum Fuchs
+                        </Link>
                     </Hero>
                 </main>
             </DocumentTitle>

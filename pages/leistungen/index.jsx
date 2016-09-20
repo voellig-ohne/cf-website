@@ -22,20 +22,6 @@ export default class Leistungen extends React.Component {
                         </header>
                     </section>
 
-                    <Hero title="...mehr als E-Mail Marketing."
-                            image="/img/wald_seile.jpg">
-                        <p>
-                            (LEISTUNGEN) Analyse Umsetzung Template-
-                            Programmierung Projektmanagement Design
-                            Versandunterstützung Seminare & Workshops Es id
-                            quibusdam quam aut quia volum fugia culloriat.
-                            Atur alicatur a del is eum natis maio. Itam
-                            explaut quibus et asperciendam rendus delectus
-                            que nonsequi doluptius, idellessit acesto quo
-                            molum dello et, sus.
-                        </p>
-                    </Hero>
-
                     <IllustratedSection
                             title="Entwicklung eines Visuellen wie inhaltlichen Konzepts."
                             illustration="icon_entwicklung">
@@ -91,6 +77,12 @@ export default class Leistungen extends React.Component {
                             necab imolore ea ipsus ipisquiam.
                         </p>
                     </IllustratedSection>
+
+                    <Hero image="/img/wald_buro.jpg">
+                        <Link to="/arbeitsweisen/" className="cta">
+                            Wie arbeitet fuchs+wald?
+                        </Link>
+                    </Hero>
 
                 </main>
             </DocumentTitle>
