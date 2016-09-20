@@ -19,7 +19,7 @@ export default class Navigation extends React.Component {
                 title: 'use cases'
             },{
                 link: '/workshops/',
-                title: 'beratung & workshops'
+                title: 'coaching & workshops'
             }
         ]
 
