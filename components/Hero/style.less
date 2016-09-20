@@ -31,6 +31,12 @@
         > div {
             margin: 1rem;
             flex: 0 1 (@contentWidth / 2);
+            display: flex;
+            justify-content: center;
+
+            @media (min-width: 600px) {
+                margin-bottom: 30%;
+            }
         }
     }
 
