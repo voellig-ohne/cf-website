@@ -7,10 +7,10 @@ export default class Footer extends React.Component {
     render() {
         const infoList = [
             {
-                title: 'phone',
+                title: 'telefon',
                 value: '+49 (0) 162 24 16 317'
             }, {
-                title: 'mail',
+                title: 'e-mail',
                 value: (
                     <a href="mailto:fuchs@undwald.de">
                         fuchs@undwald.de
