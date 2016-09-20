@@ -22,6 +22,10 @@ export default class Leistungen extends React.Component {
                         </header>
                     </section>
 
+                    <section className="section_content">
+                        <h1 className="page_heading">Unsere Leistungen</h1>
+                    </section>
+
                     <IllustratedSection
                             title="Entwicklung eines Visuellen wie inhaltlichen Konzepts."
                             illustration="icon_entwicklung">

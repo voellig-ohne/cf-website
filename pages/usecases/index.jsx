@@ -20,6 +20,10 @@ export default class UseCases extends React.Component {
                             </h1>
                         </header>
                     </section>
+
+                    <section className="section_content">
+                        <h1 className="page_heading">Use Cases</h1>
+                    </section>
                     
                     <Hero image="/img/wald_workshop.jpg">
                         <Link to="/workshops/" className="cta">

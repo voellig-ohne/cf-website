@@ -11,7 +11,9 @@ export default class Arbeitsweisen extends React.Component {
         return (
             <DocumentTitle title={ config.siteTitle + ' | arbeitsweisen'  }>
                 <main>
-                    ...arbeitsweisen here.
+                    <section className="section_content">
+                        <h1 className="page_heading">Arbeitsweisen</h1>
+                    </section>
 
                     <Hero image="/img/wald_briefe.jpg">
                         <Link to="/usecases/" className="cta">

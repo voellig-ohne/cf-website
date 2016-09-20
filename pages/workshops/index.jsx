@@ -22,6 +22,10 @@ export default class Workshops extends React.Component {
                         </header>
                     </section>
 
+                    <section className="section_content">
+                        <h1 className="page_heading">Coaching & Workshops</h1>
+                    </section>
+
                     <Hero image="/img/wald_telefon.jpg">
                         <a href="mailto:cf@undwald.de" className="cta">
                             Treten Sie in Kontakt!
