@@ -27,7 +27,12 @@ export default class Hero extends React.Component{
                 <img src={image} className="hero-image"/>
                 <div className="hero-text">
                     <div>
-                        <h1>{title}</h1>
+                        {
+                            title ?
+                            <h1>{title}</h1> :
+                            null
+                        }
+                        
                         {this.props.children}
                     </div>
                 </div>
