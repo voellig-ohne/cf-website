@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.less'
 import { Link } from 'react-router'
+import classNames from 'classNames'
 
 export default class Navigation extends React.Component {
     render () {
@@ -23,15 +24,17 @@ export default class Navigation extends React.Component {
             }
         ]
 
+        const { location } = this.props
+
         return (
             <nav className="navigation">
                 <ul className="navigation-list">
                     {links.map((link) => {
+                        const linkClasses = classNames('navigation_link', {'navigation_link--active': link.link === location})
                         return (
                             <li className="navigation-item"
                                     key={link.link}>
-                                <Link to={link.link}
-                                        className="navigation-link">
+                                <Link to={link.link} className={linkClasses}>
                                     {link.title}
                                 </Link>
                             </li>

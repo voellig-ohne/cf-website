@@ -15,10 +15,11 @@ module.exports = React.createClass({
         }
     },
     render () {
+        console.log(this)
         return (
             <div>
                 {this.props.children}
-                <Navigation />
+                <Navigation location={this.props.location.pathname}/>
                 <Footer />
                 <LogoContainer className="logo-container" />
             </div>
