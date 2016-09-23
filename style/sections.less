@@ -7,6 +7,10 @@
     flex-direction: column;
     align-items: stretch;
 
+    @media (max-width: @break) {
+        padding: 1rem;
+    }
+
     @media (min-width: @break) {
         align-items: center;
         flex-direction: row;
@@ -73,6 +77,10 @@
     &-main {
         @width: (@contentWidth / 2);
         max-width: ~"calc(@{width} - 1rem)";
+
+        @media (max-width: @break) {
+            margin-bottom: 1rem;
+        }
     }
 
     &-secondary {
@@ -87,11 +95,6 @@
 
     &-single {
         flex: 0 1 (@contentWidth / 2);
-        margin: 2rem;
-        
-        @media (max-width: (@contentWidth / 2)) {
-            margin: 1rem;
-        }
 
         &--wide {
             flex-basis: @contentWidth;
