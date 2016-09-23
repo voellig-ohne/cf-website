@@ -5,10 +5,15 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import Forrest from 'components/Forrest'
 import Hero from 'components/Hero'
+import { filter, map } from 'lodash'
 import IllustratedSection from 'components/IllustratedSection'
 
 export default class Leistungen extends React.Component {
     render() {
+        const leistungen = filter(this.props.route.pages, (page) => {
+            return page.path.includes('/leistungen/items/')
+        })
+
         return (
             <DocumentTitle title={ config.siteTitle + ' | leistungen'  }>
                 <main>
@@ -26,61 +31,18 @@ export default class Leistungen extends React.Component {
                         <h1 className="page_heading">Unsere Leistungen</h1>
                     </section>
 
-                    <IllustratedSection
-                            title="Entwicklung eines Visuellen wie inhaltlichen Konzepts."
-                            illustration="icon_entwicklung">
-                        <p>
-                            Text über Analyse. Cor siti si tem nonecae rumquis 
-                            volor accus et utas eumquiantiae praturi nobitate 
-                            poribusandi dolupie ndamusc idemporeped moditemqui 
-                            a sed maion non eiuntis volut la si teni aruptae 
-                            volupic temolor autesti stibus ad ma nis eumquat 
-                            iumentur? Daecae. Itae. Nam lanturescium dio erferia 
-                            necab imolore ea ipsus ipisquiam.
-                        </p>
-                    </IllustratedSection>
-
-                    <IllustratedSection
-                            title="Projektmanagement und Expertise."
-                            illustration="icon_planung">
-                        <p>
-                            Text über Analyse. Cor siti si tem nonecae rumquis 
-                            volor accus et utas eumquiantiae praturi nobitate 
-                            poribusandi dolupie ndamusc idemporeped moditemqui 
-                            a sed maion non eiuntis volut la si teni aruptae 
-                            volupic temolor autesti stibus ad ma nis eumquat 
-                            iumentur? Daecae. Itae. Nam lanturescium dio erferia 
-                            necab imolore ea ipsus ipisquiam.
-                        </p>
-                    </IllustratedSection>
-
-                    <IllustratedSection
-                            title="Ausführliche Beratung und Betreuung."
-                            illustration="icon_beratung">
-                        <p>
-                            Text über Analyse. Cor siti si tem nonecae rumquis 
-                            volor accus et utas eumquiantiae praturi nobitate 
-                            poribusandi dolupie ndamusc idemporeped moditemqui 
-                            a sed maion non eiuntis volut la si teni aruptae 
-                            volupic temolor autesti stibus ad ma nis eumquat 
-                            iumentur? Daecae. Itae. Nam lanturescium dio erferia 
-                            necab imolore ea ipsus ipisquiam.
-                        </p>
-                    </IllustratedSection>
-
-                    <IllustratedSection
-                            title="Technische Umsetzung."
-                            illustration="icon_programmierung">
-                        <p>
-                            Text über Analyse. Cor siti si tem nonecae rumquis 
-                            volor accus et utas eumquiantiae praturi nobitate 
-                            poribusandi dolupie ndamusc idemporeped moditemqui 
-                            a sed maion non eiuntis volut la si teni aruptae 
-                            volupic temolor autesti stibus ad ma nis eumquat 
-                            iumentur? Daecae. Itae. Nam lanturescium dio erferia 
-                            necab imolore ea ipsus ipisquiam.
-                        </p>
-                    </IllustratedSection>
+                    {
+                        map(leistungen, (leistung, idx) => {
+                            return (
+                                <IllustratedSection
+                                        title={leistung.data.title}
+                                        subTitle={leistung.data.subTitle}
+                                        illustration={'icon_' + leistung.data.icon}>
+                                    <div dangerouslySetInnerHTML={{ __html: leistung.data.body }} />
+                                </IllustratedSection>
+                            ) 
+                        })
+                    }
 
                     <Hero image="/img/wald_buro.jpg">
                         <Link to="/arbeitsweisen/" className="cta">
