@@ -9,9 +9,13 @@ export default class Teaser extends React.Component {
         return (
             <section className="section_content section_content--single">
                 <div className="section_content-single">
-                    <h1 className="page_heading">
-                        { title }
-                    </h1>
+                    { title ?
+                        <h1 className="page_heading">
+                            { title }
+                        </h1> :
+                        null
+                    }
+                    
                     <p className={style.text}>
                         { children }
                     </p>
