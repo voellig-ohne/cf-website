@@ -22,13 +22,12 @@ export default class Index extends React.Component {
 
                 <section className="section_content section_content--argument">
                     <div className="section_content-main">
-                        <h1>Es ist mehr als nur eine E-Mail.</h1>
                         <p>
-                            Wir sehen E-Mail Marketing langfristig. Eine
-                            Zusammenwirkung zwischen Marketing/CRM und
-                            IT-Abteilung. Zielgenaue Kommunikation mit dem
-                            Kunden. Weniger ist mehr. Dafür passender und
-                            wertvoller.
+                            Jede E-Mail ist anders. Jeder Kunde ist anders. Wir 
+                            sind auf E-Mail-Marketing und digitalem Dialog 
+                            spezialisiert und können in den verschiedensten 
+                            Spektren unterstützen, um das Beste aus Ihrem Potenzial 
+                            zu schaffen.
                         </p>
                     </div>
                     <div className="section_content-secondary">
