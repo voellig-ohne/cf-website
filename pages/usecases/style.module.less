@@ -1,0 +1,43 @@
+@import "~style/vars";
+
+@bubbleSize: 14rem;
+
+.bubble {
+    background: @red;
+    width: @bubbleSize;
+    height: @bubbleSize;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: @font-size-l;
+    font-family: @heading-font;
+    color: @bright;
+    text-align: center;
+    line-height: 1;
+    flex: 0 0 auto;
+
+    &-inner {
+        margin-top: 1rem;
+    }
+}
+
+.container {
+    display: flex;
+}
+
+.body {
+    margin-left: 2rem;
+}
+
+.icons {
+    height: @bubbleSize;
+    display: flex;
+    align-items: flex-end;
+
+    > * {
+        height: 5rem;
+        width: 5rem;
+        margin-right: 1rem;
+    }
+}
