@@ -7,6 +7,7 @@ import { filter, map } from 'lodash'
 import Hero from 'components/Hero'
 import MiniForrestGroup from 'components/MiniForrestGroup'
 import Illustration from 'components/Illustration'
+import Teaser from 'components/Teaser'
 import style from './style.module.less'
 import classNames from 'classNames'
 
@@ -28,9 +29,9 @@ export default class UseCases extends React.Component {
                         </header>
                     </section>
 
-                    <section className="section_content">
-                        <h1 className="page_heading">Use Cases</h1>
-                    </section>
+                    <Teaser title="Use Cases">
+                        Unterschiedliche Herausforderungen erfordern unterschiedliches KnowHow und Herangehensweisen. Mehr Details über erfolgreiche Projekte lesen Sie hier nach.
+                    </Teaser>
 
                     {
                         map(cases, (useCase, idx) => {
