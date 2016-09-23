@@ -5,6 +5,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 2rem;
+
+    @media (max-width: (@contentWidth / 2)) {
+        padding: 0 1rem;
+    }
 
     @media (max-width: @break) {
         display: block;
@@ -13,8 +18,8 @@
 }
 
 .illustration-wrap, .text {
-    flex: 0 1 (@contentWidth / 2);
-    margin: 1rem;
+    @width: (@contentWidth / 2);
+    flex: 0 1 ~"calc(@{width} - 1rem)";
 }
 
 @illustrationBreak: 400px;
@@ -26,6 +31,10 @@
     @media (max-width: @illustrationBreak) {
         flex-direction: column;
         text-align: center;
+    }
+
+    @media (min-width: @illustrationBreak) {
+        margin-right: 1rem;
     }
 }
 
@@ -42,5 +51,11 @@
     @media (min-width: @illustrationBreak) {
         flex-direction: column;
         margin-right: 1rem;
+    }
+}
+
+.text {
+    @media (min-width: @illustrationBreak) {
+        margin-left: 1rem;
     }
 }

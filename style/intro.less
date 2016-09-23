@@ -56,10 +56,14 @@
         margin: 10rem 2rem;
         line-height: 1;
         max-width: (@contentWidth * .5);
+
+        @media (max-width: (@contentWidth / 2)) {
+            margin: 10rem 1rem;
+        }
     }
 
     &-header {
-        max-width: @contentWidth;
+        max-width: ~"calc(@{contentWidth} + 4rem)";
         flex: 1 1 auto;
         pointer-events: none;
         z-index: 1;

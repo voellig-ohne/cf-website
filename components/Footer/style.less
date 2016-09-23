@@ -27,8 +27,9 @@
     }
 
     &-section {
+        @width: (@contentWidth / 2);
         flex: 1 1 (@sideMinWidth / 2);
-        max-width: (@contentWidth / 2);
+        max-width: ~"calc(@{width} - 2rem)";
         margin:  2rem;
 
         @media (max-width: (@contentWidth / 2)) {
