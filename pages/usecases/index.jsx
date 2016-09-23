@@ -53,7 +53,7 @@ export default class UseCases extends React.Component {
 
 class UseCase extends React.Component {
     render() {
-        const { title, subTitle, intro, body, icons } = this.props.useCase
+        const { title, intro, body, icons } = this.props.useCase
         const index = this.props.index
 
         return (
@@ -76,7 +76,6 @@ class UseCase extends React.Component {
                         <h1 className={style.title}>
                             {title}
                         </h1>
-                        <p>{ subTitle }</p>
                         <p>{ intro }</p>
                         <div dangerouslySetInnerHTML={{ __html: body }} />
                     </div>
