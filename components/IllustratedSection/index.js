@@ -9,8 +9,6 @@ export default class IllustratedSection extends React.Component{
         const { illustration, title } = this.props
         const className = classNames(this.props.className, style.section)
 
-        console.log(style)
-
         return (
             <section className={ className }>
                 <div className={ style['illustration-wrap'] }>
