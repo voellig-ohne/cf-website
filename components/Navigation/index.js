@@ -8,7 +8,7 @@ export default class Navigation extends React.Component {
         const links = [
             {
                 link: '/',
-                title: 'start'
+                title: 'über uns'
             },{
                 link: '/leistungen/',
                 title: 'unsere leistungen'
@@ -20,7 +20,7 @@ export default class Navigation extends React.Component {
                 title: 'use cases'
             },{
                 link: '/workshops/',
-                title: 'coaching & workshops'
+                title: 'workshops'
             }
         ]
 
