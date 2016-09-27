@@ -59,27 +59,27 @@ class UseCase extends React.Component {
 
         return (
             <section className="section_content section_content--single">
-                <div className={classNames('section_content-single', 'section_content-single--wide', style.container)}>
-                    <div className={style.bubble}>
-                        <span className={style['bubble-inner']}>
-                            Use Case<br />
-                            #{ index + 1 }
-                        </span>
+                <div className={classNames('section_content-single', style.container)}>
+                    <div className={style['bubble-container']}>
+                        <div className={style.bubble}>
+                            <span className={style['bubble-inner']}>
+                                Use Case<br />
+                                #{ index + 1 }
+                            </span>
+                        </div>                        
                     </div>
-                    <div className={style.body}>
-                        <div className={style.icons}>
-                            {
-                                map(icons, (icon) => {
-                                    return <Illustration key={icon} illustration={'icon_' + icon} />
-                                })
-                            }
-                        </div>
-                        <h1 className={style.title}>
-                            {title}
-                        </h1>
-                        <p>{ intro }</p>
-                        <div dangerouslySetInnerHTML={{ __html: body }} />
+                    <div className={style.icons}>
+                        {
+                            map(icons, (icon) => {
+                                return <Illustration key={icon} illustration={'icon_' + icon} />
+                            })
+                        }
                     </div>
+                    <h2 className={style.title}>
+                        {title}
+                    </h2>
+                    <p>{ intro }</p>
+                    <div dangerouslySetInnerHTML={{ __html: body }} />
                 </div>
             </section>
         )
