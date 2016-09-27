@@ -37,7 +37,8 @@ export default class Leistungen extends React.Component {
                                 <IllustratedSection
                                         title={leistung.data.title}
                                         subTitle={leistung.data.subTitle}
-                                        illustration={'icon_' + leistung.data.icon}>
+                                        illustration={'icon_' + leistung.data.icon}
+                                        key={idx}>
                                     <div dangerouslySetInnerHTML={{ __html: leistung.data.body }} />
                                 </IllustratedSection>
                             ) 
