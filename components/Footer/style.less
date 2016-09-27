@@ -5,11 +5,15 @@
     background: @dark;
     color: @bright;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
     -webkit-font-smoothing: antialiased;
     margin-top:  4rem;
+    padding: 1rem;
+
+    @media (max-width: @break) {
+        display: block;
+    }
 
     p {
         line-height: 1;
@@ -29,11 +33,11 @@
     &-section {
         @width: (@contentWidth / 2);
         flex: 1 1 (@sideMinWidth / 2);
-        max-width: ~"calc(@{width} - 2rem)";
-        margin:  2rem;
+        max-width: ~"calc(@{width} - 1rem)";
+        margin: 1rem;
 
         @media (max-width: (@contentWidth / 2)) {
-            margin: 1rem;
+            margin: 1rem 0;
         }
     }
 
