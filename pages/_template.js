@@ -15,7 +15,6 @@ module.exports = React.createClass({
         }
     },
     render () {
-        console.log(this)
         return (
             <div>
                 {this.props.children}
