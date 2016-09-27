@@ -26,7 +26,10 @@ a {
 
 p {
     line-height: 1.5;
-    font-size: @font-size-m;
+
+    @media (min-width: 400px) {
+        font-size: @font-size-m;
+    }
 }
 
 dl {
