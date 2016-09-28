@@ -2,18 +2,18 @@
 
 .section_content {
     padding: 2rem;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: stretch;
-
+    
     @media (max-width: @break) {
         padding: 1rem;
+        margin-bottom: 0;
     }
 
     @media (min-width: @break) {
+        display: flex;      
+        justify-content: flex-end;
         align-items: center;
         flex-direction: row;
+        margin-bottom: 2rem;
 
         &:not(&--argument) {
             &:nth-of-type(even) {
@@ -98,6 +98,7 @@
 
     &-single {
         flex: 0 1 (@contentWidth / 2);
+        flex-direction: column;
 
         &--wide {
             flex-basis: @contentWidth;
