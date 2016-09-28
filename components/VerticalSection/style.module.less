@@ -12,12 +12,19 @@
     @media (min-width: @break) {
         margin: 2rem;
     }
+
+    @media (max-width: @break) {
+        margin-top: 6rem;
+    }
 }
 
 .illustration_container {
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
+
+    @media (min-width: @break) {
+        margin-bottom: 2rem;
+    }
 }
 
 .illustration {
