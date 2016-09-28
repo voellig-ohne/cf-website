@@ -104,13 +104,10 @@ export default class Index extends React.Component {
                     <h1>Für jeden Wald der richtige Fuchs.</h1>
 
                     <p>
-                        (Use Cases) Analyse Umsetzung Template-
-                        Programmierung Projektmanagement Design
-                        Versandunterstützung Seminare & Workshops Es
-                        id quibusdam quam aut quia volum fugia culloriat.
-                        Atur alicatur a del is eum natis maio. Itam explaut
-                        quibus et asperciendam rendus delectus que nonsequi
-                        doluptius, idellessit acesto quo molum dello et, sus.
+                        Unterschiedliche Herausforderungen erfordern 
+                        unterschiedliches KnowHow und Herangehensweisen. 
+                        Mehr Details über erfolgreiche Projekte lesen Sie 
+                        hier nach.
                     </p>
                 </IntroSection>
 
