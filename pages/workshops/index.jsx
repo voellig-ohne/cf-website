@@ -6,6 +6,7 @@ import { config } from 'config'
 import Forrest from 'components/Forrest'
 import Hero from 'components/Hero'
 import VerticalSection from 'components/VerticalSection'
+import QuoteSection from 'components/QuoteSection'
 import { map, filter } from 'lodash' 
 
 export default class Workshops extends React.Component {
@@ -35,6 +36,14 @@ export default class Workshops extends React.Component {
                     </section>
 
                     <VerticalSection sections={workshops} />
+
+                    <QuoteSection author="Marcus Hahner">
+                        Workshop mit perfektem Tiefgang und sagenhafter Bandbreite – ein Muss für alle, die das Thema EMM ernst nehmen.
+                    </QuoteSection>
+
+                    <QuoteSection author="Axel Becker">
+                        Ein praxisbezogener Workshop vollgepackt mit Infos, Tipps & Tricks. Keine Frage bleibt unbeantwortet!
+                    </QuoteSection>
 
                     <Hero image="/img/wald_telefon.jpg">
                         <a href="mailto:cf@undwald.de" className="cta">
