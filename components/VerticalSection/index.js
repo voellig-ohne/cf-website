@@ -21,6 +21,13 @@ export default class VerticalSection extends React.Component {
                                             <Illustration illustration={section.icon} className={style.illustration} />
                                         </div>
                                         <h2>{ section.title }</h2>
+                                        {
+                                            section.subTitle ?
+                                            <p className={style.sub_title}>
+                                                { section.subTitle }
+                                            </p> :
+                                            null
+                                        }
                                         <div dangerouslySetInnerHTML={{ __html: section.body }} />
                                     </div>
                                 )
