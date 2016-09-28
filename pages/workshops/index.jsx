@@ -5,9 +5,17 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import Forrest from 'components/Forrest'
 import Hero from 'components/Hero'
+import VerticalSection from 'components/VerticalSection'
+import { map, filter } from 'lodash' 
 
 export default class Workshops extends React.Component {
     render() {
+        const workshops = map(filter(this.props.route.pages, (page) => {
+            return page.path.includes('/workshops/workshops')
+        }), (page) => {
+            return page.data
+        })
+
         return (
             <DocumentTitle title={ config.siteTitle  + ' | workshops' }>
                 <main>
@@ -25,6 +33,8 @@ export default class Workshops extends React.Component {
                     <section className="section_content">
                         <h1 className="page_heading">Coaching & Workshops</h1>
                     </section>
+
+                    <VerticalSection sections={workshops} />
 
                     <Hero image="/img/wald_telefon.jpg">
                         <a href="mailto:cf@undwald.de" className="cta">
