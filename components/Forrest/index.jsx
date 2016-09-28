@@ -131,7 +131,8 @@ export default class Forrest extends React.Component {
                                     idxRow={idxRow}
                                     onMouseEnter={this.onMouseEnter.bind(this)}
                                     foxPositions={this.state.foxPositions}
-                                    isFoxFn={this.isFox} />
+                                    isFoxFn={this.isFox}
+                                    rowCount={this.state.grid.length} />
                             )
                         })
                     }
@@ -141,9 +142,12 @@ export default class Forrest extends React.Component {
     }
 }
 
-function Row ({ row, idxRow, onMouseEnter, foxPositions, isFoxFn }) {
+function Row ({ row, idxRow, onMouseEnter, foxPositions, isFoxFn, rowCount }) {
+    const rowHeight = 100 / rowCount + '%';
+    const elementWidth = 100 / row.length + '%';
     return (
-        <div className="forrest-row">
+        <div className="forrest-row"
+                style={ { height: rowHeight } }>
             {
                 map(row, (element, idxElement) => {
                     const currentPosition = { row: idxElement, column: idxRow }
@@ -165,6 +169,7 @@ function Row ({ row, idxRow, onMouseEnter, foxPositions, isFoxFn }) {
                         return (
                             <Illustration illustration="element"
                                 className={classes}
+                                style={ { width: elementWidth } }
                                 key={idxElement}
                                 onMouseEnter={onMouseEnter.bind(null, isFox, currentPosition)} />
                         )
@@ -173,6 +178,7 @@ function Row ({ row, idxRow, onMouseEnter, foxPositions, isFoxFn }) {
                     return (
                         <div className={classes}
                             key={idxElement}
+                            style={ { width: elementWidth } }
                             onMouseEnter={onMouseEnter.bind(null, isFox, currentPosition)} />
                     )
                 })
