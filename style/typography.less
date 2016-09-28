@@ -69,3 +69,15 @@ dt {
 .dont-break {
     display: inline-block;
 }
+
+blockquote {
+    quotes: "«" "»" "‘" "’";
+    
+    &:before {
+        content: open-quote;
+    }
+
+    &:after {
+        content: close-quote;
+    }
+}
