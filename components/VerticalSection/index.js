@@ -20,7 +20,6 @@ export default class VerticalSection extends React.Component {
                                         <div className={style.illustration_container}>
                                             <Illustration illustration={section.icon} className={style.illustration} />
                                         </div>
-                                        <h2>{ section.title }</h2>
                                         {
                                             section.subTitle ?
                                             <p className={style.sub_title}>
@@ -28,6 +27,7 @@ export default class VerticalSection extends React.Component {
                                             </p> :
                                             null
                                         }
+                                        <h2>{ section.title }</h2>
                                         <div dangerouslySetInnerHTML={{ __html: section.body }} />
                                     </div>
                                 )
