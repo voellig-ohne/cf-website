@@ -21,7 +21,9 @@ export default class UseCases extends React.Component {
             <DocumentTitle title={ config.siteTitle + ' | use cases' }>
                 <main>
                     <section className="sub_intro">
-                        <MiniForrestGroup className="sub_intro-forrest" />
+                        <div className="sub_intro-forrest">
+                            <MiniForrestGroup  />
+                        </div>
                         <header className="sub_intro-header">
                             <h1 className="sub_intro-heading">
                                 Für jeden Wald der richtige Fuchs.

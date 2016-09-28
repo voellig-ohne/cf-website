@@ -1,5 +1,8 @@
 @import "~style/vars";
 
+@tall: ~"15/10";
+@wide: ~"10/19";
+
 .forrest {
     display: flex;
     justify-content: center;
@@ -7,7 +10,7 @@
     flex-direction: column;
 
     // wide screen
-    @media (min-aspect-ratio: 15/10) {
+    @media (min-aspect-ratio: @tall) {
         width: 25%;
         height: 50%;
 
@@ -22,7 +25,7 @@
     }
 
     // tall screen
-    @media (max-aspect-ratio: 10/15) {
+    @media (max-aspect-ratio: @wide) {
         width: 50%;
         height: 25%;
 
@@ -48,7 +51,7 @@
     }
 
     // squarish screen
-    @media (max-aspect-ratio: 15/10) and (min-aspect-ratio: 10/15)  {
+    @media (max-aspect-ratio: @tall) and (min-aspect-ratio: @wide)  {
         width: 33.3333%;
         height: 33.3333%;
 
