@@ -1,7 +1,9 @@
 @import '~style/vars';
 
+@breakSections: (@contentWidth * .66);
+
 .sections {
-    @media (min-width: @break) {
+    @media (min-width: @breakSections) {
         display: flex;
         flex-direction: row;
         margin: -2rem;
@@ -9,11 +11,12 @@
 }
 
 .section {
-    @media (min-width: @break) {
+    @media (min-width: @breakSections) {
         margin: 2rem;
+        width: 33.33%;
     }
 
-    @media (max-width: @break) {
+    @media (max-width: @breakSections) {
         margin-top: 6rem;
     }
 }
@@ -22,7 +25,7 @@
     display: flex;
     justify-content: center;
 
-    @media (min-width: @break) {
+    @media (min-width: @breakSections) {
         margin-bottom: 2rem;
     }
 }
