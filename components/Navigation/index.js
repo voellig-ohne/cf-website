@@ -11,7 +11,7 @@ export default class Navigation extends React.Component {
                 title: 'über uns'
             },{
                 link: '/leistungen/',
-                title: 'unsere leistungen'
+                title: 'leistungen'
             },{
                 link: '/arbeitsweisen/',
                 title: 'arbeitsweisen'

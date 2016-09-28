@@ -28,7 +28,7 @@ export default class Leistungen extends React.Component {
                     </section>
 
                     <section className="section_content">
-                        <h1 className="page_heading">Unsere Leistungen</h1>
+                        <h1 className="page_heading">Leistungen</h1>
                     </section>
 
                     {
