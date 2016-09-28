@@ -23,7 +23,7 @@ export default class Index extends React.Component {
                 <section className="section_content section_content--argument">
                     <div className="section_content-main">
                         <h1>
-                            Es ist mehr als nur eine E-Mail. 
+                            Es ist mehr als nur eine <span className="dont-break">E-Mail</span>. 
                         </h1>
                         <p>
                             Wir stehen für 360°Grad mit E-Mail-Marketing im Digitaldialog. 
