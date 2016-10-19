@@ -36,8 +36,10 @@
         margin: 2rem 0;
         font-size: @font-size-m;
 
-        .section_content-main {
-            margin-right: 2rem;
+        @media (min-width: @break) {
+            .section_content-main {
+                margin-right: 2rem;
+            }
         }
     }
 
@@ -82,7 +84,7 @@
         max-width: ~"calc(@{width} - 1rem)";
 
         @media (max-width: @break) {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
     }
 
