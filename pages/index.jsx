@@ -38,23 +38,23 @@ export default class Index extends React.Component {
                             <div className="circles-circle">
                                 <Illustration illustration="icon_planung"
                                     className="circles-image" />
-                                <span className="circles-title">
+                                <div className="circles-title">
                                     Planung
-                                </span>
+                                </div>
                             </div>
                             <div className="circles-circle">
                                 <Illustration illustration="icon_programmierung"
                                     className="circles-image" />
-                                <span className="circles-title">
-                                    Programmierung
-                                </span>
+                                <div className="circles-title">
+                                    Program&shy;mierung
+                                </div>
                             </div>
                             <div className="circles-circle">
                                 <Illustration illustration="icon_beratung"
                                     className="circles-image"/>
-                                <span className="circles-title">
+                                <div className="circles-title">
                                     Beratung
-                                </span>
+                                </div>
                             </div>
                         </div>
                     </div>
