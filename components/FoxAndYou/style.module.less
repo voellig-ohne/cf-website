@@ -1,7 +1,7 @@
 @import "~style/vars";
 
-.animal, .fox {
-    width: 2rem;
+.fox {
+    width: 4rem;
 }
 
 .container {
@@ -18,10 +18,24 @@
         flex-direction: column;
         justify-content: center;
     }
+
+    &-animals {
+        justify-content: flex-start;
+        transition: all 3s;
+    }
 }
 
 .animal {
+    padding: 1rem 0;
+
     svg {
+        height: 100%;
         fill: @green;
+    }
+
+    &--active {
+        svg {
+            fill: @red;
+        }
     }
 }
