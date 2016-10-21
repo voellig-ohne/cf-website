@@ -67,6 +67,10 @@ export default class FoxAndYou extends React.Component {
         if (typeof window !== 'undefined') {
             this.onResize()
             window.addEventListener('resize', this.onResize.bind(this))
+
+            setTimeout(() => {
+                this.goSlide();
+            }, 1500)
         }
     }
     componentWillUnmount() {
