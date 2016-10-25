@@ -16,8 +16,6 @@ export default class Leistungen extends React.Component {
             return page.data.order
         })
 
-        console.log(leistungen)
-
         return (
             <DocumentTitle title={ config.siteTitle + ' | leistungen'  }>
                 <main>
