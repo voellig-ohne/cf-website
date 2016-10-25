@@ -32,8 +32,6 @@ export default class Forrest extends React.Component {
         this.boundResize = this.onResize.bind(this)
 
         this.density = props.density || .8
-
-        console.log('hello, constructing')
     }
     componentDidMount() {
         if (typeof window !== 'undefined') {
@@ -88,8 +86,6 @@ export default class Forrest extends React.Component {
             width: this.container.offsetWidth
         }
 
-        console.log(this.container, this.container.offsetWidth)
-
         return {
             height: windowSize.height / elementSize.height,
             width: windowSize.width / elementSize.width
@@ -124,8 +120,6 @@ export default class Forrest extends React.Component {
     }
     render () {
         const { className } = this.props
-
-        console.log(this.state.grid)
 
         return (
             <div className={ classNames('forrest-wrapper', className) }>
