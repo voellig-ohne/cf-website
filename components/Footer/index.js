@@ -46,7 +46,8 @@ export default class Footer extends React.Component {
                 icon: 'home',
                 title: (
                     <span>
-                        Christian Fuchs<br />
+                        fuchs+wald<br /> 
+                        c/o Christian Fuchs<br />
                         Sonnenallee 206<br />
                         12059 Berlin
                     </span>
