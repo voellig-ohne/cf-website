@@ -79,7 +79,7 @@ export default class Footer extends React.Component {
                 </section>
                 <section className="footer-section">
                     <h2>kontakt</h2>
-                    <a href="mailto:kontakt@undwald.de" className="cta">
+                    <a href="mailto:projektanfrage@undwald.de" className="cta">
                         Projektanfrage senden
                     </a>
                 </section>
