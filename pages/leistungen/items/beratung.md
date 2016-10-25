@@ -3,6 +3,7 @@
 title: Beratung & Betreuung
 subTitle: Ausführliche Beratung und Betreuung
 icon: beratung
+order: 3
 
 ---
 

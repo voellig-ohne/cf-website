@@ -2,6 +2,7 @@
 
 title: Analyse & Optimierung
 icon: analyse
+order: 2
 
 ---
 

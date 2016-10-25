@@ -3,6 +3,7 @@
 title: Strategie & Konzeption
 subTitle: Entwicklung eines Visuellen wie inhaltlichen Konzepts
 icon: entwicklung
+order: 4
 
 ---
 

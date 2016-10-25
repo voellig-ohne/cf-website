@@ -3,6 +3,7 @@
 title: Programmierung
 subTitle: Technische Umsetzung
 icon: programmierung
+order: 6
 
 ---
 

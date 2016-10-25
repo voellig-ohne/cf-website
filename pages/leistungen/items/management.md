@@ -3,6 +3,7 @@
 title: Interim- & Projektmanagement
 subTitle: Projektmanagement und Expertise
 icon: planung
+order: 1
 
 ---
 

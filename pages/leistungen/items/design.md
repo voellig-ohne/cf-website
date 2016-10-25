@@ -3,6 +3,7 @@
 title: Design
 subTitle: Optimaler Anstrich für E-Mails
 icon: gestaltung
+order: 5
 
 ---
 
