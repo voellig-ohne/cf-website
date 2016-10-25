@@ -39,6 +39,12 @@
 
 .container {
     position: relative;
+
+    @media (max-width: @useCaseBreak) {
+        h2 {
+            text-align: center;
+        }
+    }
 }
 
 .icons {
