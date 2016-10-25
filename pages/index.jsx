@@ -113,7 +113,7 @@ export default class Index extends React.Component {
                 </IntroSection>
 
                 <IntroSection
-                        cta={{link: '/usecases/', text: 'die arbeitsweisen'}}
+                        cta={{link: '/arbeitsweisen/', text: 'die arbeitsweisen'}}
                         illustration={(<FoxAndYou 
                             className="section_content-graphic-image" />)}>
                     <h1>Der Fuchs und Du.</h1>
