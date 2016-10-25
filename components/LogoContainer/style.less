@@ -1,3 +1,5 @@
+@smartPhoneWidth: 500px;
+
 .logo {
     display: flex;
     justify-content: center;
@@ -13,11 +15,14 @@
         width: 100%;
         position: fixed;
         bottom: 0;
+        z-index: 1;
 
         &--fixedTop {
-            position: absolute;
-            top: 100vh;
-            bottom: auto;
+            @media (min-width: @smartPhoneWidth) {
+                position: absolute;
+                top: 100vh;
+                bottom: auto;
+            }
         }
 
         &--fixedBottom {

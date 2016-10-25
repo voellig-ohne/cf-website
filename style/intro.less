@@ -6,6 +6,8 @@
     justify-content: center;
     align-items: stretch;
     height: 100vh;
+    z-index: 2;
+    position: relative;
 
     @media (max-aspect-ratio: 1/1) {
         flex-direction: column;
@@ -41,6 +43,7 @@
     align-items: flex-end;
     justify-content: center;
     margin-bottom: 5rem;
+    z-index: 2;
 
     @media (max-width: @mobileSize) {
         flex-direction: column;
