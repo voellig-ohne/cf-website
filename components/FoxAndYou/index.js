@@ -33,33 +33,35 @@ export default class FoxAndYou extends React.Component {
             transform: 'translateY(' + this.state.scroll + ')'
         }
 
-        const containerClasses = classNames(style.container, this.props.className)
+        const containerClasses = classNames(this.props.className)
 
         return (
             <div className={containerClasses}
                 onClick={this.goSlide.bind(this)}
                 ref={(c) => this.containerEl = c}>
-                <div className={style['container-fox']}>
-                    <Illustration
-                        illustration="fuchs"
-                        className={style.fox} />
-                </div>
-                <div className={style['container-animals']}
-                    style={slideTransform}>
-                    {
-                        map(multipleAnimals, (animal, idx) => {
-                            const classes = classNames(style.animal, {
-                                [style['animal--active']]: idx === this.state.targetAnimalIndex
+                <div className={style.container}>
+                    <div className={style['container-fox']}>
+                        <Illustration
+                            illustration="fuchs"
+                            className={style.fox} />
+                    </div>
+                    <div className={style['container-animals']}
+                        style={slideTransform}>
+                        {
+                            map(multipleAnimals, (animal, idx) => {
+                                const classes = classNames(style.animal, {
+                                    [style['animal--active']]: idx === this.state.targetAnimalIndex
+                                })
+                                return (
+                                    <Illustration
+                                        key={idx}
+                                        illustration={animal}
+                                        className={classes} 
+                                        style={{height: this.state.animalHeight + 'px'}} />
+                                )
                             })
-                            return (
-                                <Illustration
-                                    key={idx}
-                                    illustration={animal}
-                                    className={classes} 
-                                    style={{height: this.state.animalHeight + 'px'}} />
-                            )
-                        })
-                    }
+                        }
+                    </div>
                 </div>
             </div>
         )
