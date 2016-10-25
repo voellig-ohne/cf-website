@@ -45,7 +45,7 @@ export default class Workshops extends React.Component {
                         Ein praxisbezogener Workshop vollgepackt mit Infos, Tipps & Tricks. Keine Frage bleibt unbeantwortet!
                     </QuoteSection>
 
-                    <Hero image="/img/wald_telefon.jpg">
+                    <Hero image="wald_telefon">
                         <a href="mailto:kontakt@undwald.de" className="cta">
                             Treten Sie in Kontakt!
                         </a>

@@ -30,7 +30,7 @@ export default class Arbeitsweisen extends React.Component {
 
                     <VerticalSection sections={weisen} />
 
-                    <Hero image="/img/wald_briefe.jpg">
+                    <Hero image="wald_briefe">
                         <Link to="/usecases/" className="cta">
                             Lesen Sie Use-Cases
                         </Link>

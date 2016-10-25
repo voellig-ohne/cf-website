@@ -112,7 +112,7 @@ export default class Index extends React.Component {
                     </p>
                 </IntroSection>
 
-                <Hero image="/img/wald_seile.jpg">
+                <Hero image="wald_seile">
                     <Link className="cta" to="/leistungen/">
                         Finden Sie mit uns durch den Wald
                     </Link>

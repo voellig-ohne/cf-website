@@ -43,7 +43,7 @@ export default class UseCases extends React.Component {
                         })
                     }
                     
-                    <Hero image="/img/wald_workshop.jpg">
+                    <Hero image="wald_workshop">
                         <Link to="/workshops/" className="cta">
                             Werden Sie zum Fuchs!
                         </Link>

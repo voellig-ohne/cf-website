@@ -47,7 +47,7 @@ export default class Leistungen extends React.Component {
                         })
                     }
 
-                    <Hero image="/img/wald_buro.jpg">
+                    <Hero image="wald_buro">
                         <Link to="/arbeitsweisen/" className="cta">
                             Wie arbeitet fuchs+wald?
                         </Link>

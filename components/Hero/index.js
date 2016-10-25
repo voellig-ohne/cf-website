@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.less'
 import Illustration from 'components/Illustration'
+import ResponsiveImage from 'components/ResponsiveImage'
 import { Link } from 'react-router'
 import classNames from 'classNames'
 
@@ -24,7 +25,7 @@ export default class Hero extends React.Component{
 
         return (
             <section className={className}>
-                <img src={image} className="hero-image"/>
+                <ResponsiveImage source={image} className="hero-image"/>
                 <div className="hero-text">
                     <div>
                         {
