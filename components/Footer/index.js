@@ -2,46 +2,14 @@ import React from 'react'
 import { map } from 'lodash'
 import './style.less'
 import { Link } from 'react-router'
+import Illustration from 'components/Illustration'
 
 export default class Footer extends React.Component {
     render() {
-        const infoList = [
-            {
-                title: 'telefon',
-                value: '+49 (0) 162 24 16 317'
-            }, {
-                title: 'e-mail',
-                value: (
-                    <a href="mailto:fuchs@undwald.de">
-                        fuchs@undwald.de
-                    </a>
-                )
-            }, {
-                title: 'twitter',
-                value: (
-                    <a href="https://twitter.com/FuchsUndWald">
-                        @FuchsUndWald
-                    </a>
-                )
-            }, {
-                title: 'xing',
-                value: (
-                    <a href="http://xing.to/christianfuchs">
-                        christianfuchs
-                    </a>
-                )
-            }, {
-                title: 'USt-ID',
-                value: 'DE296427768'
-            }, {
-                title: 'web',
-                value: (
-                    <a href="http://fuchs.undwald.de">
-                        fuchs.undwald.de
-                    </a>
-                ), 
-            }, {                
-                title: 'anschrift',
+        const infoList = [{                
+                title: (
+                    <Illustration illustration="home" />
+                ),
                 value: (
                     <span>
                         Christian Fuchs<br />
@@ -49,7 +17,45 @@ export default class Footer extends React.Component {
                         12059 Berlin
                     </span>
                 )
+            },{                
+                title: (
+                    <b>§</b>
+                ),
+                value: (
+                    <Link to="/haftungsausschluss/">
+                        Impressum
+                    </Link>
+                )
             },
+        ]
+
+        const socialMedia = [
+            {
+                icon: 'twitter',
+                link: 'https://twitter.com/FuchsUndWald',
+                title: '@FuchsUndWald'
+            }, {
+                icon: 'xing',
+                link: 'http://xing.to/christianfuchs',
+                title: 'christianfuchs'
+            }, {
+                icon: 'facebook',
+                link: 'https://www.facebook.com/fuchsundwald',
+                title: 'fuchs+wald'
+            }, {
+                icon: 'home',
+                title: (
+                    <span>
+                        Christian Fuchs<br />
+                        Sonnenallee 206<br />
+                        12059 Berlin
+                    </span>
+                )
+            }, {
+                iconChar: '§',
+                link: '/haftungsausschluss/',
+                title: 'Impressum'
+            }
         ]
 
         return (
@@ -62,20 +68,32 @@ export default class Footer extends React.Component {
                     </p>
                     <dl>
                     {
-                        map(infoList, (info, idx) => {
+                        map(socialMedia, (info, idx) => {
                             return (
                                 <div key={ idx }>
-                                    <dt>{ info.title }</dt>
-                                    <dd>{ info.value }</dd>
+                                    <dt>
+                                        { 
+                                            info.iconChar ? 
+                                            info.iconChar : 
+                                            ( <Illustration illustration={info.icon} /> )    
+                                        }
+                                    </dt>
+                                    <dd>
+                                        { 
+                                            !info.link ? 
+                                            info.title : 
+                                            ( 
+                                                <Link to={info.link}>
+                                                    { info.title }
+                                                </Link>
+                                            )    
+                                        }
+                                    </dd>
                                 </div>
                             )
                         })
                     }
                     </dl>
-                    <Link className="footer-link_impressum" to="/haftungsausschluss/">
-                        Impressum
-                    </Link>
-
                 </section>
                 <section className="footer-section">
                     <h2>kontakt</h2>

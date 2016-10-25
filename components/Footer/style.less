@@ -25,6 +25,13 @@
         }
     }
 
+    dt {
+        svg {
+            fill: white;
+            height: 1em;
+        }
+    }
+
     h2 {
         margin-top: 0;
         line-height: 1.2
@@ -46,6 +53,13 @@
         font-weight: normal;
         font-size: @font-size-m;
         line-height: 1.2;
+
+
+        a {
+            &:hover {
+                color: @green;
+            }
+        }
 
         p {
             margin: .5em 0;
@@ -109,10 +123,5 @@
     &-button_container {
         display: flex;
         justify-content: flex-end;
-    }
-
-    &-link_impressum {
-        text-decoration: none;
-        font-style: italic;
     }
 }
