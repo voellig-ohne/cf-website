@@ -7,6 +7,7 @@ import Illustration from '../components/Illustration'
 import Hero from '../components/Hero'
 import Forrest from '../components/Forrest'
 import MiniForrestGroup from '../components/MiniForrestGroup'
+import FoxAndYou from '../components/FoxAndYou'
 
 export default class Index extends React.Component {
     render() {
@@ -111,6 +112,20 @@ export default class Index extends React.Component {
                     </p>
                 </IntroSection>
 
+                <IntroSection
+                        cta={{link: '/usecases/', text: 'die arbeitsweisen'}}
+                        illustration={(<FoxAndYou 
+                            className="section_content-graphic-image" />)}>
+                    <h1>Der Fuchs und Du.</h1>
+
+                    <p>
+                        Unterschiedliche Herausforderungen erfordern 
+                        unterschiedliches KnowHow und Herangehensweisen. 
+                        Mehr Details über erfolgreiche Projekte lesen Sie 
+                        hier nach.
+                    </p>
+                </IntroSection>
+
                 <Hero image="/img/wald_seile.jpg">
                     <Link className="cta" to="/leistungen/">
                         Finden Sie mit uns durch den Wald
@@ -133,7 +148,7 @@ class IntroSection extends React.Component {
 
                     <Link to={cta.link}
                         className="cta">
-                        {cta.text}
+                        { cta.text }
                     </Link>
                 </div>
                 <div className="section_content-secondary">

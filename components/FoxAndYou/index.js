@@ -33,16 +33,18 @@ export default class FoxAndYou extends React.Component {
             transform: 'translateY(' + this.state.scroll + ')'
         }
 
+        const containerClasses = classNames(style.container, this.props.className)
+
         return (
-            <div className={style.container}
-                onClick={this.goSlide.bind(this)}>
+            <div className={containerClasses}
+                onClick={this.goSlide.bind(this)}
+                ref={(c) => this.containerEl = c}>
                 <div className={style['container-fox']}>
                     <Illustration
                         illustration="fuchs"
                         className={style.fox} />
                 </div>
                 <div className={style['container-animals']}
-                    ref={(c) => this.animals = c}
                     style={slideTransform}>
                     {
                         map(multipleAnimals, (animal, idx) => {
@@ -62,10 +64,12 @@ export default class FoxAndYou extends React.Component {
             </div>
         )
     }
-
     componentDidMount() {
         if (typeof window !== 'undefined') {
-            this.onResize()
+            setTimeout(() => {
+                this.onResize()
+            }, 0)
+
             window.addEventListener('resize', this.onResize.bind(this))
 
             setTimeout(() => {
@@ -85,11 +89,11 @@ export default class FoxAndYou extends React.Component {
         })
     }
     calculateAnimalRowCount() {
-        let rows = Math.round(window.innerHeight / ANIMAL_HEIGHT)
+        let rows = Math.round(this.containerEl.offsetHeight / ANIMAL_HEIGHT)
         return rows % 2 === 0 ? rows + 1 : rows
     }
     calculateAnimalHeight(animalRows) {
-        return window.innerHeight / animalRows
+        return this.containerEl.offsetHeight / animalRows
     }
     goSlide() {
         const targetAnimalIndex = this.generateTargetAnimal()
