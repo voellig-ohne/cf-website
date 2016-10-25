@@ -112,20 +112,6 @@ export default class Index extends React.Component {
                     </p>
                 </IntroSection>
 
-                <IntroSection
-                        cta={{link: '/arbeitsweisen/', text: 'die arbeitsweisen'}}
-                        illustration={(<FoxAndYou 
-                            className="section_content-graphic-image" />)}>
-                    <h1>Der Fuchs und Du.</h1>
-
-                    <p>
-                        Unterschiedliche Herausforderungen erfordern 
-                        unterschiedliches KnowHow und Herangehensweisen. 
-                        Mehr Details über erfolgreiche Projekte lesen Sie 
-                        hier nach.
-                    </p>
-                </IntroSection>
-
                 <Hero image="/img/wald_seile.jpg">
                     <Link className="cta" to="/leistungen/">
                         Finden Sie mit uns durch den Wald
