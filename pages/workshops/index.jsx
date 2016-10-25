@@ -46,7 +46,7 @@ export default class Workshops extends React.Component {
                     </QuoteSection>
 
                     <Hero image="/img/wald_telefon.jpg">
-                        <a href="mailto:cf@undwald.de" className="cta">
+                        <a href="mailto:kontakt@undwald.de" className="cta">
                             Treten Sie in Kontakt!
                         </a>
                     </Hero>
