@@ -28,6 +28,10 @@ export default class Arbeitsweisen extends React.Component {
                         </header>
                     </section>
 
+                    <section className="section_content">
+                        <h1 className="page_heading">Arbeitsweisen</h1>
+                    </section>
+
                     <VerticalSection sections={weisen} />
 
                     <Hero image="wald_briefe">
