@@ -1,3 +1,5 @@
 exports.onRouteUpdate = function() {
-    window.dispatchEvent(new Event('routeChange'))
+    var event = document.createEvent("Event");
+    event.initEvent("routeChange", false, true); 
+    window.dispatchEvent(event);
 };
