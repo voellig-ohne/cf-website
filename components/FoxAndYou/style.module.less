@@ -12,21 +12,24 @@
     background: white;
 
     &-fox, &-animals {
-        flex: 1 0 auto;
+        flex: 1 0 50%;
+    }
+
+    &-fox {
         display: flex;
         align-items: center;
-        flex-direction: column;
         justify-content: center;
     }
 
     &-animals {
-        justify-content: flex-start;
         transition: all 3s;
     }
 }
 
 .animal {
     padding: 1rem 0;
+    display: flex;
+    justify-content: center;
 
     svg {
         height: 100%;
