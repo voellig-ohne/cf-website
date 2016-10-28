@@ -84,9 +84,9 @@ export default class Footer extends React.Component {
                                             !info.link ? 
                                             info.title : 
                                             ( 
-                                                <Link to={info.link}>
+                                                <a href={info.link}>
                                                     { info.title }
-                                                </Link>
+                                                </a>
                                             )    
                                         }
                                     </dd>
