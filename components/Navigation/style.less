@@ -1,5 +1,7 @@
 @import '~style/vars';
 
+@guessedNavHeight: 250px;
+
 .navigation {
     width: 100%;
     display: flex;
@@ -10,7 +12,11 @@
     font-weight: normal;
     font-size: @font-size-l;
     line-height: 1;
-    min-height: 50vh;
+    padding-top: 2rem;
+
+    @media (min-height: (@guessedNavHeight * 2)) {
+        height: 50vh;
+    }
 
     &-list {
         list-style: none;
