@@ -7,4 +7,4 @@ order: 3
 
 ---
 
-Als unabhängige E-Mail-Marketing Beratung unterstützen wir in den verschiedensten Bereichen zum Auf- und Ausbau Ihrer E-Mail-Marketing Aktivitäten. Egal es sich dabei um die Evaluierung der optimalen Versandlösung, die Übernahme von operativen Tagesgeschäft oder der Beratung bei der Prozessoptimierung handelt.
+Der Wald bietet Ihnen zu viele Wege und unbekanntes Dickicht? Als unabhängige und erfahrene E-Mail-Marketees ist das Digital-Marketing unser Revier. Wir unterstützen Sie in den verschiedensten Bereichen mit dem Ziel Ihre E-Mail-Marketing Aktivitäten auf- und auszubauen. Unabhängig davon, ob es sich um die Evaluierung der optimalen Versandlösung, die Übernahme des operativen Tagesgeschäftes oder der Beratung bei der Prozessoptimierung handelt.

@@ -7,4 +7,4 @@ order: 6
 
 ---
 
-Unsere Programmierer sind Spezialisten auf ihrem Gebiet. Wir schauen uns die neuesten Trends an und beobachten das Tun und Nichttun der verschiedenen E-Mail-Clients. So kann unser produzierter Code ihre E-Mail in jedem Client optimal darstellen. Dabei versuchen wir neue Pfade zu gehen, um Außergewöhnliches zu präsentieren.
+Förster kennen den Waldbestand und die möglichen Brennpunkte. Auch unsere Programmierer sind Spezialisten auf ihrem Gebiet. Sie kennen Vorteile, die neuesten Trends und die Launen der E-Mail-Clients wie ihre Westentasche. So kann der von uns produzierte Code ihre E-Mail in jedem Client optimal darstellen. Natürlich verlassen wir dabei die allerseits bekannten Pfade, um Außergewöhnliches zu präsentieren.

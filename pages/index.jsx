@@ -27,9 +27,8 @@ export default class Index extends React.Component {
                             Es ist mehr als nur eine <span className="dont-break">E-Mail</span>. 
                         </h1>
                         <p>
-                            Wir stehen für 360°Grad mit E-Mail-Marketing im Digitaldialog. 
-                            Für uns ist die E-Mail kein SPAM, sondern Kunst in einer modernen 
-                            Kommunikation mit Kunden. Unser Ansatz ist die Kombination und 
+                            Wir stehen für <strong>360</strong>°Grad Kommunikation im <strong>E-Mail-Marketing</strong> und <em>Digitaldialog</em>. Für uns ist die E-Mail Kunstobjekt und modernes Mittel zum 
+                            dauerhaften Dialog mit dem Kunden. Unser Ansatz ist die Kombination und 
                             Integration von Marketing und IT zur zielgenauen Kommunikation. 
                             Testen Sie uns.
                         </p>
@@ -68,13 +67,12 @@ export default class Index extends React.Component {
                             className="section_content-graphic-image" />)}>
                     <h1>Wir finden den richtigen Weg durch den Wald.</h1>
                     <p>
-                        (LEISTUNGEN) Analyse Umsetzung Template-
-                        Programmierung Projektmanagement Design
-                        Versandunterstützung Seminare & Workshops Es
-                        id quibusdam quam aut quia volum fugia culloriat.
-                        Atur alicatur a del is eum natis maio. Itam explaut
-                        quibus et asperciendam rendus delectus que nonsequi
-                        doluptius, idellessit acesto quo molum dello et, sus.
+                        Eine erfolgreiche Jagderfordert die richtige Vorbereitung. Im digitalen 
+                        Dschungel ist das nicht anders. Jeder Kunde bringt unterschiedliche 
+                        Voraussetzungen und Ziele mit sich.Wir legen die richtige Fährte als 
+                        Team mit dem Kunden fest und unterstützen Sie in verschiedensten Spektren 
+                        des E-Mail-Marketings. Sie bestimmen die Trophäe. Wir als Team müssen 
+                        dafür das Beste aus dem vorgegebenen und vorhandenenPotenzial schaffen. 
                     </p>
                 </IntroSection>
 

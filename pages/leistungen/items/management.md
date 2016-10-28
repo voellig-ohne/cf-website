@@ -7,4 +7,4 @@ order: 1
 
 ---
 
-Sie planen ein größeres Projekt und Ihnen fehlen die Ressourcen? In diesem Fall oder auch im Tagesgeschäft können wir aktiv unterstützen. Remote oder Vor Ort, wie es für eine optimale Zusammenarbeit notwendig ist.
+Wir sind Jäger, Förster, Füchse und Jagdleiter, je nachdem was Sie benötigen. Für das Projektmanagement, wenn Ihnen Ressourcen fehlen, aber auch im Tagesgeschäft können wir Sie aktiv unterstützen. Remote oder vor Ort.

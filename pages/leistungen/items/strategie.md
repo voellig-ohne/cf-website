@@ -7,4 +7,4 @@ order: 4
 
 ---
 
-Neue Produkte oder Anlässe wie Weihnachten und Kundengeburtstage sind perfekte Zeitpunkte für eine individuelle Kommunikation. Wir wollen Ihr Anliegen verstehen und entwickeln mit Ihnen das Optimum, was zu Ihnen passt und von Ihren Kunden verstanden wird.
+Füchse sind schlau, wir sind ihnen einen Schritt voraus. In Dialog zu treten erfordert Verständnis und gleiches Denken. Treten Sie mit ihrerZielgruppe in einen individuellen Dialog. Sei es um Produkteinführungen mitzuteilen oder zu Anlässe wie Jubiläen und Weihnachten in Kontakt zu bleiben. Wir entwickeln mit Ihnen die Strategie, um im Dickicht des Waldes hervorzustechen.
