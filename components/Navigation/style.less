@@ -1,6 +1,6 @@
 @import '~style/vars';
 
-@guessedNavHeight: 250px;
+@guessedNavHeight: 300px;
 
 .navigation {
     width: 100%;
@@ -12,10 +12,13 @@
     font-weight: normal;
     font-size: @font-size-l;
     line-height: 1;
-    padding-top: 2rem;
+
+    @media (max-height: (@guessedNavHeight * 2)) {
+        padding-top: 2rem;
+    }
 
     @media (min-height: (@guessedNavHeight * 2)) {
-        height: 50vh;
+        height: ~"calc(50vh - 4rem)";
     }
 
     &-list {
