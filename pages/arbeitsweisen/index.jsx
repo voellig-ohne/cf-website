@@ -6,12 +6,12 @@ import { config } from 'config'
 import VerticalSection from 'components/VerticalSection'
 import FoxAndYou from 'components/FoxAndYou'
 import Hero from 'components/Hero'
-import { filter, map } from 'lodash'
+import { filter, map, includes } from 'lodash'
 
 export default class Arbeitsweisen extends React.Component {
     render() {
         const weisen = map(filter(this.props.route.pages, (page) => {
-            return page.path.includes('/arbeitsweisen/weisen')
+            return includes(page.path, '/arbeitsweisen/weisen')
         }), (page) => {
             return page.data
         })

@@ -5,13 +5,13 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import Forrest from 'components/Forrest'
 import Hero from 'components/Hero'
-import { filter, map, sortBy } from 'lodash'
+import { filter, map, sortBy, includes } from 'lodash'
 import IllustratedSection from 'components/IllustratedSection'
 
 export default class Leistungen extends React.Component {
     render() {
         const leistungen = sortBy(filter(this.props.route.pages, (page) => {
-            return page.path.includes('/leistungen/items/')
+            return includes(page.path, '/leistungen/items/')
         }), (page) => {
             return page.data.order
         })

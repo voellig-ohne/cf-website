@@ -7,12 +7,12 @@ import Forrest from 'components/Forrest'
 import Hero from 'components/Hero'
 import VerticalSection from 'components/VerticalSection'
 import QuoteSection from 'components/QuoteSection'
-import { map, filter } from 'lodash' 
+import { map, filter, includes } from 'lodash' 
 
 export default class Workshops extends React.Component {
     render() {
         const workshops = map(filter(this.props.route.pages, (page) => {
-            return page.path.includes('/workshops/workshops')
+            return includes(page.path, '/workshops/workshops')
         }), (page) => {
             return page.data
         })

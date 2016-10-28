@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
-import { filter, map } from 'lodash'
+import { filter, map, includes } from 'lodash'
 import Hero from 'components/Hero'
 import MiniForrestGroup from 'components/MiniForrestGroup'
 import Illustration from 'components/Illustration'
@@ -14,7 +14,7 @@ import classNames from 'classNames'
 export default class UseCases extends React.Component {
     render() {
         const cases = filter(this.props.route.pages, (page) => {
-            return page.path.includes('/usecases/cases/')
+            return includes(page.path, '/usecases/cases/')
         })
 
         return (
