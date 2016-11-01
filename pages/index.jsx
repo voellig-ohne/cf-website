@@ -37,7 +37,7 @@ export default class Index extends React.Component {
                                 <Illustration illustration="icon_planung"
                                     className="circles-image" />
                                 <div className="circles-title">
-                                    Planung
+                                    Interim- & Projektmanagement
                                 </div>
                             </div>
                             <div className="circles-circle">
@@ -51,7 +51,7 @@ export default class Index extends React.Component {
                                 <Illustration illustration="icon_beratung"
                                     className="circles-image"/>
                                 <div className="circles-title">
-                                    Beratung
+                                    Beratung & <br />Betreuung
                                 </div>
                             </div>
                         </div>
