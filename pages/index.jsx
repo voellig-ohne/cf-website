@@ -8,6 +8,7 @@ import Hero from '../components/Hero'
 import Forrest from '../components/Forrest'
 import MiniForrestGroup from '../components/MiniForrestGroup'
 import FoxAndYou from '../components/FoxAndYou'
+import Teaser from 'components/Teaser'
 
 export default class Index extends React.Component {
     render() {
@@ -21,20 +22,17 @@ export default class Index extends React.Component {
                             className="intro-wald" />
                 </section>
 
-                <section className="section_content section_content--argument">
-                    <div className="section_content-main">
-                        <h1>
-                            Es ist mehr als nur eine <span className="dont-break">E-Mail</span>. 
-                        </h1>
-                        <p>
-                            Wir stehen für <strong>360</strong>°Grad Kommunikation im <strong>E-Mail-Marketing</strong> und <em>Digitaldialog</em>. Für uns ist die E-Mail Kunstobjekt und modernes Mittel zum 
-                            dauerhaften Dialog mit dem Kunden. Unser Ansatz ist die Kombination und 
-                            Integration von Marketing und IT zur zielgenauen Kommunikation. 
-                            Testen Sie uns.
-                        </p>
-                    </div>
-                    <div className="section_content-secondary">
-                        <div className="circles">
+
+                <Teaser title={ ( <span>Es ist mehr <br />als nur eine <span className="dont-break">E-Mail</span></span> ) }>
+
+                    <p>
+                        Wir stehen für <strong>360</strong>°Grad Kommunikation im <strong>E-Mail-Marketing</strong> und <em>Digitaldialog</em>. Für uns ist die E-Mail Kunstobjekt und modernes Mittel zum 
+                        dauerhaften Dialog mit dem Kunden. Unser Ansatz ist die Kombination und 
+                        Integration von Marketing und IT zur zielgenauen Kommunikation. 
+                        Testen Sie uns.
+                    </p> 
+
+                    <div className="circles">
                             <div className="circles-circle">
                                 <Illustration illustration="icon_planung"
                                     className="circles-image" />
@@ -57,8 +55,8 @@ export default class Index extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    
+                </Teaser>
 
                 <IntroSection
                         cta={{link: '/leistungen/', text: 'leistungen'}}
