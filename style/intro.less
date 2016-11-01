@@ -1,13 +1,16 @@
 @import '~style/vars';
 
+.intro, .sub_intro {
+    margin-bottom: 4rem;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    z-index: 2;
+}
+
 .intro {
     background: white;
-    display: flex;
-    justify-content: center;
     align-items: stretch;
-    height: 100vh;
-    z-index: 2;
-    position: relative;
 
     @media (max-aspect-ratio: 1/1) {
         flex-direction: column;
@@ -37,13 +40,7 @@
 @mobileSize: 450px;
 
 .sub_intro {
-    height: 100vh;
-    position: relative;
-    display: flex;
     align-items: flex-end;
-    justify-content: center;
-    margin-bottom: 5rem;
-    z-index: 2;
 
     @media (max-width: @mobileSize) {
         flex-direction: column;
