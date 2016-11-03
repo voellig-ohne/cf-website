@@ -78,13 +78,7 @@ export default class Index extends React.Component {
                     <h1>Jeder kann ein Fuchs sein.</h1>
 
                     <p>
-                        (Arbeitsweise) Analyse Umsetzung Template-
-                        Programmierung Projektmanagement Design
-                        Versandunterstützung Seminare & Workshops Es
-                        id quibusdam quam aut quia volum fugia culloriat.
-                        Atur alicatur a del is eum natis maio. Itam explaut
-                        quibus et asperciendam rendus delectus que nonsequi
-                        doluptius, idellessit acesto quo molum dello et, sus.
+                        Mit unseren Workshops wird auch aus dir ein Fuchs. Wir passen uns deiner wilden Umgebung an und stellen dir gerne ein individuelles Waldprogramm zusammen. 
                     </p>
                 </IntroSection>
 
