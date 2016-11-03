@@ -7,4 +7,4 @@ order: 1
 
 ---
 
-Wir sind Jäger, Förster, Füchse und Jagdleiter, je nachdem was Sie benötigen. Für das Projektmanagement, wenn Ihnen Ressourcen fehlen, aber auch im Tagesgeschäft können wir Sie aktiv unterstützen. Remote oder vor Ort.
+Wir sind Jäger, Förster, Füchse, Schweißhunde und Jagdleiter, je nachdem was Sie benötigen. Für das Projektmanagement, wenn Ihnen Ressourcen aber auch im Tagesgeschäft können wir Sie aktiv unterstützen. Remote oder vor Ort.

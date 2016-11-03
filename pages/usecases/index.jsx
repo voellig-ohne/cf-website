@@ -32,7 +32,11 @@ export default class UseCases extends React.Component {
                     </section>
 
                     <Teaser title="Use Cases">
-                        Unterschiedliche Herausforderungen erfordern unterschiedliches KnowHow und Herangehensweisen. Mehr Details über erfolgreiche Projekte lesen Sie hier nach.
+                        Hier erfolgt kein Jägerlatein. Vielmehr wollen wir Ihnen Beispiele und 
+                        ausgewählte Fallstudien verdeutlichen. Im E-Mail-Marketing gibt es keine 
+                        Schon- oder Brunftzeit. Weder für uns noch für den E-Mail-Dialog mit Ihren 
+                        bestehenden oder potentiellen Kunden. Wir sind einsatzbereit und gespannt 
+                        auf die Herausforderung Ihrer Anfrage.
                     </Teaser>
 
                     {

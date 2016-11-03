@@ -65,12 +65,7 @@ export default class Index extends React.Component {
                             className="section_content-graphic-image" />)}>
                     <h1>Wir finden den richtigen Weg durch den Wald.</h1>
                     <p>
-                        Eine erfolgreiche Jagderfordert die richtige Vorbereitung. Im digitalen 
-                        Dschungel ist das nicht anders. Jeder Kunde bringt unterschiedliche 
-                        Voraussetzungen und Ziele mit sich.Wir legen die richtige Fährte als 
-                        Team mit dem Kunden fest und unterstützen Sie in verschiedensten Spektren 
-                        des E-Mail-Marketings. Sie bestimmen die Trophäe. Wir als Team müssen 
-                        dafür das Beste aus dem vorgegebenen und vorhandenenPotenzial schaffen. 
+                        Eine erfolgreiche Jagd erfordert die richtige Vorbereitung. Im digitalen Dschungel ist das nicht anders. Jeder Kunde bringt unterschiedliche Voraussetzungen und Ziele mit sich. Wir legen die richtige Fährte als Team mit dem Kunden fest und unterstützen Sie in verschiedensten Spektren des E-Mail-Marketings. Sie bestimmen die Trophäe. Wir als Team müssen dafür das Beste aus dem vorgegebenen und vorhandenen Potenzial schaffen.
                     </p>
                 </IntroSection>
 
@@ -101,10 +96,9 @@ export default class Index extends React.Component {
                     <h1>Für jeden Wald der richtige Fuchs.</h1>
 
                     <p>
-                        Unterschiedliche Herausforderungen erfordern 
-                        unterschiedliches KnowHow und Herangehensweisen. 
-                        Mehr Details über erfolgreiche Projekte lesen Sie 
-                        hier nach.
+                        Weidmannsheil! Unterschiedliche Herausforderungen 
+                        erfordern unterschiedliches Know-How und Herangehensweisen. 
+                        Details zu erfolgreichen Projekten finden Sie hier.
                     </p>
                 </IntroSection>
 
