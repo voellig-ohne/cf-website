@@ -40,9 +40,16 @@ export default class Forrest extends React.Component {
             }, 0)
             window.addEventListener('resize', this.boundResize)
         }
+
+        if (this.props.projection) {
+            this.interval = setInterval(() => {
+                this.rePositionFox()
+            }, 5000)
+        }
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.boundResize)
+        clearInterval(this.interval)
     }
     onResize() {
         const gridDimentions = this.getGridDimentions(ELEMENT_SIZE)
@@ -74,6 +81,12 @@ export default class Forrest extends React.Component {
             column: Math.round((gridDimentions.height * Math.random()) / 2 + 1)
         }
     }
+    generateFoxPosition(gridDimentions) {
+        return {
+            row:    Math.round(((gridDimentions.width - 5) * Math.random()) + 2),
+            column: Math.round((gridDimentions.height * Math.random()))
+        }
+    }
     generateFoxPositionCenter(gridDimentions) {
         return {
             row:    Math.round(gridDimentions.width / 2),
@@ -92,7 +105,9 @@ export default class Forrest extends React.Component {
         }
     }
     rePositionFox() {
-        const foxPositions = [this.generateFoxPositionTopHalf(this.state.gridDimentions)]
+        const foxPositions = this.props.projection ?
+            [this.generateFoxPosition(this.state.gridDimentions)] :
+            [this.generateFoxPositionTopHalf(this.state.gridDimentions)]
         this.setState({ foxPositions })
     }
     addFox(currentPosition) {
