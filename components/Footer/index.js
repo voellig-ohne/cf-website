@@ -56,6 +56,16 @@ export default class Footer extends React.Component {
                 iconChar: '§',
                 link: '/haftungsausschluss/',
                 title: 'Impressum'
+            }, {
+                icon: 'sternchen',
+                link: '//völligohne.de',
+                title: (
+                    <span className='footer-credit'>
+                         gestaltung & code:<br />
+                         völlig ohne
+                    </span>
+                ), 
+                className: 'footer-credit-row'
             }
         ]
 
@@ -71,7 +81,8 @@ export default class Footer extends React.Component {
                     {
                         map(socialMedia, (info, idx) => {
                             return (
-                                <div key={ idx }>
+                                <div key={ idx } 
+                                        className={info.className}>
                                     <dt>
                                         { 
                                             info.iconChar ? 
