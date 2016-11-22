@@ -58,7 +58,7 @@ export default class Footer extends React.Component {
                 title: 'Impressum'
             }, {
                 icon: 'sternchen',
-                link: '//völligohne.de',
+                link: 'https://volligohne.de/projekte/fuchsundwald/',
                 title: (
                     <span className='footer-credit'>
                          gestaltung & code:<br />
