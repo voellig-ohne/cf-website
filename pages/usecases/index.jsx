@@ -10,12 +10,40 @@ import Illustration from 'components/Illustration'
 import Teaser from 'components/Teaser'
 import style from './style.module.less'
 import classNames from 'classNames'
+import SectionIconStrip from 'components/SectionIconStrip'
 
 export default class UseCases extends React.Component {
     render() {
         const cases = filter(this.props.route.pages, (page) => {
             return includes(page.path, '/usecases/cases/')
         })
+
+        const customers = [
+            { 
+                illustration: 'customer_aufhalbertreppe',
+                title: 'Auf Halber Treppe'
+            },
+            { 
+                illustration: 'customer_mediasaturn',
+                title: 'Mediasaturn'
+            },
+            { 
+                illustration: 'customer_momox',
+                title: 'Momox'
+            },
+            { 
+                illustration: 'customer_myfotobook',
+                title: 'MyFotobook'
+            },
+            { 
+                illustration: 'customer_springpunkt',
+                title: 'Springpunkt'
+            },
+            { 
+                illustration: 'customer_topbonus',
+                title: 'TopBonus'
+            }
+        ]
 
         return (
             <DocumentTitle title={ config.siteTitle + ' | use cases' }>
@@ -46,6 +74,10 @@ export default class UseCases extends React.Component {
                             )
                         })
                     }
+                                        
+                    <SectionIconStrip 
+                        title="Kunden"
+                        illustrations={ customers }/>
                     
                     <Hero image="wald_workshop">
                         <Link to="/workshops/" className="cta">
