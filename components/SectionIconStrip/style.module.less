@@ -1,0 +1,25 @@
+.heading {
+    text-align: center;
+}
+
+.illustration {
+    height: 2rem;
+    display: inline-block;
+    margin: 1rem;
+    opacity: .5;
+
+    svg {
+        height: 100%;
+    }
+}
+
+.illustrationContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem -1rem -1rem;
+
+    @media (max-width: 600px) {
+        justify-content: center;
+    }
+}
