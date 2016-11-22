@@ -80,7 +80,7 @@ export default class Arbeitsweisen extends React.Component {
 
                     <Hero image="wald_briefe">
                         <Link to="/usecases/" className="cta">
-                            Lesen Sie Use-Cases
+                            Lesen Sie Use Cases
                         </Link>
                     </Hero>
                 </main>

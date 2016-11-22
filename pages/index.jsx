@@ -83,7 +83,7 @@ export default class Index extends React.Component {
                 </IntroSection>
 
                 <IntroSection
-                        cta={{link: '/usecases/', text: 'alle usecases'}}
+                        cta={{link: '/usecases/', text: 'alle use cases'}}
                         illustration={(<MiniForrestGroup
                             isSmall={true}
                             className="section_content-graphic-image" />)}>
