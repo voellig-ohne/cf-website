@@ -6,6 +6,7 @@ import { config } from 'config'
 import VerticalSection from 'components/VerticalSection'
 import FoxAndYou from 'components/FoxAndYou'
 import Hero from 'components/Hero'
+import SectionIconStrip from 'components/SectionIconStrip'
 import { filter, map, includes } from 'lodash'
 
 export default class Arbeitsweisen extends React.Component {
@@ -15,6 +16,45 @@ export default class Arbeitsweisen extends React.Component {
         }), (page) => {
             return page.data
         })
+
+        const tools = [
+            {
+                illustration: 'tools_cleverreach',
+                title: 'Cleverreach'
+            },
+            {
+                illustration: 'tools_emarsys',
+                title: 'emrsys'
+            },
+            {
+                illustration: 'tools_google',
+                title: 'Google Ananytics'
+            },
+            {
+                illustration: 'tools_litmus',
+                title: 'Litmus'
+            },
+            {
+                illustration: 'tools_mailchimp',
+                title: 'Mailchimp'
+            },
+            {
+                illustration: 'tools_newsletter2go',
+                title: 'Newsletter2go'
+            },
+            {
+                illustration: 'tools_optivo',
+                title: 'Optivo'
+            },
+            {
+                illustration: 'tools_trello',
+                title: 'Trello'
+            },
+            {
+                illustration: 'tools_wordpress',
+                title: 'Wordpress'
+            },
+        ]
 
         return (
             <DocumentTitle title={ config.siteTitle + ' | arbeitsweisen'  }>
@@ -33,6 +73,10 @@ export default class Arbeitsweisen extends React.Component {
                     </section>
 
                     <VerticalSection sections={weisen} />
+
+                    <SectionIconStrip 
+                        title="Tools"
+                        illustrations={tools}/>
 
                     <Hero image="wald_briefe">
                         <Link to="/usecases/" className="cta">
