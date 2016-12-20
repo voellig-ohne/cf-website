@@ -47,10 +47,6 @@ export default class Arbeitsweisen extends React.Component {
                 title: 'Optivo'
             },
             {
-                illustration: 'tools_trello',
-                title: 'Trello'
-            },
-            {
                 illustration: 'tools_wordpress',
                 title: 'Wordpress'
             },
