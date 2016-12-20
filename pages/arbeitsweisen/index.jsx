@@ -72,7 +72,8 @@ export default class Arbeitsweisen extends React.Component {
 
                     <SectionIconStrip 
                         title="Tools"
-                        illustrations={tools}/>
+                        illustrations={tools}
+                        smaller={true} />
 
                     <Hero image="wald_briefe">
                         <Link to="/usecases/" className="cta">

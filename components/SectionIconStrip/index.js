@@ -12,7 +12,8 @@ export default class SectionItemStrip extends React.Component{
     render() {
         const {
             illustrations,
-            title
+            title,
+            smaller
         } = this.props
 
         const className = classNames(
@@ -33,7 +34,7 @@ export default class SectionItemStrip extends React.Component{
                             map(illustrations, (illustration, key) => {
                                 return (
                                     <Illustration 
-                                        className={style.illustration}
+                                        className={classNames(style.illustration, { [style['illustration--smaller']]: smaller})}
                                         illustration={illustration.illustration}
                                         key={key} />
                                 )
