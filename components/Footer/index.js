@@ -6,29 +6,6 @@ import Illustration from 'components/Illustration'
 
 export default class Footer extends React.Component {
     render() {
-        const infoList = [{                
-                title: (
-                    <Illustration illustration="home" />
-                ),
-                value: (
-                    <span>
-                        Christian Fuchs<br />
-                        Sonnenallee 206<br />
-                        12059 Berlin
-                    </span>
-                )
-            },{                
-                title: (
-                    <b>§</b>
-                ),
-                value: (
-                    <Link to="/haftungsausschluss/">
-                        Impressum
-                    </Link>
-                )
-            },
-        ]
-
         const socialMedia = [
             {
                 icon: 'twitter',
