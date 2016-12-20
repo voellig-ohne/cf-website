@@ -36,7 +36,8 @@ export default class SectionItemStrip extends React.Component{
                                     <Illustration 
                                         className={classNames(style.illustration, { [style['illustration--smaller']]: smaller})}
                                         illustration={illustration.illustration}
-                                        key={key} />
+                                        key={key}
+                                        title={illustration.title} />
                                 )
                             })
                         }

@@ -20,11 +20,11 @@ export default class Arbeitsweisen extends React.Component {
         const tools = [
             {
                 illustration: 'tools_cleverreach',
-                title: 'Cleverreach'
+                title: 'CleverReach'
             },
             {
                 illustration: 'tools_emarsys',
-                title: 'emrsys'
+                title: 'emarsys'
             },
             {
                 illustration: 'tools_google',
