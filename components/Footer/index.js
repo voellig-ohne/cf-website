@@ -54,7 +54,7 @@ export default class Footer extends React.Component {
                 )
             }, {
                 iconChar: '§',
-                link: '/haftungsausschluss/',
+                link: '/impressum/',
                 title: 'Impressum'
             }, {
                 icon: 'sternchen',
