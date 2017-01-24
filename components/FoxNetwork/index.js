@@ -1,24 +1,28 @@
 import Illustration from 'components/Illustration'
 import React from 'react'
 import style from './style.module.less'
-import { map } from 'lodash'
+import { map, includes } from 'lodash'
 import classNames from 'classNames'
 
 const ANIMAL_COUNT = 16;
 const GRAPHICS_COUNT = 12;
 
+const COUNT = 50;
+const DELAY = 1000;
+
 export default class FoxNetwork extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {}
-    }
-    render() {
-        const leaves = Array.apply(null, {length: ANIMAL_COUNT}).map((animal, index) => {
+        this.leaves = Array.apply(null, {length: ANIMAL_COUNT}).map((animal, index) => {
             return 'tiere_' + index % GRAPHICS_COUNT
         })
 
-        console.log(leaves)
+        this.state = {
+            activeLeaves: []
+        };
+    }
+    render() {
 
         const containerClasses = classNames(this.props.className)
 
@@ -34,9 +38,9 @@ export default class FoxNetwork extends React.Component {
                     </div>
                     <div className={style.leaves}>
                         {
-                            map(leaves, (leave, idx) => {
+                            map(this.leaves, (leave, idx) => {
                                 const classes = classNames(style.leave, {
-                                    [style['leave-active']]: idx === this.state.targetAnimalIndex
+                                    [style.leave__active]: includes(this.state.activeLeaves, idx)
                                 })
                                 return (
                                     <Illustration
@@ -59,6 +63,7 @@ export default class FoxNetwork extends React.Component {
 
             window.addEventListener('resize', this.onResize.bind(this))
         }
+        this.generate()
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.onResize.bind(this))
@@ -69,6 +74,32 @@ export default class FoxNetwork extends React.Component {
         })
     }
     generate() {
-        console.log('clicked')
+        const teamSize = Math.random() < .3 ? 1 : getRandom(ANIMAL_COUNT) + 1;
+        this.countDown(COUNT, teamSize)
     }
+    countDown(count, teamSize) {
+        if (count === 0) {
+            return;
+        }
+
+        if (count > teamSize - 1) {
+            this.setState({
+                activeLeaves: [ getRandom(ANIMAL_COUNT) ]
+            });
+        } else {
+            const team = this.state.activeLeaves;
+            team.push(getRandom(ANIMAL_COUNT));
+            this.setState({
+                activeLeaves: team
+            });
+        }
+
+        setTimeout(() => {
+            this.countDown(count - 1, teamSize)
+        }, DELAY / count)
+    }
+}
+
+function getRandom(range) {
+    return Math.round(Math.random() * (range - 1));
 }

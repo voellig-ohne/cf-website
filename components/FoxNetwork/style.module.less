@@ -33,6 +33,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    fill: @green;
+    transition: all .5s;
+
+    &__active {
+        fill: @red;
+        transition: all .02s;
+    }
+
+    &__passive {
+        opacity: .7;
+    }
 
     svg {
         width: 50%;
