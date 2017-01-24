@@ -18,33 +18,6 @@ export default class UseCases extends React.Component {
             return includes(page.path, '/usecases/cases/')
         })
 
-        const customers = [
-            { 
-                illustration: 'customer_aufhalbertreppe',
-                title: 'Auf Halber Treppe'
-            },
-            { 
-                illustration: 'customer_mediasaturn',
-                title: 'Mediasaturn'
-            },
-            { 
-                illustration: 'customer_momox',
-                title: 'Momox'
-            },
-            { 
-                illustration: 'customer_myfotobook',
-                title: 'MyFotobook'
-            },
-            { 
-                illustration: 'customer_springpunkt',
-                title: 'Springpunkt'
-            },
-            { 
-                illustration: 'customer_topbonus',
-                title: 'TopBonus'
-            }
-        ]
-
         return (
             <DocumentTitle title={ config.siteTitle + ' | use cases' }>
                 <main>
@@ -74,11 +47,7 @@ export default class UseCases extends React.Component {
                             )
                         })
                     }
-                                        
-                    <SectionIconStrip 
-                        title="Kunden"
-                        illustrations={ customers }/>
-                    
+
                     <Hero image="wald_workshop">
                         <Link to="/workshops/" className="cta">
                             Werden Sie zum Fuchs!
