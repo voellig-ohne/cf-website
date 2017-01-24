@@ -6,7 +6,7 @@ import Hero from 'components/Hero'
 import FoxNetwork from 'components/FoxNetwork'
 import { filter, map, sortBy, includes } from 'lodash'
 
-export default class Leistungen extends React.Component {
+export default class UberUns extends React.Component {
     render() {
         const partners = sortBy(filter(this.props.route.pages, (page) => {
             return includes(page.path, '/uber_uns/partner/')
