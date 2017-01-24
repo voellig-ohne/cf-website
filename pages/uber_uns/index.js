@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import Hero from 'components/Hero'
+import FoxNetwork from 'components/FoxNetwork'
 import { filter, map, sortBy, includes } from 'lodash'
 
 export default class Leistungen extends React.Component {
@@ -17,6 +18,7 @@ export default class Leistungen extends React.Component {
             <DocumentTitle title={ config.siteTitle + ' | leistungen'  }>
                 <main>
                     <section className="sub_intro">
+                        <FoxNetwork className="sub_intro-forrest" />
                         <header className="sub_intro-header">
                             <h1 className="sub_intro-heading">
                                 Der Fuchs + sein Wald.
