@@ -15,7 +15,7 @@ export default class UberUns extends React.Component {
         })
 
         return (
-            <DocumentTitle title={ config.siteTitle + ' | leistungen'  }>
+            <DocumentTitle title={ config.siteTitle + ' | über uns'  }>
                 <main>
                     <section className="sub_intro">
                         <FoxNetwork className="sub_intro-forrest" />
