@@ -19,12 +19,14 @@ export default class FoxNetwork extends React.Component {
         })
 
         this.state = {
-            activeLeaves: []
+            activeLeaves: [],
+            counting: false
         };
     }
     render() {
 
         const containerClasses = classNames(this.props.className)
+
 
         return (
             <div className={containerClasses}
@@ -39,8 +41,10 @@ export default class FoxNetwork extends React.Component {
                     <div className={style.leaves}>
                         {
                             map(this.leaves, (leave, idx) => {
+                                const isActive = includes(this.state.activeLeaves, idx)
                                 const classes = classNames(style.leave, {
-                                    [style.leave__active]: includes(this.state.activeLeaves, idx)
+                                    [style.leave__active]: isActive,
+                                    [style.leave__passive]: !isActive && !this.state.counting
                                 })
                                 return (
                                     <Illustration
@@ -79,20 +83,26 @@ export default class FoxNetwork extends React.Component {
     }
     countDown(count, teamSize) {
         if (count === 0) {
-            return;
+            this.setState({
+                counting: false
+            });
+            return
         }
 
+        let activeLeaves;
+
         if (count > teamSize - 1) {
-            this.setState({
-                activeLeaves: [ getRandom(ANIMAL_COUNT) ]
-            });
+            activeLeaves = [ getRandom(ANIMAL_COUNT) ]
         } else {
             const team = this.state.activeLeaves;
             team.push(getRandom(ANIMAL_COUNT));
-            this.setState({
-                activeLeaves: team
-            });
+            activeLeaves = team
         }
+
+        this.setState({
+            activeLeaves,
+            counting: true
+        });
 
         setTimeout(() => {
             this.countDown(count - 1, teamSize)
