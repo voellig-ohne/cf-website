@@ -78,8 +78,10 @@ export default class FoxNetwork extends React.Component {
         })
     }
     generate() {
-        const teamSize = Math.random() < .3 ? 1 : getRandom(ANIMAL_COUNT) + 1;
-        this.countDown(COUNT, teamSize)
+        if(!this.state.counting) {
+            const teamSize = Math.random() < .3 ? 1 : getRandom(ANIMAL_COUNT) + 1
+            this.countDown(COUNT, teamSize)
+        }
     }
     countDown(count, teamSize) {
         if (count === 0) {
