@@ -23,8 +23,6 @@ export default class SectionItemStrip extends React.Component{
             style.strip
         )
 
-        console.log(style.illustrationContainer)
-
         return (
             <section className={className}>
                 <div className="section_content-single">
