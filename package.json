@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "name": "gatsby-starter-lumen",
-  "description": "Simple starter for Gatsby",
+  "name": "fuchs-und-wald",
+  "description": "Fuchs+Wald Website",
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
