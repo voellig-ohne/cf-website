@@ -29,17 +29,17 @@
 .leaves {
     display: flex;
     flex-wrap: wrap;
+    align-content: stretch;
 }
 
 .leave {
     flex: 0 0 25%;
-    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     fill: @green;
     transition: all .5s;
-    padding: 2vh;
+    position: relative;
 
     &__active {
         fill: @red;
@@ -52,7 +52,10 @@
     }
 
     svg {
-        height: 100%;
-        width: 100%;
+        height: ~"calc(100% - (2vh + 2vw))";
+        width: ~"calc(100% - (2vh + 2vw))";
+        position: absolute;
+        top: ~"calc(1vh + 1vw)";
+        left: ~"calc(1vh + 1vw)";
     }
 }
