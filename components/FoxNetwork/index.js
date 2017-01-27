@@ -5,7 +5,7 @@ import { map, includes } from 'lodash'
 import classNames from 'classNames'
 
 const ANIMAL_COUNT = 16;
-const GRAPHICS_COUNT = 12;
+const GRAPHICS_COUNT = 15;
 
 const COUNT = 50;
 const DELAY = 1000;
@@ -15,7 +15,7 @@ export default class FoxNetwork extends React.Component {
         super(props)
 
         this.leaves = Array.apply(null, {length: ANIMAL_COUNT}).map((animal, index) => {
-            return 'tiere_' + index % GRAPHICS_COUNT
+            return 'blaetter_' + index % GRAPHICS_COUNT
         })
 
         this.state = {
