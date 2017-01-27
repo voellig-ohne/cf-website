@@ -8,7 +8,7 @@ const ANIMAL_COUNT = 16;
 const GRAPHICS_COUNT = 15;
 
 const COUNT = 50;
-const DELAY = 1000;
+const DELAY = 1500;
 
 export default class FoxNetwork extends React.Component {
     constructor(props) {
@@ -79,7 +79,7 @@ export default class FoxNetwork extends React.Component {
     }
     generate() {
         if(!this.state.counting) {
-            const teamSize = Math.random() < .3 ? 1 : getRandom(ANIMAL_COUNT) + 1
+            const teamSize = Math.random() < .5 ? 1 : getRandom(ANIMAL_COUNT) + 1
             this.countDown(COUNT, teamSize)
         }
     }
