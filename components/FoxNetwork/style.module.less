@@ -11,6 +11,10 @@
     overflow: hidden;
     background: white;
 
+    @media (max-aspect-ratio: 1/1) {
+        flex-direction: column;
+    }
+
     .fox, .leaves {
         flex: 1 0 50%;
     }
@@ -35,6 +39,7 @@
     align-items: center;
     fill: @green;
     transition: all .5s;
+    padding: 2vh;
 
     &__active {
         fill: @red;
@@ -47,6 +52,7 @@
     }
 
     svg {
-        width: 50%;
+        height: 100%;
+        width: 100%;
     }
 }
