@@ -15,23 +15,17 @@
     }
 
     &_imageContainer {
-        @media (min-width: @break) {
-            position: relative;
-            padding-bottom: 100%;
-        }
+        border-radius: 50%;
+        overflow: hidden;
+        background: white;
+        position: relative;
+        padding-bottom: 100%;
+        width: 100%;
     }
 
     &_image {
         width: 100%;
-        border-radius: 50%;
-
-        @media (min-width: @break) {
-            position: absolute;
-        }
-
-        @media (max-width: @break) {
-            max-width: 20rem;
-        }
+        position: absolute;
     }
 
     &_text {
