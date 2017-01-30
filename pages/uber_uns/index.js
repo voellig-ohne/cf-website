@@ -6,6 +6,7 @@ import Hero from 'components/Hero'
 import FoxNetwork from 'components/FoxNetwork'
 import SectionContentSingle from 'components/SectionContentSingle'
 import ResponsiveImage from 'components/ResponsiveImage'
+import PartnerList from 'components/PartnerList'
 import { filter, map, sortBy, includes } from 'lodash'
 import style from './style.module.less'
 import classNames from 'classNames'
@@ -57,15 +58,9 @@ export default class UberUns extends React.Component {
                         </div>
                     </SectionContentSingle>
 
-                    {
-                        map(partners, (partner, idx) => {
-                            return (
-                                <div key={idx}>
-                                    { partner.data.name }
-                                </div>
-                            ) 
-                        })
-                    }
+                    <SectionContentSingle wide={ true }>
+                        <PartnerList partners={ partners } />
+                    </SectionContentSingle>
 
                     <Hero image="wald_seile">
                         <Link className="cta" to="/leistungen/">
