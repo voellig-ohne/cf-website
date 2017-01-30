@@ -17,8 +17,6 @@ export default class UberUns extends React.Component {
             return page.data.order
         })
 
-        console.log(style)
-
         return (
             <DocumentTitle title={ config.siteTitle + ' | über uns'  }>
                 <main>
@@ -36,7 +34,10 @@ export default class UberUns extends React.Component {
                         <div className={ style.main }>
                             <div className={ style.main_imageContainerContainer }>
                                 <div className={ style.main_imageContainer }>
-                                    <ResponsiveImage source="portrait_christian" className={ style.main_image } />
+                                    <ResponsiveImage 
+                                            source="portrait_christian" 
+                                            className={ style.main_image }
+                                            sizes="(max-width: 600px) 100vw, 400px" />
                                 </div>
                             </div>
                             <div className={ style.main_text }>
