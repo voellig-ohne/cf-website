@@ -58,7 +58,8 @@ export default class UberUns extends React.Component {
                         </div>
                     </SectionContentSingle>
 
-                    <SectionContentSingle wide={ true }>
+                    <SectionContentSingle wide={ true }
+                            title="Unser Netzwerk">
                         <PartnerList partners={ partners } />
                     </SectionContentSingle>
 
