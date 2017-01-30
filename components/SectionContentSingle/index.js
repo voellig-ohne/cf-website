@@ -3,7 +3,9 @@ import classNames from 'classNames'
 
 export default class SectionContentSingle extends React.Component {
     render () {
-        const { children, wide, title, classNameWrapper } = this.props
+        const { children, wide, title, classNameWrapper, className } = this.props
+
+        const classes = classNames('section_content', 'section_content--single', className)
 
         const wrapperClasses = classNames('section_content-single', 
             classNameWrapper, {
@@ -11,8 +13,8 @@ export default class SectionContentSingle extends React.Component {
         })
 
         return (
-            <section className="section_content section_content--single">
-                <div className={wrapperClasses}>
+            <section className={ classes }>
+                <div className={ wrapperClasses }>
                     { 
                         title ?
                         <h1 className="page_heading">{ title }</h1> : null
