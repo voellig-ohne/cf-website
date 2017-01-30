@@ -3,9 +3,10 @@ import classNames from 'classNames'
 
 export default class SectionContentSingle extends React.Component {
     render () {
-        const { children, wide, title } = this.props
+        const { children, wide, title, classNameWrapper } = this.props
 
-        const wrapperClasses = classNames('section_content-single', {
+        const wrapperClasses = classNames('section_content-single', 
+            classNameWrapper, {
             'section_content-single--wide': wide
         })
 
