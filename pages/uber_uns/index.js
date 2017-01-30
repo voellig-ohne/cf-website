@@ -8,7 +8,7 @@ import SectionContentSingle from 'components/SectionContentSingle'
 import ResponsiveImage from 'components/ResponsiveImage'
 import { filter, map, sortBy, includes } from 'lodash'
 import style from './style.module.less'
-import classNames from 'classnames'
+import classNames from 'classNames'
 
 export default class UberUns extends React.Component {
     render() {
