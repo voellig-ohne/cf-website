@@ -4,6 +4,7 @@ import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import Hero from 'components/Hero'
 import FoxNetwork from 'components/FoxNetwork'
+import SectionContentSingle from 'components/SectionContentSingle'
 import { filter, map, sortBy, includes } from 'lodash'
 
 export default class UberUns extends React.Component {
@@ -26,9 +27,10 @@ export default class UberUns extends React.Component {
                         </header>
                     </section>
 
-                    <section className="section_content">
-                        <h1 className="page_heading">Fuchs und Wald</h1>
-                    </section>
+                    <SectionContentSingle wide={ true }
+                            title="Fuchs und Wald">
+                        hello.
+                    </SectionContentSingle>
 
                     {
                         map(partners, (partner, idx) => {
