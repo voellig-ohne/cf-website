@@ -8,6 +8,7 @@ import SectionContentSingle from 'components/SectionContentSingle'
 import ResponsiveImage from 'components/ResponsiveImage'
 import { filter, map, sortBy, includes } from 'lodash'
 import style from './style.module.less'
+import classNames from 'classnames'
 
 export default class UberUns extends React.Component {
     render() {
@@ -48,6 +49,10 @@ export default class UberUns extends React.Component {
                                     Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur 
                                     est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
                                 </p>
+
+                                <a className={classNames('cta', style.cta)} to="/leistungen/">
+                                    CTA! Schreib uns!
+                                </a>
                             </div>
                         </div>
                     </SectionContentSingle>
