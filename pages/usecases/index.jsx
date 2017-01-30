@@ -7,7 +7,7 @@ import { filter, map, includes } from 'lodash'
 import Hero from 'components/Hero'
 import MiniForrestGroup from 'components/MiniForrestGroup'
 import Illustration from 'components/Illustration'
-import Teaser from 'components/Teaser'
+import SectionContentSingle from 'components/SectionContentSingle'
 import style from './style.module.less'
 import classNames from 'classNames'
 import SectionIconStrip from 'components/SectionIconStrip'
@@ -32,13 +32,15 @@ export default class UseCases extends React.Component {
                         </header>
                     </section>
 
-                    <Teaser title="Use Cases">
-                        Hier erfolgt kein Jägerlatein. Vielmehr wollen wir Ihnen Beispiele und 
-                        ausgewählte Fallstudien verdeutlichen. Im E-Mail-Marketing gibt es keine 
-                        Schon- oder Brunftzeit. Weder für uns noch für den E-Mail-Dialog mit Ihren 
-                        bestehenden oder potentiellen Kunden. Wir sind einsatzbereit und gespannt 
-                        auf die Herausforderung Ihrer Anfrage.
-                    </Teaser>
+                    <SectionContentSingle title="Use Cases">
+                        <p>
+                            Hier erfolgt kein Jägerlatein. Vielmehr wollen wir Ihnen Beispiele und 
+                            ausgewählte Fallstudien verdeutlichen. Im E-Mail-Marketing gibt es keine 
+                            Schon- oder Brunftzeit. Weder für uns noch für den E-Mail-Dialog mit Ihren 
+                            bestehenden oder potentiellen Kunden. Wir sind einsatzbereit und gespannt 
+                            auf die Herausforderung Ihrer Anfrage.
+                        </p>
+                    </SectionContentSingle>
 
                     {
                         map(cases, (useCase, idx) => {
