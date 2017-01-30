@@ -51,7 +51,7 @@ export default class UberUns extends React.Component {
                                     est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
                                 </p>
 
-                                <a className={classNames('cta', style.cta)} to="/leistungen/">
+                                <a className={classNames('cta', style.cta)} href="#">
                                     CTA! Schreib uns!
                                 </a>
                             </div>
