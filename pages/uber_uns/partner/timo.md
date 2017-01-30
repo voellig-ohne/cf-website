@@ -1,8 +1,12 @@
 ---
 
 name: Timo Becker
-order: 5
+order: 1
+link: 
+  text: timobecker.com
+  href: https://www.timobecker.com/
+img: portrait_timo
 
 ---
 
-AWESOME ILLUSTRATOR!
+Ich bin begeisterter Zeichner, Forscher, Lehrer, Designer, Illustrator.
