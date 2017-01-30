@@ -5,7 +5,9 @@ import { config } from 'config'
 import Hero from 'components/Hero'
 import FoxNetwork from 'components/FoxNetwork'
 import SectionContentSingle from 'components/SectionContentSingle'
+import ResponsiveImage from 'components/ResponsiveImage'
 import { filter, map, sortBy, includes } from 'lodash'
+import style from './style.module.less'
 
 export default class UberUns extends React.Component {
     render() {
@@ -14,6 +16,8 @@ export default class UberUns extends React.Component {
         }), (page) => {
             return page.data.order
         })
+
+        console.log(style)
 
         return (
             <DocumentTitle title={ config.siteTitle + ' | über uns'  }>
@@ -29,7 +33,22 @@ export default class UberUns extends React.Component {
 
                     <SectionContentSingle wide={ true }
                             title="Fuchs und Wald">
-                        hello.
+                        <div className={ style.main }>
+                            <div className={ style.main_imageContainerContainer }>
+                                <div className={ style.main_imageContainer }>
+                                    <ResponsiveImage source="portrait_christian" className={ style.main_image } />
+                                </div>
+                            </div>
+                            <div className={ style.main_text }>
+                                <p>
+                                    Hier ist ein Text über Christian Fuchs, den Hauptakteur bei Duchs+Wald.<br />
+                                    Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis 
+                                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                                    Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur 
+                                    est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                </p>
+                            </div>
+                        </div>
                     </SectionContentSingle>
 
                     {

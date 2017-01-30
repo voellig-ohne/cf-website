@@ -1,0 +1,50 @@
+@import "~style/vars";
+
+.main {
+    @media (min-width: @break) {
+        display: flex;
+    }
+
+    &_imageContainerContainer {
+        flex: 1 0 33%;
+ 
+        @media (max-width: @break) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &_imageContainer {
+        @media (min-width: @break) {
+            position: relative;
+            padding-bottom: 100%;
+        }
+    }
+
+    &_image {
+        width: 100%;
+        border-radius: 50%;
+
+        @media (min-width: @break) {
+            position: absolute;
+        }
+
+        @media (max-width: @break) {
+            max-width: 20rem;
+        }
+    }
+
+    &_text {
+        @media (min-width: @break) {
+            margin-left: 2rem;
+        }
+
+        @media (max-width: @break) {
+            margin-top: 2rem;
+        }
+
+        p:first-child {
+            margin: 0;
+        }
+    }
+}
