@@ -1,6 +1,7 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
+import SectionContentSingle from 'components/SectionContentSingle'
 
 module.exports = React.createClass({
   propTypes () {
@@ -12,10 +13,9 @@ module.exports = React.createClass({
     const page = this.props.route.page.data
     return (
         <DocumentTitle title={`${config.siteTitle} | ${page.title}`}>
-            <section className="section_content section_content--single">
-                <div className="section_content-single"
-                    dangerouslySetInnerHTML={{ __html: page.body }} />
-            </section>
+            <SectionContentSingle>
+                <div dangerouslySetInnerHTML={{ __html: page.body }} />
+            </SectionContentSingle>
         </DocumentTitle>
     )
   },
