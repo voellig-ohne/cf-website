@@ -32,7 +32,7 @@ export default class UberUns extends React.Component {
                     </section>
 
                     <SectionContentSingle wide={ true }
-                            title="Fuchs und Wald">
+                            title="Christian Fuchs">
                         <div className={ style.main }>
                             <div className={ style.main_imageContainerContainer }>
                                 <div className={ style.main_imageContainer }>
