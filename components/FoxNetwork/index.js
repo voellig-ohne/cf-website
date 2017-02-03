@@ -51,6 +51,7 @@ export default class FoxNetwork extends React.Component {
         this.generate()
     }
     componentWillUnmount() {
+        clearTimeout(this.timeout)
     }
     generate() {
         if(!this.state.counting) {
@@ -81,7 +82,7 @@ export default class FoxNetwork extends React.Component {
             counting: true
         });
 
-        setTimeout(() => {
+        this.timeout = setTimeout(() => {
             this.countDown(count - 1, teamSize)
         }, DELAY / count)
     }
