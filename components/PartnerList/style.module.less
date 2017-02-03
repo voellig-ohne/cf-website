@@ -13,15 +13,16 @@
 }
 
 .partner {
+    @width: (@contentWidth / 3);
     list-style: none;
     margin: 2rem;
-    flex: 0 0 ~"calc(33% - 4rem)";
+    flex: 0 0 ~"calc(@{width} - 4rem)";
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media (max-width: @break) {
-        flex: 1 0 ~"calc(33% - 1rem)";
+        flex: 1 0 ~"calc(@{width} - 1rem)";
         margin: 0 .5rem 2rem;
     }
 }
