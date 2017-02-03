@@ -47,7 +47,7 @@ export default class UberUns extends React.Component {
                                     Ich, Christian Fuchs, bin Fachinformatiker, studierter Wirtschaftsinformatiker 
                                     und #emailgeek. Mit fuchs+wald biete ich Beratung und Umsetzung mit den 
                                     Schwerpunkten E-Mail-Marketing, Marketing Automation und Kundenbeziehung an. 
-                                    Zusammen mit einem spezialisierten Netzwerk, dem Wald, bin ich für große 
+                                    Zusammen mit meinem spezialisierten Netzwerk, dem Wald, bin ich für große 
                                     Handelsunternehmen, Firmen aus eCommerce, Travel und anderen Branchen, Startups, 
                                     Solopreneure und Agenturen aktiv.
                                 </p>
