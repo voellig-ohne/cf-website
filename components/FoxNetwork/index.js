@@ -24,38 +24,26 @@ export default class FoxNetwork extends React.Component {
         };
     }
     render() {
-
-        const containerClasses = classNames(this.props.className)
-
+        const containerClasses = classNames(this.props.className, style.leaves)
 
         return (
-            <div className={containerClasses}
-                onClick={this.generate.bind(this)}
-                ref={(c) => this.containerEl = c}>
-                <div className={style.container}>
-                    <div className={style.fox}>
-                        <Illustration
-                            illustration="fuchs"
-                            className={style.fox_illustration} />
-                    </div>
-                    <div className={style.leaves}>
-                        {
-                            map(this.leaves, (leave, idx) => {
-                                const isActive = includes(this.state.activeLeaves, idx)
-                                const classes = classNames(style.leave, {
-                                    [style.leave__active]: isActive,
-                                    [style.leave__passive]: !isActive && !this.state.counting
-                                })
-                                return (
-                                    <Illustration
-                                        key={idx}
-                                        illustration={leave}
-                                        className={classes} />
-                                )
-                            })
-                        }
-                    </div>
-                </div>
+            <div className={ containerClasses }
+                onClick={this.generate.bind(this)}>
+                {
+                    map(this.leaves, (leave, idx) => {
+                        const isActive = includes(this.state.activeLeaves, idx)
+                        const classes = classNames(style.leave, {
+                            [style.leave__active]: isActive,
+                            [style.leave__passive]: !isActive && !this.state.counting
+                        })
+                        return (
+                            <Illustration
+                                key={idx}
+                                illustration={leave}
+                                className={classes} />
+                        )
+                    })
+                }
             </div>
         )
     }

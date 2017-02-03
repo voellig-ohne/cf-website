@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import Hero from 'components/Hero'
-import FoxNetwork from 'components/FoxNetwork'
+import FoxNetworkHead from 'components/FoxNetworkHead'
 import SectionContentSingle from 'components/SectionContentSingle'
 import ResponsiveImage from 'components/ResponsiveImage'
 import PartnerList from 'components/PartnerList'
@@ -23,7 +23,7 @@ export default class UberUns extends React.Component {
             <DocumentTitle title={ config.siteTitle + ' | über uns'  }>
                 <main>
                     <section className="sub_intro">
-                        <FoxNetwork className="sub_intro-forrest" />
+                        <FoxNetworkHead className="sub_intro-forrest" />
                         <header className="sub_intro-header">
                             <h1 className="sub_intro-heading">
                                 Der Fuchs + sein Wald.
