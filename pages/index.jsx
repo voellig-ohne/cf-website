@@ -107,9 +107,9 @@ export default class Index extends React.Component {
                     </p>
                 </IntroSection>
 
-                <Hero image="wald_seile">
-                    <Link className="cta" to="/leistungen/">
-                        Finden Sie mit uns durch den Wald
+                <Hero image="wald_christian">
+                    <Link className="cta" to="/ueber_uns/">
+                        Wer ist fuchs+wald?
                     </Link>
                 </Hero>
                 
