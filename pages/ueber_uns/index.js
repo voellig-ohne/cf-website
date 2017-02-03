@@ -14,7 +14,7 @@ import classNames from 'classNames'
 export default class UberUns extends React.Component {
     render() {
         const partners = sortBy(filter(this.props.route.pages, (page) => {
-            return includes(page.path, '/uber_uns/partner/')
+            return includes(page.path, '/ueber_uns/partner/')
         }), (page) => {
             return page.data.order
         })
