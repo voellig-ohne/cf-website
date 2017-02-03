@@ -9,6 +9,7 @@ import Forrest from '../components/Forrest'
 import MiniForrestGroup from '../components/MiniForrestGroup'
 import FoxAndYou from '../components/FoxAndYou'
 import SectionContentSingle from 'components/SectionContentSingle'
+import FoxNetwork from 'components/FoxNetwork'
 
 export default class Index extends React.Component {
     render() {
@@ -56,6 +57,17 @@ export default class Index extends React.Component {
                         </div>
                     
                 </SectionContentSingle>
+
+                { /*
+                <IntroSection
+                        cta={{link: '/ueber_uns/', text: 'Über uns'}}
+                        illustration={(<FoxNetwork className="section_content-graphic-image" />)}>
+                    <h1>Der Fuchs und sein Wald.</h1>
+                    <p>
+                        Fuchs+Wald sind Christian Fuchs und ein loser Zusammenschluss verschienster Kreativer.
+                    </p>
+                </IntroSection>
+                */ } 
 
                 <IntroSection
                         cta={{link: '/leistungen/', text: 'leistungen'}}
