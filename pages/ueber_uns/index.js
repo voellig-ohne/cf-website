@@ -44,15 +44,16 @@ export default class UberUns extends React.Component {
                             </div>
                             <div className={ style.main_text }>
                                 <p>
-                                    Hier ist ein Text über Christian Fuchs, den Hauptakteur bei Duchs+Wald.<br />
-                                    Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis 
-                                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                                    Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur 
-                                    est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                    Ich, Christian Fuchs, bin Fachinformatiker, studierter Wirtschaftsinformatiker 
+                                    und #emailgeek. Mit fuchs+wald biete ich Beratung und Umsetzung mit den 
+                                    Schwerpunkten E-Mail-Marketing, Marketing Automation und Kundenbeziehung an. 
+                                    Zusammen mit einem spezialisierten Netzwerk, dem Wald, bin ich für große 
+                                    Handelsunternehmen, Firmen aus eCommerce, Travel und anderen Branchen, Startups, 
+                                    Solopreneure und Agenturen aktiv.
                                 </p>
 
-                                <a className={classNames('cta', style.cta)} href="#">
-                                    CTA! Schreib uns!
+                                <a className={classNames('cta', style.cta)} href="mailto:projektanfrage@undwald.de">
+                                    In Kontakt treten
                                 </a>
                             </div>
                         </div>
