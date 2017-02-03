@@ -48,22 +48,9 @@ export default class FoxNetwork extends React.Component {
         )
     }
     componentDidMount() {
-        if (typeof window !== 'undefined') {
-            setTimeout(() => {
-                this.onResize()
-            }, 0)
-
-            window.addEventListener('resize', this.onResize.bind(this))
-        }
         this.generate()
     }
     componentWillUnmount() {
-        window.removeEventListener('resize', this.onResize.bind(this))
-    }
-    onResize() {
-        this.setState({
-            
-        })
     }
     generate() {
         if(!this.state.counting) {
