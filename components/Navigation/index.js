@@ -7,7 +7,7 @@ export default class Navigation extends React.Component {
     render () {
         const links = [
             {
-                link: '/',
+                link: '/ueber_uns/',
                 title: 'über uns'
             },{
                 link: '/leistungen/',
