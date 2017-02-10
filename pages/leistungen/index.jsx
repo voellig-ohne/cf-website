@@ -6,6 +6,7 @@ import { config } from 'config'
 import Forrest from 'components/Forrest'
 import Hero from 'components/Hero'
 import { filter, map, sortBy, includes } from 'lodash'
+import SectionIconStrip from 'components/SectionIconStrip'
 import IllustratedSection from 'components/IllustratedSection'
 
 export default class Leistungen extends React.Component {
@@ -15,6 +16,49 @@ export default class Leistungen extends React.Component {
         }), (page) => {
             return page.data.order
         })
+
+        const branchen = [
+            {
+                illustration: 'branchen_ecommerce',
+                title: 'E-Commerce & Versandhandel'
+            },
+            {
+                illustration: 'branchen_verkehr',
+                title: 'Tourismus & Verkehr'
+            },
+            {
+                illustration: 'branchen_dienstleistung',
+                title: ( <span>Dienst&shy;leis&shy;tungen & Hand&shy;werk</span> )
+            },
+            {
+                illustration: 'branchen_b2b',
+                title: 'B2B'
+            },
+            {
+                illustration: 'branchen_b2c',
+                title: 'B2C'
+            },
+            {
+                illustration: 'branchen_agenturen',
+                title: 'Agenturen'
+            },
+            {
+                illustration: 'branchen_ngo',
+                title: 'NGOs & Vereine'
+            },
+            {
+                illustration: 'branchen_freelance',
+                title: ( <span>Einzel&shy;unter&shy;nehmer</span> )
+            },
+            {
+                illustration: 'branchen_telecom',
+                title: ( <span>Technik & Tele&shy;kom&shy;muni&shy;ka&shy;tion</span> )
+            },
+            {
+                illustration: 'branchen_medien',
+                title: 'Medien & Marketing'
+            },
+        ]
 
         return (
             <DocumentTitle title={ config.siteTitle + ' | leistungen'  }>
@@ -47,6 +91,10 @@ export default class Leistungen extends React.Component {
                         })
                     }
 
+                    <SectionIconStrip 
+                        title="Zufriedene Kunden aus den Branchen"
+                        illustrations={branchen} />
+                    
                     <Hero image="wald_buro">
                         <Link to="/arbeitsweisen/" className="cta">
                             Wie arbeitet fuchs+wald?
