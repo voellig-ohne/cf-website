@@ -26,15 +26,23 @@ export default class SectionItemStrip extends React.Component{
         return (
             <SectionContentSingle className={ className }>
                 <h2 className={style.heading}>{ title }</h2>
-                <div className={style.illustrationContainer}>
+                <div className={style.illustrationsContainer}>
                     {
                         map(illustrations, (illustration, key) => {
                             return (
-                                <Illustration 
-                                    className={classNames(style.illustration, { [style['illustration--smaller']]: smaller})}
-                                    illustration={illustration.illustration}
-                                    key={key}
-                                    title={illustration.title} />
+                                <div className={ classNames(style.illustrationContainer, { [style['illustrationContainer--bigger']]: !smaller})}
+                                        key={key}>
+                                    <Illustration 
+                                        className={classNames(style.illustration, { [style['illustration--smaller']]: smaller})}
+                                        illustration={illustration.illustration}
+                                        title={illustration.title} />
+                                    {
+                                        smaller ? null : 
+                                        <span className={style.title}>
+                                            {illustration.title}
+                                        </span>
+                                    }
+                                </div>
                             )
                         })
                     }

@@ -1,15 +1,17 @@
+@import "~style/vars";
+
 .heading {
     text-align: center;
 }
 
 .illustration {
-    height: 3rem;
     display: inline-block;
     margin: 1rem;
-    opacity: .5;
-    max-width: 11rem;
+    max-width: 16rem;
 
     &--smaller {
+        opacity: .5;
+        height: 3rem;
         max-width: 7rem;
     }
 
@@ -19,9 +21,39 @@
     }
 }
 
-.illustrationContainer {
+.illustrationsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 1rem -1rem -1rem;
+}
+
+.illustrationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--bigger {
+        width: 20%;
+        padding: .5rem;
+
+        @media (max-width: @break) {
+            width: 25%;
+        }
+
+        @media (max-width: 500px) {
+            width: 33.3%;
+        }
+
+        @media (max-width: 500px) {
+            width: 50%;
+        }
+    }
+}
+
+.title {
+    font-family: @heading-font;
+    opacity: .5;
+    margin-bottom: 1rem;
+    text-align: center;
 }
