@@ -32,7 +32,7 @@
     "gatsby": "^0.12.38",
     "lodash": "^4.12.0",
     "moment": "^2.12.0",
-    "markdown-it": "^6.0.2",
+    "markdown-it": "^8.3.1",
     "react-document-title": "^2.0.1",
     "react-google-analytics": "^0.2.0"
   },
@@ -44,8 +44,8 @@
     "eslint-plugin-import": "^1.8.0",
     "eslint-plugin-jsx-a11y": "^1.2.0",
     "eslint-plugin-react": "^5.1.1",
-    "file-loader": "^0.8.5",
-    "loader-utils": "^0.2.16",
+    "file-loader": "^0.10.1",
+    "loader-utils": "^1.1.0",
     "sharp": "^0.17.2",
     "svg-inline-loader": "^0.7.1"
   }
