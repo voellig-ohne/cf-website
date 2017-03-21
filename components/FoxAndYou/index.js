@@ -12,6 +12,8 @@ export default class FoxAndYou extends React.Component {
     constructor(props) {
         super(props)
 
+        this.boundResize = this.onResize.bind(this)
+
         this.state = {
             scroll: 0,
             animalHeight: 60,
@@ -72,7 +74,7 @@ export default class FoxAndYou extends React.Component {
                 this.onResize()
             }, 0)
 
-            window.addEventListener('resize', this.onResize.bind(this))
+            window.addEventListener('resize', this.boundResize)
 
             setTimeout(() => {
                 this.goSlide();
@@ -80,7 +82,7 @@ export default class FoxAndYou extends React.Component {
         }
     }
     componentWillUnmount() {
-        window.removeEventListener('resize', this.onResize.bind(this))
+        window.removeEventListener('resize', this.boundResize)
     }
     onResize() {
         const animalRowCount = this.calculateAnimalRowCount()
