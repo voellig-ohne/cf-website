@@ -31,15 +31,12 @@
     "classnames": "^2.1.2",
     "front-matter": "^2.0.8",
     "gatsby": "^0.12.38",
-    "history": "^2.1.1",
     "lodash": "^4.12.0",
     "moment": "^2.12.0",
     "markdown-it": "^6.0.2",
     "react-document-title": "^2.0.1",
     "react-google-analytics": "^0.2.0",
-    "react-router": "^2.4.0",
-    "safe-access": "^0.1.0",
-    "underscore.string": "^3.2.3"
+    "react-router": "^2.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -52,8 +49,6 @@
     "eslint-plugin-react": "^5.1.1",
     "file-loader": "^0.8.5",
     "loader-utils": "^0.2.16",
-    "lost": "^6.7.2",
-    "rucksack-css": "^0.8.5",
     "sharp": "^0.16.2",
     "svg-inline-loader": "^0.6.1"
   }
