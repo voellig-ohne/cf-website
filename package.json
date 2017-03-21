@@ -4,7 +4,6 @@
   "description": "Fuchs+Wald Website",
   "main": "n/a",
   "scripts": {
-    "develop": "gatsby develop",
     "build": "gatsby build",
     "serve-build": "gatsby serve-build",
     "clean:public": "rm -rf public",
