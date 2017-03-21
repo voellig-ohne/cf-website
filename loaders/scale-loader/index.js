@@ -5,7 +5,7 @@ module.exports = function(content) {
 
     this.cacheable();
 
-    var config = loaderUtils.getLoaderConfig(this, "scaleLoader");
+    var config = loaderUtils.getOptions(this, "scaleLoader");
 
     var callback = this.async();
 
