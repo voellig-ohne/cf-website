@@ -7,6 +7,7 @@ import Forrest from 'components/Forrest'
 import Hero from 'components/Hero'
 import VerticalSection from 'components/VerticalSection'
 import QuoteSection from 'components/QuoteSection'
+import Events from 'components/Events'
 import { map, filter, includes } from 'lodash' 
 
 export default class Workshops extends React.Component {
@@ -16,6 +17,10 @@ export default class Workshops extends React.Component {
         }), (page) => {
             return page.data
         })
+
+        const termine = map(filter(this.props.route.pages, (page) => {
+            return includes(page.path, '/workshops/termine')
+        }), (page) => page.data)
 
         return (
             <DocumentTitle title={ config.siteTitle  + ' | workshops' }>
@@ -36,6 +41,8 @@ export default class Workshops extends React.Component {
                     </section>
 
                     <VerticalSection sections={workshops} />
+
+                    <Events events={termine} />
 
                     <QuoteSection author="Marcus Hahner">
                         Workshop mit perfektem Tiefgang und sagenhafter Bandbreite – ein Muss für alle, die das Thema EMM ernst nehmen.
