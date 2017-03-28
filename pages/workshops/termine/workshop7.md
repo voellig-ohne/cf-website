@@ -1,5 +1,5 @@
 ---
-title: Individueller Workshop 1
+title: Individueller Workshop 3
 type: individual
 ---
 
