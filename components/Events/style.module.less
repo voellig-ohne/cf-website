@@ -1,5 +1,8 @@
 @import "~style/vars";
 
+@border: .5rem solid @red;
+@gridBreak: 600px;
+
 .events {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -7,15 +10,59 @@
     grid-row-gap: 2rem;
     list-style: none;
     padding: 0;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    @media (max-width: @gridBreak) {
+        display: block;
+    }
 }
 
 .event {
-    border: .3em solid @red;
+    border: @border;
     padding: .5rem;
+
+    @media (max-width: @gridBreak) {
+        margin-bottom: 1rem;
+    }
+}
+
+.heading {
+    margin-bottom: 0;
 }
 
 .body {
     p {
         font-size: @font-size-s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
+}
+
+.meta {
+    display: flex;
+    align-items: flex-end;
+}
+
+.date {
+    color: @red;
+    font-family: @heading-font;
+    font-size: @font-size-l;
+    border-right: @border;
+    padding-right: .5rem;
+    margin-right: .5rem;
+    line-height: 1;
+}
+
+.year {
+    display: flex;
+    justify-content: space-between;
 }
