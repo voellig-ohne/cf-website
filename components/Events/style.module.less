@@ -1,6 +1,5 @@
 @import "~style/vars";
 
-@border: .5rem solid @red;
 @gridBreak: 600px;
 
 .events {
@@ -21,8 +20,8 @@
 }
 
 .event {
-    border: @border;
     padding: .5rem;
+    background: white;
 
     @media (max-width: @gridBreak) {
         margin-bottom: 1rem;
@@ -56,7 +55,6 @@
     color: @red;
     font-family: @heading-font;
     font-size: @font-size-l;
-    border-right: @border;
     padding-right: .5rem;
     margin-right: .5rem;
     line-height: 1;
