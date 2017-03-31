@@ -23,13 +23,13 @@ function Events({ events }) {
                             <div className={style.meta}>
                                 { event.date && <Date date={event.date} /> } 
                                 <div>
-                                    { event.price && 
+                                    { !!event.price && 
                                         <Meta> 
                                             <span>Preis</span>
                                             <span>{event.price}</span>
                                         </Meta>
                                     } 
-                                    { event.type && 
+                                    { !!event.type && 
                                         <Meta> 
                                             <span>Typ</span>
                                             <span>{ TYPES[event.type] }</span>
@@ -43,6 +43,18 @@ function Events({ events }) {
                                 </h2>
                                 <div className={style.body}
                                         dangerouslySetInnerHTML={{ __html: event.body }} />
+
+                                { event.link && 
+                                    <div className={style.cta_container}> 
+                                        <a className='cta cta__small'
+                                                href={event.link}
+                                                target='_blank'>
+                                            { event.type === 'open' ?
+                                                'Buchen' : 'Mehr Informationen'
+                                            }                                            
+                                        </a>
+                                    </div>
+                                } 
                             </div>
                         </li>
                     )
