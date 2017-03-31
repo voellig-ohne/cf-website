@@ -5,11 +5,18 @@ import classNames from 'classNames'
 import SectionContentSingle from 'components/SectionContentSingle'
 import moment from 'moment';
 import 'moment/locale/de';
+import Illustration from 'components/Illustration'
 
 const TYPES = {
     open: 'Offener Workshop',
     individual: 'Individueller Workshop',
     inhouse: 'Inhouse Workshop'
+}
+
+const ICONS = {
+    open: 'workshop_offen',
+    individual: 'workshop_coaching',
+    inhouse: 'workshop_inhouse'
 }
 
 function Events({ events }) {
@@ -20,9 +27,12 @@ function Events({ events }) {
                     return (
                         <li key={event.title}
                                 className={style.event}>
-                            <div className={style.meta}>
-                                { event.date && <Date date={event.date} /> } 
-                                <div>
+                            <div className={style.head}>
+                                <div className={style.head_part}>
+                                    <Illustration illustration={ICONS[event.type]} className={style.illustration} />
+                                </div>
+                                <div className={classNames(style.head_part, style.head_part_second)}>
+                                    { event.date && <Date date={event.date} /> } 
                                 </div>
                             </div>
                             <div className={style.content}>

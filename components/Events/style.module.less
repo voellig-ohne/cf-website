@@ -1,6 +1,7 @@
 @import "~style/vars";
 
 @gridBreak: 600px;
+@padding: 1rem;
 
 .events {
     display: grid;
@@ -20,7 +21,7 @@
 }
 
 .event {
-    padding: .5rem;
+    padding: @padding;
     background: white;
     display: flex;
     flex-direction: column;
@@ -48,15 +49,33 @@
     }
 }
 
-.meta {
+.head {
     display: flex;
-    align-items: flex-end;
+    height: 8rem;
+    margin: -@padding  -@padding 0;
+
+    &_part {
+        flex: 0 0 auto;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_second {
+            background: @green;
+        }
+    }
+}
+
+.illustration {
+    height: 4rem;
+    width: 4rem;
 }
 
 .date {
-    color: @red;
+    color: white;
     font-family: @heading-font;
-    font-size: @font-size-l;
+    font-size: @font-size-m;
     padding-right: .5rem;
     margin-right: .5rem;
     line-height: 1;
