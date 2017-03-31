@@ -22,6 +22,8 @@
 .event {
     padding: .5rem;
     background: white;
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: @gridBreak) {
         margin-bottom: 1rem;
@@ -65,8 +67,10 @@
     justify-content: space-between;
 }
 
-.cta_container {
+.footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1 0 auto;
     margin-top: .5rem;
 }

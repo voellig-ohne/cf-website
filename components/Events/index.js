@@ -23,6 +23,17 @@ function Events({ events }) {
                             <div className={style.meta}>
                                 { event.date && <Date date={event.date} /> } 
                                 <div>
+                                </div>
+                            </div>
+                            <div className={style.content}>
+                                <h2 className={style.heading}>
+                                    { event.title }
+                                </h2>
+                                <div className={style.body}
+                                        dangerouslySetInnerHTML={{ __html: event.body }} />
+                            </div>
+                            <div className={style.footer}> 
+                                <div>
                                     { !!event.price && 
                                         <Meta> 
                                             <span>Preis</span>
@@ -36,25 +47,15 @@ function Events({ events }) {
                                         </Meta>
                                     } 
                                 </div>
-                            </div>
-                            <div className={style.content}>
-                                <h2 className={style.heading}>
-                                    { event.title }
-                                </h2>
-                                <div className={style.body}
-                                        dangerouslySetInnerHTML={{ __html: event.body }} />
-
                                 { event.link && 
-                                    <div className={style.cta_container}> 
-                                        <a className='cta cta__small'
-                                                href={event.link}
-                                                target='_blank'>
-                                            { event.type === 'open' ?
-                                                'Buchen' : 'Mehr Informationen'
-                                            }                                            
-                                        </a>
-                                    </div>
-                                } 
+                                    <a className='cta cta__small'
+                                            href={event.link}
+                                            target='_blank'>
+                                        { event.type === 'open' ?
+                                            'Buchen' : 'Mehr Informationen'
+                                        }                                            
+                                    </a>
+                                }
                             </div>
                         </li>
                     )
