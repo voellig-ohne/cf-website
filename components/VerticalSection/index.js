@@ -29,6 +29,16 @@ export default class VerticalSection extends React.Component {
                                     }
                                     <h2>{ section.title }</h2>
                                     <div dangerouslySetInnerHTML={{ __html: section.body }} />
+                                    {   
+                                        section.cta
+                                        ? <div className={style.cta_container}>
+                                            <a href={section.cta.link}
+                                                    className="cta cta__small">
+                                                {section.cta.text}
+                                            </a> 
+                                        </div>
+                                        : null 
+                                    }
                                 </div>
                             )
                         })
