@@ -42,7 +42,7 @@ export default class Workshops extends React.Component {
 
                     <VerticalSection sections={workshops} />
 
-                    <Events events={termine} />
+                    {/* <Events events={termine} /> */}
 
                     <QuoteSection author="Marcus Hahner">
                         Workshop mit perfektem Tiefgang und sagenhafter Bandbreite – ein Muss für alle, die das Thema EMM ernst nehmen.
