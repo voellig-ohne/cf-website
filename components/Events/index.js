@@ -8,9 +8,9 @@ import 'moment/locale/de';
 import Illustration from 'components/Illustration'
 
 const TYPES = {
-    open: 'Offener Workshop',
-    individual: 'Individueller Workshop',
-    inhouse: 'Inhouse Workshop'
+    open: 'Offen',
+    individual: 'Individuell',
+    inhouse: 'Inhouse'
 }
 
 const ICONS = {
@@ -50,19 +50,13 @@ function Events({ events }) {
                                             <span>{event.price}</span>
                                         </Meta>
                                     } 
-                                    { !!event.type && 
-                                        <Meta> 
-                                            <span>Typ</span>
-                                            <span>{ TYPES[event.type] }</span>
-                                        </Meta>
-                                    } 
                                 </div>
                                 { event.link && 
                                     <a className='cta cta__small'
                                             href={event.link}
                                             target='_blank'>
                                         { event.type === 'open' ?
-                                            'Buchen' : 'Mehr Informationen'
+                                            'Buchen' : 'Mehr Informationen (pdf)'
                                         }                                            
                                     </a>
                                 }
