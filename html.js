@@ -1,6 +1,5 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
-import GoogleTracking from 'components/GoogleTracking'
 import { prefixLink } from 'gatsby-helpers'
 
 const BUILD_TIME = new Date().getTime()
@@ -35,7 +34,6 @@ module.exports = React.createClass({
             <body>
               <div id="react-mount" dangerouslySetInnerHTML={ {    __html: this.props.body} } />
               <script src={ prefixLink(`/bundle.js?t=${BUILD_TIME}`) } />
-              <GoogleTracking />
             </body>
             </html>
         )
