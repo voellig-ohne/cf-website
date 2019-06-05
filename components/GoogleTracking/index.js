@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function GoogleTracking() {
     const js = `
@@ -9,12 +9,9 @@ function GoogleTracking() {
 
         ga('create', 'UA-82798063-1', 'auto');
         ga('send', 'pageview');
-    `
+    `;
 
-    return <script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{ __html: js }}
-    />
+    return <script type="text/javascript" dangerouslySetInnerHTML={{ __html: js }} />;
 }
 
-export default GoogleTracking
+export default GoogleTracking;
