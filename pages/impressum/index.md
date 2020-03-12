@@ -6,7 +6,7 @@ title: Impressum
 <p>
     fuchs+wald <br />
     c/o Christian Fuchs<br />
-    Sonnenallee 206<br />
+    Sonnenallee 200<br />
     12059 Berlin
 </p>
 <h2>Kontakt:</h2>
@@ -18,7 +18,7 @@ title: Impressum
 </tr></table>
 <h2>Umsatzsteuer-ID:</h2>
 <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br />
-DE296427768</p>
+DE327576270</p>
 <p> </p>
 
 <h1>Haftungs&shy;ausschluss (Disclaimer)</h1>
