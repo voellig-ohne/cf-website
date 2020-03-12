@@ -48,7 +48,7 @@ Deine persönlichen Daten werden von fuchs+wald nur verschlüsselt übertragen. 
 
 ### VERANTWORTLICHE STELLE UND DATENSCHUTZBEAUFTRAGTER
 
-Verantwortliche Stelle für die Erhebung, Verarbeitung und Nutzung Deiner personenbezogenen Daten im Sinne des Bundesdatenschutzgesetzes (BDSG) und der Datenschutz Grundverordnung (DSGVO) ist Christian Fuchs // fuchs+wald Sonnenallee 206, 12059 Berlin, vertreten durch Christian Fuchs. Kontakt: Telefon: +49 (0) 30 555 721791; E-Mail: buero(at)undwald.de
+Verantwortliche Stelle für die Erhebung, Verarbeitung und Nutzung Deiner personenbezogenen Daten im Sinne des Bundesdatenschutzgesetzes (BDSG) und der Datenschutz Grundverordnung (DSGVO) ist Christian Fuchs // fuchs+wald Sonnenallee 200, 12059 Berlin, vertreten durch Christian Fuchs. Kontakt: Telefon: +49 (0) 30 555 721791; E-Mail: buero(at)undwald.de
 
 #### 1. ERHEBUNG, SPEICHERUNG UND VERWENDUNG PERSONENBEZOGENER DATEN
 
