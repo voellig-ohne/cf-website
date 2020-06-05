@@ -4,7 +4,7 @@ title: Impressum
 
 <h2>Angaben gemäß § 5 TMG:</h2>
 <p>
-    fuchs+wald <br />
+    fuchs+wald GmbH<br />
     Sonnenallee 200<br />
     12059 Berlin
 </p>
