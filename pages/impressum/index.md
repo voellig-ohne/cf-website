@@ -5,14 +5,13 @@ title: Impressum
 <h2>Angaben gemäß § 5 TMG:</h2>
 <p>
     fuchs+wald <br />
-    c/o Christian Fuchs<br />
     Sonnenallee 200<br />
     12059 Berlin
 </p>
 <h2>Kontakt:</h2>
 <table><tr>
 <td>Telefon:</td>
-<td>+49 162 2416317</td></tr>
+<td>+49 30 68055860</td></tr>
 <tr><td>E-Mail:</td>
 <td>buero@undwald.de</td>
 </tr></table>
