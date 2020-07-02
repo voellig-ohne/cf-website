@@ -37,7 +37,7 @@ export default class Navigation extends React.Component {
         return (
             <nav className="navigation">
                 <ul className="navigation-list">
-                    {links.map(link => {
+                    {links.map((link) => {
                         const linkClasses = classNames('navigation_link', {
                             'navigation_link--active': link.link === location,
                         });
