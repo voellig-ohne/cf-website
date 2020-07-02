@@ -19,16 +19,16 @@
   "author": "Timur Celikel <timur@volligohne.de≥",
   "dependencies": {
     "classnames": "^2.2.5",
-    "file-loader": "^0.10.1",
+    "file-loader": "^6.0.0",
     "front-matter": "^2.0.8",
-    "gatsby": "^0.12.38",
+    "gatsby": "^2.23.14",
     "loader-utils": "^1.1.0",
-    "lodash": "^4.12.0",
-    "markdown-it": "^8.3.1",
-    "moment": "^2.12.0",
+    "lodash": "^4.17.15",
+    "markdown-it": "^11.0.0",
+    "moment": "^2.27.0",
     "react-document-title": "^2.0.1",
     "react-google-analytics": "^0.2.0",
-    "svg-inline-loader": "^0.7.1"
+    "svg-inline-loader": "^0.8.2"
   },
   "devDependencies": {
     "prettier": "2.0.5"
