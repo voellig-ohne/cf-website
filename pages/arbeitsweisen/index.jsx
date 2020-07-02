@@ -1,66 +1,67 @@
-import React from 'react'
-import { Link } from 'react-router'
-import DocumentTitle from 'react-document-title'
-import { prefixLink } from 'gatsby-helpers'
-import { config } from 'config'
-import VerticalSection from 'components/VerticalSection'
-import FoxAndYou from 'components/FoxAndYou'
-import Hero from 'components/Hero'
-import SectionIconStrip from 'components/SectionIconStrip'
-import { filter, map, includes } from 'lodash'
+import React from 'react';
+import { Link } from 'react-router';
+import DocumentTitle from 'react-document-title';
+import { prefixLink } from 'gatsby-helpers';
+import { config } from 'config';
+import VerticalSection from 'components/VerticalSection';
+import FoxAndYou from 'components/FoxAndYou';
+import Hero from 'components/Hero';
+import SectionIconStrip from 'components/SectionIconStrip';
+import { filter, map, includes } from 'lodash';
 
 export default class Arbeitsweisen extends React.Component {
     render() {
-        const weisen = map(filter(this.props.route.pages, (page) => {
-            return includes(page.path, '/arbeitsweisen/weisen')
-        }), (page) => {
-            return page.data
-        })
+        const weisen = map(
+            filter(this.props.route.pages, (page) => {
+                return includes(page.path, '/arbeitsweisen/weisen');
+            }),
+            (page) => {
+                return page.data;
+            }
+        );
 
         const tools = [
             {
                 illustration: 'tools_cleverreach',
-                title: 'CleverReach'
+                title: 'CleverReach',
             },
             {
                 illustration: 'tools_emarsys',
-                title: 'emarsys'
+                title: 'emarsys',
             },
             {
                 illustration: 'tools_google',
-                title: 'Google Ananytics'
+                title: 'Google Ananytics',
             },
             {
                 illustration: 'tools_litmus',
-                title: 'Litmus'
+                title: 'Litmus',
             },
             {
                 illustration: 'tools_mailchimp',
-                title: 'Mailchimp'
+                title: 'Mailchimp',
             },
             {
                 illustration: 'tools_newsletter2go',
-                title: 'Newsletter2go'
+                title: 'Newsletter2go',
             },
             {
                 illustration: 'tools_optivo',
-                title: 'Optivo'
+                title: 'Optivo',
             },
             {
                 illustration: 'tools_wordpress',
-                title: 'Wordpress'
+                title: 'Wordpress',
             },
-        ]
+        ];
 
         return (
-            <DocumentTitle title={ config.siteTitle + ' | arbeitsweisen'  }>
+            <DocumentTitle title={config.siteTitle + ' | arbeitsweisen'}>
                 <main>
                     <section className="sub_intro">
                         <FoxAndYou className="sub_intro-forrest" />
                         <header className="sub_intro-header">
-                            <h1 className="sub_intro-heading">
-                                Der Fuchs und Du.
-                            </h1>
+                            <h1 className="sub_intro-heading">Der Fuchs und Du.</h1>
                         </header>
                     </section>
 
@@ -70,10 +71,7 @@ export default class Arbeitsweisen extends React.Component {
 
                     <VerticalSection sections={weisen} />
 
-                    <SectionIconStrip 
-                        title="Tools"
-                        illustrations={tools}
-                        smaller={true} />
+                    <SectionIconStrip title="Tools" illustrations={tools} smaller={true} />
 
                     <Hero image="wald_briefe">
                         <Link to="/usecases/" className="cta">
@@ -82,6 +80,6 @@ export default class Arbeitsweisen extends React.Component {
                     </Hero>
                 </main>
             </DocumentTitle>
-        )
+        );
     }
 }

@@ -1,30 +1,25 @@
-const f = 'f'
-const t = 't'
-const e = 'e'
+const f = 'f';
+const t = 't';
+const e = 'e';
 
 const forrests = [
     [
         [t, t, t],
         [t, f, f],
-        [t, t, t]
+        [t, t, t],
     ],
     [
         [e, e, e, t, e],
         [t, e, f, f, t],
         [t, t, t, t, t],
-        [e, t, e, e, t]
+        [e, t, e, e, t],
     ],
-    [
-        [t],
-        [f],
-        [f],
-        [t],
-    ],
+    [[t], [f], [f], [t]],
     [
         [e, e, e, t, e],
         [t, e, t, t, t],
         [f, f, t, t, t],
-        [e, t, e, e, t]
+        [e, t, e, e, t],
     ],
     [
         [t, t, t, t, t, t, t],
@@ -38,7 +33,7 @@ const forrests = [
         [e, e, e, t, e],
         [t, e, f, f, t],
         [t, t, t, t, t],
-        [e, t, e, e, t]
+        [e, t, e, e, t],
     ],
     [
         [e, e, e, e, e, t, e, e],
@@ -49,20 +44,20 @@ const forrests = [
         [e, t, f, f, t, t, t, t],
         [t, t, t, t, t, t, t, t],
         [t, t, t, t, t, t, t, t],
-        [t, t, t, t, t, t, t, t]
+        [t, t, t, t, t, t, t, t],
     ],
     [
         [e, e, e, t, e],
         [t, e, f, f, t],
         [t, t, t, t, t],
-        [e, t, e, e, t]
+        [e, t, e, e, t],
     ],
     [
         [e, e, e, t, e],
         [t, e, f, f, t],
         [t, t, t, t, t],
-        [e, t, e, e, t]
-    ]
-]
+        [e, t, e, e, t],
+    ],
+];
 
 export default forrests;
