@@ -6,9 +6,6 @@
   "scripts": {
     "build": "gatsby build",
     "serve-build": "gatsby serve-build",
-    "clean:public": "rm -rf public",
-    "clean": "npm run clean:public",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gatsby develop",
     "deploy-beta": "rsync -avzc --del public/ voellig@antares.uberspace.de:/var/www/virtual/voellig/fuchs.volligohne.de/",
