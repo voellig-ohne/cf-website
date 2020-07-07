@@ -3,11 +3,11 @@ import { Link } from 'react-router';
 import DocumentTitle from 'react-document-title';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
-import Illustration from '../components/Illustration';
-import Hero from '../components/Hero';
-import Forrest from '../components/Forrest';
-import MiniForrestGroup from '../components/MiniForrestGroup';
-import FoxAndYou from '../components/FoxAndYou';
+import Illustration from '../../components/Illustration';
+import Hero from '../../components/Hero';
+import Forrest from '../../components/Forrest';
+import MiniForrestGroup from '../../components/MiniForrestGroup';
+import FoxAndYou from '../../components/FoxAndYou';
 import SectionContentSingle from 'components/SectionContentSingle';
 import FoxNetwork from 'components/FoxNetwork';
 
