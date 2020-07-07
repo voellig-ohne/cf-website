@@ -6,22 +6,25 @@ import SectionContentSingle from '../SectionContentSingle';
 import contentfulRichText from '../contentfulRichText';
 import PageWrapper from '../PageWrapper';
 import IntroSection from '../IntroSection';
+import Hero from '../Hero';
 
 export default ({ data: { contentfulPage }, location: { pathname } }) => {
     return (
         <PageWrapper pathname={pathname}>
             {contentfulPage.sections.map((section, index) => (
-                <>
+                <React.Fragment key={index}>
                     {section.__typename === 'ContentfulSectionIntro' && (
                         <IntroSection claim={section.claim} type={section.type} />
                     )}
+                    {section.__typename === 'ContentfulSectionHero' && (
+                        <Hero ctaTarget={section?.ctaTarget?.slug} ctaText={section.ctaText} image={section.image} />
+                    )}
                     {section.__typename === 'ContentfulSection' && (
-                        <SectionContentSingle key={index} title={section.titleDisplay}>
-                            {console.log(section.__typename)}
+                        <SectionContentSingle title={section.titleDisplay}>
                             {contentfulRichText(section.body.json)}
                         </SectionContentSingle>
                     )}
-                </>
+                </React.Fragment>
             ))}
             <Helmet>
                 <title>{contentfulPage.title}</title>
@@ -53,6 +56,18 @@ export const pageQuery = graphql`
                         __typename
                         claim
                         type
+                    }
+                    ... on ContentfulSectionHero {
+                        __typename
+                        image {
+                            fluid(maxWidth: 2000) {
+                                ...GatsbyContentfulFluid_noBase64
+                            }
+                        }
+                        ctaTarget {
+                            slug
+                        }
+                        ctaText
                     }
                 }
             }
