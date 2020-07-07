@@ -42,7 +42,7 @@ export default class Navigation extends React.Component {
                             'navigation_link--active': link.link === location,
                         });
                         return (
-                            <li className="navigation-item" key={link.link}>
+                            <li className="navigation-item" key={link.href || link.to}>
                                 {link.to && (
                                     <Link to={link.to} className={linkClasses}>
                                         {link.title}
