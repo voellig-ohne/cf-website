@@ -23,7 +23,9 @@
     "file-loader": "^6.0.0",
     "front-matter": "^2.0.8",
     "gatsby": "^2.23.14",
+    "gatsby-plugin-less": "^4.0.0",
     "gatsby-source-contentful": "^2.3.24",
+    "less": "^3.11.3",
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.15",
     "markdown-it": "^11.0.0",
@@ -31,6 +33,7 @@
     "react-document-title": "^2.0.1",
     "react-dom": "^16.13.1",
     "react-google-analytics": "^0.2.0",
+    "react-helmet-async": "^1.0.6",
     "svg-inline-loader": "^0.8.2"
   },
   "devDependencies": {
