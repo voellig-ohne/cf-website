@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.less';
-import Illustration from '../components/Illustration';
-import ResponsiveImage from '../components/ResponsiveImage';
-import { Link } from 'react-router';
+import Illustration from '../Illustration';
+import ResponsiveImage from '../ResponsiveImage';
+import { Link } from 'gatsby';
 import classNames from 'classNames';
 
 export default class Hero extends React.Component {

@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './style.module.less';
-import Illustration from '../components/Illustration';
-import { Link } from 'react-router';
+import Illustration from '../Illustration';
+import { Link } from 'gatsby';
 import classNames from 'classNames';
 import { map } from 'lodash';
-import SectionContentSingle from '../components/SectionContentSingle';
+import SectionContentSingle from '../SectionContentSingle';
 
 export default class SectionItemStrip extends React.Component {
     constructor(props) {

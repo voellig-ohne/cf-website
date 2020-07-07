@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.less';
-import Illustration from '../components/Illustration';
-import { Link } from 'react-router';
+import Illustration from '../Illustration';
+import { Link } from 'gatsby';
 
 export default class LogoContainer extends React.Component {
     constructor(props) {

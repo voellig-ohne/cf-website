@@ -1,11 +1,11 @@
-import Illustration from '../components/Illustration';
+import Illustration from '../Illustration';
 import React from 'react';
 import style from './style.module.less';
 import { map } from 'lodash';
 import classNames from 'classNames';
 
 import forrests from './_forrests.js';
-import MiniForrest from '../components/MiniForrest';
+import MiniForrest from '../MiniForrest';
 
 export default class miniForrest extends React.Component {
     constructor(props) {

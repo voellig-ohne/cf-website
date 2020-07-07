@@ -1,8 +1,7 @@
 import React from 'react';
 import { map } from 'lodash';
 import './style.less';
-import { Link } from 'react-router';
-import Illustration from '../components/Illustration';
+import Illustration from '../Illustration';
 
 export default class Footer extends React.Component {
     render() {
