@@ -18,6 +18,7 @@
   ],
   "author": "Timur Celikel <timur@volligohne.de≥",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.1",
     "classnames": "^2.2.5",
     "dotenv": "^8.2.0",
     "file-loader": "^6.0.0",
