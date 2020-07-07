@@ -5,3 +5,6 @@ public
 pages/.manifest
 
 fonts/
+
+.env.*
+.cache
