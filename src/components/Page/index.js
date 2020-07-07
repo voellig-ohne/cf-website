@@ -16,8 +16,8 @@ export default ({ data, location }) => {
 
     return (
         <>
-            {contentfulPage.sections.map((section) => (
-                <SectionContentSingle title={section.titleDisplay}>
+            {contentfulPage.sections.map((section, index) => (
+                <SectionContentSingle key={index} title={section.titleDisplay}>
                     {contentfulRichText(section.body.json)}
                 </SectionContentSingle>
             ))}
