@@ -19,14 +19,17 @@
   "author": "Timur Celikel <timur@volligohne.de≥",
   "dependencies": {
     "classnames": "^2.2.5",
+    "dotenv": "^8.2.0",
     "file-loader": "^6.0.0",
     "front-matter": "^2.0.8",
     "gatsby": "^2.23.14",
+    "gatsby-source-contentful": "^2.3.24",
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.15",
     "markdown-it": "^11.0.0",
     "moment": "^2.27.0",
     "react-document-title": "^2.0.1",
+    "react-dom": "^16.13.1",
     "react-google-analytics": "^0.2.0",
     "svg-inline-loader": "^0.8.2"
   },
