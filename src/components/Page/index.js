@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Navigation from '../Navigation';
-// import Footer from '../Footer';
-// import LogoContainer from '../LogoContainer';
+import Footer from '../Footer';
+import LogoContainer from '../LogoContainer';
 
 import '../style/main.less';
 
@@ -13,8 +13,8 @@ export default ({ data, location }) => {
     return (
         <>
             <Navigation location={location.pathname} />
-            {/* <Footer />
-            <LogoContainer className="logo-container" /> */}
+            <Footer />
+            <LogoContainer className="logo-container" />
         </>
     );
 };
