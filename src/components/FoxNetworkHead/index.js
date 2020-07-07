@@ -1,9 +1,9 @@
-import Illustration from 'components/Illustration';
+import Illustration from '../components/Illustration';
 import React from 'react';
 import style from './style.module.less';
 import { map, includes } from 'lodash';
 import classNames from 'classNames';
-import FoxNetwork from 'components/FoxNetwork';
+import FoxNetwork from '../components/FoxNetwork';
 
 export default class FoxNetworkHead extends React.Component {
     render() {

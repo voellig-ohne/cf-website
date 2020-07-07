@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.less';
-import Illustration from 'components/Illustration';
-import ResponsiveImage from 'components/ResponsiveImage';
+import Illustration from '../components/Illustration';
+import ResponsiveImage from '../components/ResponsiveImage';
 import { Link } from 'react-router';
 import classNames from 'classNames';
 

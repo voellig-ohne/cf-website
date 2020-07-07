@@ -2,8 +2,8 @@ import React from 'react';
 import style from './style.module.less';
 import classNames from 'classNames';
 import { map } from 'lodash';
-import Illustration from 'components/Illustration';
-import SectionContentSingle from 'components/SectionContentSingle';
+import Illustration from '../components/Illustration';
+import SectionContentSingle from '../components/SectionContentSingle';
 
 export default class VerticalSection extends React.Component {
     render() {
