@@ -5,18 +5,27 @@ import { Helmet } from 'react-helmet-async';
 import SectionContentSingle from '../SectionContentSingle';
 import contentfulRichText from '../contentfulRichText';
 import PageWrapper from '../PageWrapper';
+import IntroSection from '../IntroSection';
 
 export default ({ data: { contentfulPage }, location: { pathname } }) => {
     return (
         <PageWrapper pathname={pathname}>
             {contentfulPage.sections.map((section, index) => (
-                <SectionContentSingle key={index} title={section.titleDisplay}>
-                    {contentfulRichText(section.body.json)}
-                </SectionContentSingle>
+                <>
+                    {section.__typename === 'ContentfulSectionIntro' && (
+                        <IntroSection claim={section.claim} type={section.type} />
+                    )}
+                    {section.__typename === 'ContentfulSection' && (
+                        <SectionContentSingle key={index} title={section.titleDisplay}>
+                            {console.log(section.__typename)}
+                            {contentfulRichText(section.body.json)}
+                        </SectionContentSingle>
+                    )}
+                </>
             ))}
             <Helmet>
                 <title>{contentfulPage.title}</title>
-                <meta name="description" content={contentfulPage.description.description} />
+                <meta name="description" content={contentfulPage?.description?.description} />
             </Helmet>
         </PageWrapper>
     );
@@ -32,10 +41,20 @@ export const pageQuery = graphql`
                 }
             }
             sections {
-                body {
-                    json
+                ... on Node {
+                    ... on ContentfulSection {
+                        __typename
+                        body {
+                            json
+                        }
+                        titleDisplay
+                    }
+                    ... on ContentfulSectionIntro {
+                        __typename
+                        claim
+                        type
+                    }
                 }
-                titleDisplay
             }
         }
     }
