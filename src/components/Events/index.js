@@ -2,10 +2,10 @@ import React from 'react';
 import style from './style.module.less';
 import { map } from 'lodash';
 import classNames from 'classNames';
-import SectionContentSingle from 'components/SectionContentSingle';
+import SectionContentSingle from '../components/SectionContentSingle';
 import moment from 'moment';
 import 'moment/locale/de';
-import Illustration from 'components/Illustration';
+import Illustration from '../components/Illustration';
 
 const TYPES = {
     open: 'Offen',
