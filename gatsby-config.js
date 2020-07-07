@@ -5,6 +5,8 @@ require('dotenv').config({
 module.exports = {
     plugins: [
         'gatsby-plugin-react-helmet-async',
+        'gatsby-plugin-sharp',
+        'gatsby-image',
         {
             resolve: `gatsby-source-contentful`,
             options: {

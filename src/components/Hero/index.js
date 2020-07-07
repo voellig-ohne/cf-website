@@ -1,32 +1,19 @@
 import React from 'react';
 import './style.less';
-import Illustration from '../Illustration';
-import ResponsiveImage from '../ResponsiveImage';
+import Img from 'gatsby-image';
 import { Link } from 'gatsby';
-import classNames from 'classNames';
 
-export default class Hero extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        const { image, title } = this.props;
-
-        const className = classNames(this.props.classNames, 'hero', {
-            'hero--has_text': this.props.children,
-        });
-
-        return (
-            <section className={className}>
-                <ResponsiveImage source={image} className="hero-image" />
-                <div className="hero-text">
-                    <div>
-                        {title ? <h1>{title}</h1> : null}
-
-                        {this.props.children}
-                    </div>
+export default ({ image, ctaTarget, ctaText }) => {
+    return (
+        <section className="hero">
+            <Img fluid={image.fluid} className="hero-image" />
+            <div className="hero-text">
+                <div>
+                    <Link to={ctaTarget} className="cta">
+                        {ctaText}
+                    </Link>
                 </div>
-            </section>
-        );
-    }
-}
+            </div>
+        </section>
+    );
+};

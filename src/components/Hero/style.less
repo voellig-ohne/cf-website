@@ -6,13 +6,9 @@
     background-size: cover;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 5rem;
     position: relative;
-
-    &--has_text {
-        justify-content: flex-start;
-    }
 
     &-text {
         width: 50%;
@@ -41,9 +37,7 @@
     }
 
     &-image {
-        object-fit: cover;
-        object-position: center;
-        position: absolute;
+        position: absolute !important;
         z-index: -1;
         top: 0;
         left: 0;
