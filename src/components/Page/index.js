@@ -7,6 +7,8 @@ import Favicon from './favicon.png';
 
 import '../style/main.less';
 import { Helmet } from 'react-helmet-async';
+import SectionContentSingle from '../SectionContentSingle';
+import contentfulRichText from '../contentfulRichText';
 
 export default ({ data, location }) => {
     const { contentfulGlobal, contentfulPage } = data;
@@ -14,6 +16,11 @@ export default ({ data, location }) => {
 
     return (
         <>
+            {contentfulPage.sections.map((section) => (
+                <SectionContentSingle title={section.titleDisplay}>
+                    {contentfulRichText(section.body.json)}
+                </SectionContentSingle>
+            ))}
             <Helmet>
                 <title>{contentfulGlobal.title}</title>
                 <meta name="description" content={contentfulGlobal.description.description} />
@@ -40,6 +47,12 @@ export const pageQuery = graphql`
                 internal {
                     content
                 }
+            }
+            sections {
+                body {
+                    json
+                }
+                titleDisplay
             }
         }
     }
