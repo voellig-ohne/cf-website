@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.less';
-import { Link } from 'react-router';
+import { Link } from 'gatsby';
 import classNames from 'classNames';
 
 export default class Navigation extends React.Component {
