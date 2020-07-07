@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classNames';
 import style from './style.module.less';
 import { map } from 'lodash';
-import ResponsiveImage from '../components/ResponsiveImage';
+import ResponsiveImage from '../ResponsiveImage';
 
 export default class PartnerList extends React.Component {
     render() {

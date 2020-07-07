@@ -1,4 +1,4 @@
-import Illustration from '../components/Illustration';
+import Illustration from '../Illustration';
 import React from 'react';
 import './style.less';
 import { map, find } from 'lodash';

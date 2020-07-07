@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './style.module.less';
 import classNames from 'classNames';
-import SectionContentSingle from '../components/SectionContentSingle';
+import SectionContentSingle from '../SectionContentSingle';
 
 export default class QuoteSection extends React.Component {
     render() {
