@@ -4,7 +4,7 @@ public
 .gatsby-context.js
 pages/.manifest
 
-fonts/
+fonts/webfonts
 
 .env.*
 .cache
