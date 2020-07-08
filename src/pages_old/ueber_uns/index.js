@@ -9,7 +9,7 @@ import ResponsiveImage from 'components/ResponsiveImage';
 import PartnerList from 'components/PartnerList';
 import { filter, map, sortBy, includes } from 'lodash';
 import style from './style.module.less';
-import classNames from 'classNames';
+import classNames from 'classnames';
 
 export default class UberUns extends React.Component {
     render() {

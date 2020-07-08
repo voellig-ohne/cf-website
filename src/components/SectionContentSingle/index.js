@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classNames';
+import classNames from 'classnames';
 
 export default ({ wide, title, classNameWrapper, className, children }) => {
     const classes = classNames('section_content', 'section_content--single', className);

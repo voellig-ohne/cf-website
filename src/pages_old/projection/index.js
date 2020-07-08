@@ -5,7 +5,7 @@ import { config } from 'config';
 import { filter, map, includes } from 'lodash';
 import Forrest from 'components/Forrest';
 import style from './style.module.less';
-import classNames from 'classNames';
+import classNames from 'classnames';
 
 export default class UseCases extends React.Component {
     render() {

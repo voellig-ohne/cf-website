@@ -2,7 +2,7 @@ import Illustration from '../Illustration';
 import React from 'react';
 import style from './style.module.less';
 import { map } from 'lodash';
-import classNames from 'classNames';
+import classNames from 'classnames';
 
 export default class IllustratedSection extends React.Component {
     render() {
