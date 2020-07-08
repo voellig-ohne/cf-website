@@ -2,7 +2,7 @@ import React from 'react';
 import style from './style.module.less';
 import Illustration from '../Illustration';
 import { Link } from 'gatsby';
-import classNames from 'classNames';
+import classNames from 'classnames';
 import { map } from 'lodash';
 import SectionContentSingle from '../SectionContentSingle';
 

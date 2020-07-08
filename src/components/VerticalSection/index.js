@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './style.module.less';
-import classNames from 'classNames';
+import classNames from 'classnames';
 import { map } from 'lodash';
 import Illustration from '../Illustration';
 import SectionContentSingle from '../SectionContentSingle';

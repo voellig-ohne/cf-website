@@ -2,7 +2,7 @@ import Illustration from '../Illustration';
 import React from 'react';
 import './style.less';
 import { map, find } from 'lodash';
-import classNames from 'classNames';
+import classNames from 'classnames';
 
 const ELEMENT_SIZE = {
     width: 30,

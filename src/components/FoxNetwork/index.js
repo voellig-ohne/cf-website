@@ -2,7 +2,7 @@ import Illustration from '../Illustration';
 import React from 'react';
 import style from './style.module.less';
 import { map, includes } from 'lodash';
-import classNames from 'classNames';
+import classNames from 'classnames';
 
 const ANIMAL_COUNT = 16;
 const GRAPHICS_COUNT = 15;

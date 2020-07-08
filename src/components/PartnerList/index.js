@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classNames';
+import classNames from 'classnames';
 import style from './style.module.less';
 import { map } from 'lodash';
 import ResponsiveImage from '../ResponsiveImage';

@@ -9,7 +9,7 @@ import MiniForrestGroup from 'components/MiniForrestGroup';
 import Illustration from 'components/Illustration';
 import SectionContentSingle from 'components/SectionContentSingle';
 import style from './style.module.less';
-import classNames from 'classNames';
+import classNames from 'classnames';
 import SectionIconStrip from 'components/SectionIconStrip';
 
 export default class UseCases extends React.Component {
