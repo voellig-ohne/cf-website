@@ -3,51 +3,24 @@ import './style.less';
 import { Link } from 'gatsby';
 import classNames from 'classnames';
 
-export default ({ location }) => {
-    const links = [
-        {
-            to: '/ueber_uns/',
-            title: 'über uns',
-        },
-        {
-            to: '/leistungen/',
-            title: 'leistungen',
-        },
-        {
-            to: '/arbeitsweisen/',
-            title: 'arbeitsweisen',
-        },
-        {
-            to: '/usecases/',
-            title: 'use cases',
-        },
-        {
-            to: '/workshops/',
-            title: 'workshops',
-        },
-        {
-            href: 'https://blog.fuchsundwald.de/',
-            title: 'blog',
-        },
-    ];
-
+export default ({ location, menu }) => {
     return (
         <nav className="navigation">
             <ul className="navigation-list">
-                {links.map((link) => {
+                {menu.map(({ label, targetLink, targetPage }, index) => {
                     const linkClasses = classNames('navigation_link', {
-                        'navigation_link--active': link.link === location,
+                        'navigation_link--active': targetPage?.slug === location,
                     });
                     return (
-                        <li className="navigation-item" key={link.href || link.to}>
-                            {link.to && (
-                                <Link to={link.to} className={linkClasses}>
-                                    {link.title}
+                        <li className="navigation-item" key={index}>
+                            {targetPage && (
+                                <Link to={targetPage?.slug} className={linkClasses}>
+                                    {label}
                                 </Link>
                             )}
-                            {link.href && (
-                                <a href={link.href} className={linkClasses}>
-                                    {link.title}
+                            {targetLink && (
+                                <a href={targetLink} className={linkClasses}>
+                                    {label}
                                 </a>
                             )}
                         </li>

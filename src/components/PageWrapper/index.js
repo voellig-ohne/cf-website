@@ -16,6 +16,13 @@ export default ({ children, pathname }) => {
                 description {
                     description
                 }
+                menu {
+                    label
+                    targetPage {
+                        slug
+                    }
+                    targetLink
+                }
             }
         }
     `);
@@ -28,7 +35,7 @@ export default ({ children, pathname }) => {
                 <link rel="icon" type="image/png" href={Favicon} />
             </Helmet>
             {children}
-            <Navigation location={pathname} />
+            <Navigation location={pathname} menu={contentfulGlobal.menu} />
             <Footer />
             <LogoContainer className="logo-container" />
         </>
