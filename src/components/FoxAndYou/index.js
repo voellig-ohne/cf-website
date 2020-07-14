@@ -38,7 +38,12 @@ export default class FoxAndYou extends React.Component {
         const containerClasses = classNames(this.props.className);
 
         return (
-            <div className={containerClasses} onClick={this.goSlide.bind(this)} ref={(c) => (this.containerEl = c)}>
+            <div
+                className={containerClasses}
+                aria-hidden="true"
+                onClick={this.goSlide.bind(this)}
+                ref={(c) => (this.containerEl = c)}
+            >
                 <div className={style.container}>
                     <div className={style['container-fox']}>
                         <Illustration illustration="fuchs" className={style.fox} />

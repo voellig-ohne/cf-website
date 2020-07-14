@@ -27,7 +27,7 @@ export default class FoxNetwork extends React.Component {
         const containerClasses = classNames(this.props.className, style.leaves);
 
         return (
-            <div className={containerClasses} onClick={this.generate.bind(this)}>
+            <div className={containerClasses} aria-hidden="true" onClick={this.generate.bind(this)}>
                 {map(this.leaves, (leave, idx) => {
                     const isActive = includes(this.state.activeLeaves, idx);
                     const classes = classNames(style.leave, {

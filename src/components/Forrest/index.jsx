@@ -194,6 +194,7 @@ function Row({ row, idxRow, onMouseEnter, foxPositions, isFoxFn, rowCount }) {
                         className={classes}
                         key={idxElement}
                         style={{ width: elementWidth }}
+                        aria-hidden="true"
                         onMouseEnter={onMouseEnter.bind(null, isFox, currentPosition)}
                     />
                 );
