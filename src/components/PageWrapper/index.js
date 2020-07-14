@@ -29,7 +29,7 @@ export default ({ children, pathname }) => {
 
     return (
         <>
-            <Helmet titleTemplate={`${contentfulGlobal.title} - %s`}>
+            <Helmet titleTemplate={`${contentfulGlobal.title} | %s`}>
                 <title>{contentfulGlobal.title}</title>
                 <meta name="description" content={contentfulGlobal.description.description} />
                 <link rel="icon" type="image/png" href={Favicon} />
