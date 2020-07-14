@@ -17,7 +17,7 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                         <IntroSection claim={section.claim} type={section.type} />
                     )}
                     {section.__typename === 'ContentfulSectionHero' && (
-                        <Hero ctaTarget={section?.ctaTarget?.slug} ctaText={section.ctaText} image={section.image} />
+                        <Hero ctaTarget={section?.ctaButton} image={section.image} />
                     )}
                     {section.__typename === 'ContentfulSection' && (
                         <SectionContentSingle title={section.titleDisplay}>
@@ -64,10 +64,13 @@ export const pageQuery = graphql`
                                 ...GatsbyContentfulFluid_noBase64
                             }
                         }
-                        ctaTarget {
-                            slug
+                        ctaButton {
+                            label
+                            targetLink
+                            targetPage {
+                                slug
+                            }
                         }
-                        ctaText
                     }
                 }
             }
