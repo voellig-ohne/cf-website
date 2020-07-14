@@ -10,9 +10,13 @@ export default ({ label, targetLink, targetPage }) => {
         );
     }
 
-    return (
-        <Link className="cta" to={targetPage?.slug}>
-            {label}
-        </Link>
-    );
+    if (targetPage) {
+        return (
+            <Link className="cta" to={targetPage?.slug}>
+                {label}
+            </Link>
+        );
+    }
+
+    return null;
 };
