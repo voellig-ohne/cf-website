@@ -21,7 +21,7 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                     )}
                     {section.__typename === 'ContentfulSection' && (
                         <SectionContentSingle title={section.titleDisplay}>
-                            {contentfulRichText(section.body.json)}
+                            {contentfulRichText(section?.body?.json)}
                         </SectionContentSingle>
                     )}
                 </React.Fragment>
