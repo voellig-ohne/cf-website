@@ -1,38 +1,29 @@
 import React from 'react';
 import style from './style.module.less';
-import classNames from 'classnames';
 import { map } from 'lodash';
 import Illustration from '../Illustration';
-import SectionContentSingle from '../SectionContentSingle';
+import contentfulRichText, { mapFields } from '../contentfulRichText';
 
-export default class VerticalSection extends React.Component {
-    render() {
-        const { sections } = this.props;
-
-        return (
-            <SectionContentSingle wide={true}>
-                <div className={style.sections}>
-                    {map(sections, (section, idx) => {
-                        return (
-                            <div key={idx} className={style.section}>
-                                <div className={style.illustration_container}>
-                                    <Illustration illustration={section.icon} className={style.illustration} />
-                                </div>
-                                {section.subTitle ? <p className={style.sub_title}>{section.subTitle}</p> : null}
-                                <h2>{section.title}</h2>
-                                <div dangerouslySetInnerHTML={{ __html: section.body }} />
-                                {section.cta ? (
-                                    <div className={style.cta_container}>
-                                        <a href={section.cta.link} className="cta cta__small">
-                                            {section.cta.text}
-                                        </a>
-                                    </div>
-                                ) : null}
+export default ({ sections }) => {
+    return (
+        <div className={style.sections}>
+            {map(sections, ({ aboveHeading, body, icon, title }, idx) => {
+                return (
+                    <div key={idx} className={style.section}>
+                        {icon && (
+                            <div className={style.illustration_container}>
+                                <Illustration
+                                    illustration={mapFields(icon.fields).type}
+                                    className={style.illustration}
+                                />
                             </div>
-                        );
-                    })}
-                </div>
-            </SectionContentSingle>
-        );
-    }
-}
+                        )}
+                        {aboveHeading ? <p className={style.sub_title}>{aboveHeading}</p> : null}
+                        {title && <h2>{title}</h2>}
+                        {body && contentfulRichText(body)}
+                    </div>
+                );
+            })}
+        </div>
+    );
+};
