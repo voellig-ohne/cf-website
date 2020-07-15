@@ -28,13 +28,13 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                     )}
                     {section.__typename === 'ContentfulSection' && section.sideImage && (
                         <SectionContentSingle wide={true} title={section.titleDisplay}>
-                            <div className={style.main}>
-                                <div className={style.main_imageContainerContainer}>
-                                    <div className={style.main_imageContainer}>
-                                        <Img className={style.main_image} fluid={section.sideImage.fluid} />
+                            <div className={style.sideImage}>
+                                <div className={style.sideImage_imageContainerContainer}>
+                                    <div className={style.sideImage_imageContainer}>
+                                        <Img className={style.sideImage_image} fluid={section.sideImage.fluid} />
                                     </div>
                                 </div>
-                                <div className={style.main_text}>{contentfulRichText(section?.body?.json)}</div>
+                                <div className={style.sideImage_text}>{contentfulRichText(section?.body?.json)}</div>
                             </div>
                         </SectionContentSingle>
                     )}
