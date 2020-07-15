@@ -34,27 +34,6 @@ export default ({ children, pathname }) => {
                 <title>{contentfulGlobal.title}</title>
                 <meta name="description" content={contentfulGlobal.description.description} />
                 <link rel="icon" type="image/png" href={Favicon} />
-                <link
-                    rel="preload"
-                    href="https://fuchsfonts.volligohne.de/31DA6A_0_0.woff2"
-                    as="font"
-                    type="font/woff2"
-                    crossorigin
-                />
-                <link
-                    rel="preload"
-                    href="https://fuchsfonts.volligohne.de/31DA6A_1_0.woff2"
-                    as="font"
-                    type="font/woff2"
-                    crossorigin
-                />
-                <link
-                    rel="preload"
-                    href="https://fuchsfonts.volligohne.de/31DA6A_2_0.woff2"
-                    as="font"
-                    type="font/woff2"
-                    crossorigin
-                />
             </Helmet>
             {children}
             <Navigation location={pathname} menu={contentfulGlobal.menu} />
