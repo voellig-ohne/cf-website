@@ -30,6 +30,7 @@ export default ({ children, pathname }) => {
     return (
         <>
             <Helmet titleTemplate={`${contentfulGlobal.title} | %s`}>
+                <html lang="de" />
                 <title>{contentfulGlobal.title}</title>
                 <meta name="description" content={contentfulGlobal.description.description} />
                 <link rel="icon" type="image/png" href={Favicon} />
