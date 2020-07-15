@@ -1,0 +1,46 @@
+@import "../style/vars";
+
+.main {
+    @media (min-width: @break) {
+        display: flex;
+    }
+
+    &_imageContainerContainer {
+        flex: 1 0 33%;
+
+        @media (max-width: @break) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &_imageContainer {
+        border-radius: 50%;
+        overflow: hidden;
+        background: white;
+        position: relative;
+        padding-bottom: 100%;
+        width: 100%;
+    }
+
+    &_image {
+        width: 100%;
+        position: absolute !important;
+    }
+
+    &_text {
+        margin-left: 2rem;
+
+        @media (min-width: @contentWidth) {
+            margin-left: 4rem;
+        }
+
+        @media (max-width: @break) {
+            margin-top: 2rem;
+        }
+
+        p:first-child {
+            margin: 0;
+        }
+    }
+}
