@@ -13,21 +13,16 @@ import style from './style.module.less';
 export default ({ data: { contentfulPage }, location: { pathname } }) => {
     return (
         <PageWrapper pathname={pathname}>
-            {contentfulPage.sections.map((section, index) => (
-                <React.Fragment key={index}>
-                    {section.__typename === 'ContentfulSectionIntro' && (
-                        <IntroSection claim={section.claim} type={section.type} />
-                    )}
-                    {section.__typename === 'ContentfulSectionHero' && (
-                        <Hero ctaTarget={section?.ctaButton} image={section.image} />
-                    )}
-                    {section.__typename === 'ContentfulSection' && !section.sideImage && (
-                        <SectionContentSingle title={section.titleDisplay}>
-                            {contentfulRichText(section?.body?.json)}
-                        </SectionContentSingle>
-                    )}
-                    {section.__typename === 'ContentfulSection' && section.sideImage && (
-                        <SectionContentSingle wide={true} title={section.titleDisplay}>
+            {contentfulPage.sections.map((section, index) => {
+                if (section.__typename === 'ContentfulSectionIntro') {
+                    return <IntroSection key={index} claim={section.claim} type={section.type} />;
+                }
+                if (section.__typename === 'ContentfulSectionHero') {
+                    return <Hero ctaTarget={section?.ctaButton} image={section.image} />;
+                }
+                if (section.__typename === 'ContentfulSection' && section.sideImage) {
+                    return (
+                        <SectionContentSingle key={index} wide={true} title={section.titleDisplay}>
                             <div className={style.sideImage}>
                                 <div className={style.sideImage_imageContainerContainer}>
                                     <div className={style.sideImage_imageContainer}>
@@ -37,9 +32,16 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                                 <div className={style.sideImage_text}>{contentfulRichText(section?.body?.json)}</div>
                             </div>
                         </SectionContentSingle>
-                    )}
-                </React.Fragment>
-            ))}
+                    );
+                }
+                if (section.__typename === 'ContentfulSection') {
+                    return (
+                        <SectionContentSingle key={index} title={section.titleDisplay}>
+                            {contentfulRichText(section?.body?.json)}
+                        </SectionContentSingle>
+                    );
+                }
+            })}
             <Helmet>
                 <title>{contentfulPage.title}</title>
                 {contentfulPage?.description?.description && (
