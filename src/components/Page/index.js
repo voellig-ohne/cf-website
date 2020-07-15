@@ -7,6 +7,8 @@ import contentfulRichText from '../contentfulRichText';
 import PageWrapper from '../PageWrapper';
 import IntroSection from '../IntroSection';
 import Hero from '../Hero';
+import Img from 'gatsby-image';
+import style from './style.module.less';
 
 export default ({ data: { contentfulPage }, location: { pathname } }) => {
     return (
@@ -19,9 +21,21 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                     {section.__typename === 'ContentfulSectionHero' && (
                         <Hero ctaTarget={section?.ctaButton} image={section.image} />
                     )}
-                    {section.__typename === 'ContentfulSection' && (
+                    {section.__typename === 'ContentfulSection' && !section.sideImage && (
                         <SectionContentSingle title={section.titleDisplay}>
                             {contentfulRichText(section?.body?.json)}
+                        </SectionContentSingle>
+                    )}
+                    {section.__typename === 'ContentfulSection' && section.sideImage && (
+                        <SectionContentSingle wide={true} title={section.titleDisplay}>
+                            <div className={style.main}>
+                                <div className={style.main_imageContainerContainer}>
+                                    <div className={style.main_imageContainer}>
+                                        <Img className={style.main_image} fluid={section.sideImage.fluid} />
+                                    </div>
+                                </div>
+                                <div className={style.main_text}>{contentfulRichText(section?.body?.json)}</div>
+                            </div>
                         </SectionContentSingle>
                     )}
                 </React.Fragment>
@@ -53,6 +67,12 @@ export const pageQuery = graphql`
                             json
                         }
                         titleDisplay
+                        sideImage {
+                            id
+                            fluid(maxWidth: 8000) {
+                                ...GatsbyContentfulFluid_noBase64
+                            }
+                        }
                     }
                     ... on ContentfulSectionIntro {
                         __typename
