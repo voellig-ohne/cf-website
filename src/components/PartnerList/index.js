@@ -1,43 +1,27 @@
 import React from 'react';
-import classNames from 'classnames';
 import style from './style.module.less';
 import { map } from 'lodash';
-import ResponsiveImage from '../ResponsiveImage';
+import contentfulRichText from '../contentfulRichText';
+import Img from 'gatsby-image';
 
-export default class PartnerList extends React.Component {
-    render() {
-        const { partners } = this.props;
-
-        return (
-            <ul className={style.partners}>
-                {map(partners, (partner, idx) => {
-                    return (
-                        <li key={idx} className={style.partner}>
-                            <div className={style.image_container_container}>
-                                <div className={style.image_container}>
-                                    {partner.data.img ? (
-                                        <ResponsiveImage
-                                            source={partner.data.img}
-                                            className={style.image}
-                                            sizes="(max-width: 600px) 100vw, 400px"
-                                        />
-                                    ) : null}
-                                </div>
+export default function PartnerList({ partners }) {
+    return (
+        <ul className={style.partners}>
+            {map(partners, ({ body, image, name }, idx) => {
+                return (
+                    <li key={idx} className={style.partner}>
+                        <div className={style.image_container_container}>
+                            <div className={style.image_container}>
+                                {image ? <Img className={style.image} fluid={image.fluid} /> : null}
                             </div>
+                        </div>
 
-                            <h2 className={style.heading}>{partner.data.name}</h2>
+                        <h2 className={style.heading}>{name}</h2>
 
-                            <div className={style.text} dangerouslySetInnerHTML={{ __html: partner.data.body }} />
-
-                            {partner.data.link ? (
-                                <a href={partner.data.link.href} target="_blank">
-                                    {partner.data.link.text}
-                                </a>
-                            ) : null}
-                        </li>
-                    );
-                })}
-            </ul>
-        );
-    }
+                        <div className={style.text}>{contentfulRichText(body.json)}</div>
+                    </li>
+                );
+            })}
+        </ul>
+    );
 }
