@@ -2,6 +2,7 @@ import React from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Illustration from '../Illustration';
+import VerticalSection from '../VerticalSection';
 
 export default (json) => {
     const options = {
@@ -25,7 +26,6 @@ export default (json) => {
                 },
             }) => {
                 const fieldsMapped = objectMap(fields, (field) => field['en-US']);
-
                 if (contentTypeId === 'circleSectionInline') {
                     return (
                         <div className="circles">
@@ -42,6 +42,10 @@ export default (json) => {
                         </div>
                     );
                 }
+                if (contentTypeId === 'circleSectionLongTextInline') {
+                    const sections = fieldsMapped.items.map((item) => mapFields(item.fields));
+                    return <VerticalSection sections={sections} />;
+                }
             },
         },
     };
@@ -49,7 +53,7 @@ export default (json) => {
     return documentToReactComponents(json, options);
 };
 
-const mapFields = (fieldsUnmapped) => {
+export const mapFields = (fieldsUnmapped) => {
     return objectMap(fieldsUnmapped, (field) => field['en-US']);
 };
 
