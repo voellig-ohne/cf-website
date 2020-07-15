@@ -6,6 +6,7 @@ import SectionContentSingle from '../SectionContentSingle';
 import contentfulRichText from '../contentfulRichText';
 import PageWrapper from '../PageWrapper';
 import IntroSection from '../IntroSection';
+import PartnerList from '../PartnerList';
 import Hero from '../Hero';
 import Img from 'gatsby-image';
 import style from './style.module.less';
@@ -18,7 +19,7 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                     return <IntroSection key={index} claim={section.claim} type={section.type} />;
                 }
                 if (section.__typename === 'ContentfulSectionHero') {
-                    return <Hero ctaTarget={section?.ctaButton} image={section.image} />;
+                    return <Hero key={index} ctaTarget={section?.ctaButton} image={section.image} />;
                 }
                 if (section.__typename === 'ContentfulSection' && section.sideImage) {
                     return (
@@ -31,6 +32,13 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                                 </div>
                                 <div className={style.sideImage_text}>{contentfulRichText(section?.body?.json)}</div>
                             </div>
+                        </SectionContentSingle>
+                    );
+                }
+                if (section.__typename === 'ContentfulSection' && section.teamMembers) {
+                    return (
+                        <SectionContentSingle key={index} wide={true} title={section.titleDisplay}>
+                            <PartnerList partners={section.teamMembers} />
                         </SectionContentSingle>
                     );
                 }
@@ -73,6 +81,17 @@ export const pageQuery = graphql`
                             id
                             fluid(maxWidth: 8000) {
                                 ...GatsbyContentfulFluid_noBase64
+                            }
+                        }
+                        teamMembers {
+                            image {
+                                fluid(maxWidth: 500) {
+                                    ...GatsbyContentfulFluid_noBase64
+                                }
+                            }
+                            name
+                            body {
+                                json
                             }
                         }
                     }
