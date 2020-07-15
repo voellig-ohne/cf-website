@@ -4,6 +4,7 @@ import { BLOCKS } from '@contentful/rich-text-types';
 import Illustration from '../Illustration';
 import VerticalSection from '../VerticalSection';
 import Button from '../Button';
+import style from './style.module.less';
 
 export default (json) => {
     const options = {
@@ -27,7 +28,6 @@ export default (json) => {
                 },
             }) => {
                 const fieldsMapped = objectMap(fields, (field) => field['en-US']);
-                console.log(contentTypeId);
                 if (contentTypeId === 'circleSectionInline') {
                     return (
                         <div className="circles">
@@ -49,7 +49,7 @@ export default (json) => {
                     return <VerticalSection sections={sections} />;
                 }
                 if (contentTypeId === 'button') {
-                    return <Button {...fieldsMapped} />;
+                    return <Button className={style.button} {...fieldsMapped} />;
                 }
             },
         },
