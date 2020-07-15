@@ -28,7 +28,9 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
             ))}
             <Helmet>
                 <title>{contentfulPage.title}</title>
-                <meta name="description" content={contentfulPage?.description?.description} />
+                {contentfulPage?.description?.description && (
+                    <meta name="description" content={contentfulPage?.description?.description} />
+                )}
             </Helmet>
         </PageWrapper>
     );
