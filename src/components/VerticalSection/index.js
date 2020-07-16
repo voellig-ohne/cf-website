@@ -2,7 +2,7 @@ import React from 'react';
 import style from './style.module.less';
 import { map } from 'lodash';
 import Illustration from '../Illustration';
-import contentfulRichText, { mapFields } from '../contentfulRichText';
+import contentfulRichText from '../contentfulRichText';
 
 export default ({ sections }) => {
     return (

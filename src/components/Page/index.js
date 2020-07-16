@@ -11,6 +11,8 @@ import Hero from '../Hero';
 import Img from 'gatsby-image';
 import style from './style.module.less';
 import VerticalSection from '../VerticalSection';
+import Forrest from '../Forrest';
+import SectionContentIllustration from '../SectionContentIllustration';
 
 export default ({ data: { contentfulPage }, location: { pathname } }) => {
     return (
@@ -50,6 +52,17 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                         </SectionContentSingle>
                     );
                 }
+                if (section.__typename === 'ContentfulSection' && section.specialSectionAtTheSide) {
+                    return (
+                        <SectionContentIllustration
+                            title={section.titleDisplay}
+                            key={index}
+                            illustration={section.specialSectionAtTheSide}
+                        >
+                            {contentfulRichText(section?.body?.json)}
+                        </SectionContentIllustration>
+                    );
+                }
                 if (section.__typename === 'ContentfulSection') {
                     return (
                         <SectionContentSingle key={index} title={section.titleDisplay}>
@@ -57,6 +70,7 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                         </SectionContentSingle>
                     );
                 }
+                return null;
             })}
             <Helmet>
                 <title>{contentfulPage.title}</title>
@@ -112,6 +126,7 @@ export const pageQuery = graphql`
                             }
                             title
                         }
+                        specialSectionAtTheSide
                     }
                     ... on ContentfulSectionIntro {
                         __typename
