@@ -12,6 +12,7 @@ import Img from 'gatsby-image';
 import style from './style.module.less';
 import VerticalSection from '../VerticalSection';
 import SectionContentIllustration from '../SectionContentIllustration';
+import IllustratedSection from '../IllustratedSection';
 
 export default ({ data: { contentfulPage }, location: { pathname } }) => {
     return (
@@ -49,6 +50,26 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                         <SectionContentSingle key={index} wide={true} title={section.titleDisplay}>
                             <VerticalSection sections={section.verticalIconSection} />
                         </SectionContentSingle>
+                    );
+                }
+                if (section.__typename === 'ContentfulSection' && section.horizontalSection) {
+                    return (
+                        <React.Fragment key={index}>
+                            <SectionContentSingle key={index} title={section.titleDisplay} />
+                            {section.horizontalSection.map((horizontalSection, idx) => {
+                                return (
+                                    <IllustratedSection
+                                        title={horizontalSection.title}
+                                        subTitle={horizontalSection.subTitle}
+                                        illustration={horizontalSection.icon.type}
+                                        key={idx}
+                                    >
+                                        {contentfulRichText(horizontalSection?.body?.json)}
+                                    </IllustratedSection>
+                                );
+                            })}
+                            );
+                        </React.Fragment>
                     );
                 }
                 if (section.__typename === 'ContentfulSection' && section.specialSectionAtTheSide) {
@@ -116,6 +137,16 @@ export const pageQuery = graphql`
                             }
                         }
                         verticalIconSection {
+                            aboveHeading
+                            body {
+                                json
+                            }
+                            icon {
+                                type
+                            }
+                            title
+                        }
+                        horizontalSection {
                             aboveHeading
                             body {
                                 json
