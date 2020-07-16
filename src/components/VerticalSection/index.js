@@ -12,15 +12,12 @@ export default ({ sections }) => {
                     <div key={idx} className={style.section}>
                         {icon && (
                             <div className={style.illustration_container}>
-                                <Illustration
-                                    illustration={mapFields(icon.fields).type}
-                                    className={style.illustration}
-                                />
+                                <Illustration illustration={icon.type} className={style.illustration} />
                             </div>
                         )}
                         {aboveHeading ? <p className={style.sub_title}>{aboveHeading}</p> : null}
                         {title && <h2>{title}</h2>}
-                        {body && contentfulRichText(body)}
+                        {body && contentfulRichText(body.json)}
                     </div>
                 );
             })}

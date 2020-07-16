@@ -10,6 +10,7 @@ import PartnerList from '../PartnerList';
 import Hero from '../Hero';
 import Img from 'gatsby-image';
 import style from './style.module.less';
+import VerticalSection from '../VerticalSection';
 
 export default ({ data: { contentfulPage }, location: { pathname } }) => {
     return (
@@ -39,6 +40,13 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                     return (
                         <SectionContentSingle key={index} wide={true} title={section.titleDisplay}>
                             <PartnerList partners={section.teamMembers} />
+                        </SectionContentSingle>
+                    );
+                }
+                if (section.__typename === 'ContentfulSection' && section.verticalIconSection) {
+                    return (
+                        <SectionContentSingle key={index} wide={true} title={section.titleDisplay}>
+                            <VerticalSection sections={section.verticalIconSection} />
                         </SectionContentSingle>
                     );
                 }
@@ -93,6 +101,16 @@ export const pageQuery = graphql`
                             body {
                                 json
                             }
+                        }
+                        verticalIconSection {
+                            aboveHeading
+                            body {
+                                json
+                            }
+                            icon {
+                                type
+                            }
+                            title
                         }
                     }
                     ... on ContentfulSectionIntro {
