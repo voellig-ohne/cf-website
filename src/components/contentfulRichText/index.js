@@ -2,7 +2,6 @@ import React from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Illustration from '../Illustration';
-import VerticalSection from '../VerticalSection';
 import Button from '../Button';
 import style from './style.module.less';
 
@@ -43,10 +42,6 @@ export default (json) => {
                             })}
                         </div>
                     );
-                }
-                if (contentTypeId === 'circleSectionLongTextInline') {
-                    const sections = fieldsMapped.items.map((item) => mapFields(item.fields));
-                    return <VerticalSection sections={sections} />;
                 }
                 if (contentTypeId === 'button') {
                     return <Button className={style.button} {...fieldsMapped} />;
