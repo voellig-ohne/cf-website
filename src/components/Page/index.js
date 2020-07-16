@@ -11,7 +11,6 @@ import Hero from '../Hero';
 import Img from 'gatsby-image';
 import style from './style.module.less';
 import VerticalSection from '../VerticalSection';
-import Forrest from '../Forrest';
 import SectionContentIllustration from '../SectionContentIllustration';
 
 export default ({ data: { contentfulPage }, location: { pathname } }) => {

@@ -9,9 +9,8 @@ const illustrations = {
 };
 
 export default ({ illustration, children, title }) => {
-    console.log(illustration);
-
     const IllustrationComponent = illustrations[illustration];
+
     return (
         <section className="section_content">
             <div className="section_content-main">
