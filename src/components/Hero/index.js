@@ -6,7 +6,7 @@ import Button from '../Button';
 export default ({ image, ctaTarget }) => {
     return (
         <section className="hero">
-            <Img fluid={image.fluid} className="hero-image" />
+            {image.fluid && <Img fluid={image.fluid} className="hero-image" />}
             <div className="hero-text">
                 <div>
                     <Button {...ctaTarget} />
