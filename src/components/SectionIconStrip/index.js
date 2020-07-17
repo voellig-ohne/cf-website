@@ -1,46 +1,39 @@
 import React from 'react';
 import style from './style.module.less';
-import Illustration from '../Illustration';
-import { Link } from 'gatsby';
 import classNames from 'classnames';
-import { map } from 'lodash';
 import SectionContentSingle from '../SectionContentSingle';
 
-export default class SectionItemStrip extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+export default function SectionItemStrip({ illustrations, title, showLabels, className }) {
+    const classNamesContainer = classNames(className, style.strip);
 
-    render() {
-        const { illustrations, title, smaller } = this.props;
-
-        const className = classNames(this.props.classNames, style.strip);
-
-        return (
-            <SectionContentSingle className={className}>
-                <h2 className={style.heading}>{title}</h2>
-                <div className={style.illustrationsContainer}>
-                    {map(illustrations, (illustration, key) => {
-                        return (
-                            <div
-                                className={classNames(style.illustrationContainer, {
-                                    [style['illustrationContainer--bigger']]: !smaller,
+    return (
+        <SectionContentSingle className={classNamesContainer}>
+            <h2 className={style.heading}>{title}</h2>
+            <div
+                className={classNames(style.illustrationsContainer, {
+                    [style['illustrationsContainer--bigger']]: showLabels,
+                })}
+            >
+                {illustrations.map((illustration, key) => {
+                    return (
+                        <div
+                            className={classNames(style.illustrationContainer, {
+                                [style['illustrationContainer--bigger']]: showLabels,
+                            })}
+                            key={key}
+                        >
+                            <img
+                                src={illustration.file.url}
+                                alt={illustration.title}
+                                className={classNames(style.illustration, {
+                                    [style['illustration--smaller']]: !showLabels,
                                 })}
-                                key={key}
-                            >
-                                <Illustration
-                                    className={classNames(style.illustration, {
-                                        [style['illustration--smaller']]: smaller,
-                                    })}
-                                    illustration={illustration.illustration}
-                                    title={illustration.title}
-                                />
-                                {smaller ? null : <span className={style.title}>{illustration.title}</span>}
-                            </div>
-                        );
-                    })}
-                </div>
-            </SectionContentSingle>
-        );
-    }
+                            />
+                            {showLabels && <span className={style.title}>{illustration.title}</span>}
+                        </div>
+                    );
+                })}
+            </div>
+        </SectionContentSingle>
+    );
 }
