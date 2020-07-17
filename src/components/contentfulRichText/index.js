@@ -3,6 +3,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import Illustration from '../Illustration';
 import Button from '../Button';
+import SectionIconStrip from '../SectionIconStrip';
 import style from './style.module.less';
 
 export default (json) => {
@@ -45,6 +46,16 @@ export default (json) => {
                 }
                 if (contentTypeId === 'button') {
                     return <Button className={style.button} {...fieldsMapped} />;
+                }
+                if (contentTypeId === 'smallIconsInline') {
+                    const iconsMapped = fieldsMapped.icons.map((icon) => mapFields(icon.fields));
+                    return (
+                        <SectionIconStrip
+                            title={fieldsMapped.title}
+                            illustrations={iconsMapped}
+                            showLabels={fieldsMapped.showLabels}
+                        />
+                    );
                 }
             },
         },
