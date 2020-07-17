@@ -4,6 +4,7 @@ import { BLOCKS } from '@contentful/rich-text-types';
 import Illustration from '../Illustration';
 import Button from '../Button';
 import SectionIconStrip from '../SectionIconStrip';
+import QuoteSection from '../QuoteSection';
 import style from './style.module.less';
 
 export default (json) => {
@@ -56,6 +57,9 @@ export default (json) => {
                             showLabels={fieldsMapped.showLabels}
                         />
                     );
+                }
+                if (contentTypeId === 'quote') {
+                    return <QuoteSection author={fieldsMapped.source}>{fieldsMapped.quote}</QuoteSection>;
                 }
             },
         },
