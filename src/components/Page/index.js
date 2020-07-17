@@ -13,6 +13,7 @@ import style from './style.module.less';
 import VerticalSection from '../VerticalSection';
 import SectionContentIllustration from '../SectionContentIllustration';
 import IllustratedSection from '../IllustratedSection';
+import UseCases from '../UseCases';
 
 export default ({ data: { contentfulPage }, location: { pathname } }) => {
     return (
@@ -81,6 +82,17 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                         >
                             {contentfulRichText(section?.body?.json)}
                         </SectionContentIllustration>
+                    );
+                }
+                if (section.__typename === 'ContentfulSection' && section.useCases) {
+                    return (
+                        <React.Fragment key={index}>
+                            {section.useCases.map(({ title, icons, body, bubbleText }) => (
+                                <UseCases title={title} icons={icons} bubbleText={bubbleText.bubbleText}>
+                                    {contentfulRichText(body?.json)}
+                                </UseCases>
+                            ))}
+                        </React.Fragment>
                     );
                 }
                 if (section.__typename === 'ContentfulSection') {
@@ -155,6 +167,18 @@ export const pageQuery = graphql`
                                 type
                             }
                             title
+                        }
+                        useCases {
+                            title
+                            bubbleText {
+                                bubbleText
+                            }
+                            icons {
+                                type
+                            }
+                            body {
+                                json
+                            }
                         }
                         specialSectionAtTheSide
                     }
