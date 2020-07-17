@@ -28,7 +28,7 @@ export default (json) => {
                     },
                 },
             }) => {
-                const fieldsMapped = objectMap(fields, (field) => field['en-US']);
+                const fieldsMapped = objectMap(fields, (field) => field['de-DE']);
                 if (contentTypeId === 'circleSectionInline') {
                     return (
                         <div className="circles">
@@ -70,7 +70,7 @@ export default (json) => {
 };
 
 export const mapFields = (fieldsUnmapped) => {
-    return objectMap(fieldsUnmapped, (field) => field['en-US']);
+    return objectMap(fieldsUnmapped, (field) => field['de-DE']);
 };
 
 // https://stackoverflow.com/questions/14810506/map-function-for-objects-instead-of-arrays
