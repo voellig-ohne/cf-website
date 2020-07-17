@@ -49,14 +49,15 @@ export default (json) => {
                     return <Button className={style.button} {...fieldsMapped} />;
                 }
                 if (contentTypeId === 'smallIconsInline') {
-                    const iconsMapped = fieldsMapped.icons.map((icon) => mapFields(icon.fields));
-                    return (
-                        <SectionIconStrip
-                            title={fieldsMapped.title}
-                            illustrations={iconsMapped}
-                            showLabels={fieldsMapped.showLabels}
-                        />
-                    );
+                    const iconsMapped = fieldsMapped?.icons?.map((icon) => mapFields(icon.fields));
+                    if (iconsMapped)
+                        return (
+                            <SectionIconStrip
+                                title={fieldsMapped.title}
+                                illustrations={iconsMapped}
+                                showLabels={fieldsMapped.showLabels}
+                            />
+                        );
                 }
                 if (contentTypeId === 'quote') {
                     return <QuoteSection author={fieldsMapped.source}>{fieldsMapped.quote}</QuoteSection>;
