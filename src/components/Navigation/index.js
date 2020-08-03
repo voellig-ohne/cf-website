@@ -2,6 +2,7 @@ import React from 'react';
 import './style.less';
 import { Link } from 'gatsby';
 import classNames from 'classnames';
+import { addForwardSlashToSlug } from '../utils';
 
 export default ({ location, menu }) => {
     return (
@@ -14,7 +15,7 @@ export default ({ location, menu }) => {
                     return (
                         <li className="navigation-item" key={index}>
                             {targetPage && (
-                                <Link to={targetPage?.slug} className={linkClasses}>
+                                <Link to={addForwardSlashToSlug(targetPage?.slug)} className={linkClasses}>
                                     {label}
                                 </Link>
                             )}
