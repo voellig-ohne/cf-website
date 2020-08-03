@@ -6,35 +6,38 @@
     background-size: cover;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-start;
-    margin-top: 5rem;
+    justify-content: center;
     position: relative;
 
-    &-text {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-        color: @bright;
-
-        p {
-            text-shadow: 0 0 4px black;
-        }
-
-        @media (max-width: 600px) {
-            width: 100%;
-        }
-
-        > div {
-            margin: 1rem;
-            flex: 0 1 (@contentWidth / 2);
-            display: flex;
-            justify-content: center;
-
-            @media (min-width: 600px) {
-                margin-bottom: 20vh;
-            }
-        }
+    &:not(:first-child) {
+        margin-top: 5rem;
     }
+
+    // &-text {
+    //     width: 50%;
+    //     display: flex;
+    //     justify-content: flex-end;
+    //     color: @bright;
+
+    //     p {
+    //         text-shadow: 0 0 4px black;
+    //     }
+
+    //     @media (max-width: 600px) {
+    //         width: 100%;
+    //     }
+
+    //     > div {
+    //         margin: 1rem;
+    //         flex: 0 1 (@contentWidth / 2);
+    //         display: flex;
+    //         justify-content: center;
+
+    //         @media (min-width: 600px) {
+    //             margin-bottom: 20vh;
+    //         }
+    //     }
+    // }
 
     &-image {
         position: absolute !important;
@@ -43,5 +46,43 @@
         left: 0;
         height: 100%;
         width: 100%;
+    }
+
+    &-heading {
+        color: @bright;
+        background-color: @green;
+        display: inline-block;
+        padding: 1rem;
+        line-height: 1;
+        max-width: (@contentWidth * .5);
+        display: block;
+        margin: 0 0 2rem;
+
+        @media (max-width: @mobileSize) {
+            font-size: @font-size-ml;
+        }
+    }
+
+    &-header {
+        flex-basis: @contentWidth;
+        min-height: 33%;
+
+        @media (min-width: @mobileSize) {
+            margin: 2rem 2rem;
+        }
+
+        @media (max-width: @mobileSize) {
+            margin: 0 0 2rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &-button {
+        @media (max-width: @mobileSize) {
+            // margin-bottom: 1rem;
+
+        }
     }
 }

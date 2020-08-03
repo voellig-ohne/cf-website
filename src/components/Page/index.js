@@ -23,7 +23,14 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                     return <IntroSection key={index} claim={section.claim} type={section.type} />;
                 }
                 if (section.__typename === 'ContentfulSectionHero') {
-                    return <Hero key={index} ctaTarget={section?.ctaButton} image={section.image} />;
+                    return (
+                        <Hero
+                            key={index}
+                            ctaTarget={section?.ctaButton}
+                            image={section.image}
+                            claim={section?.claimHero?.claimHero}
+                        />
+                    );
                 }
                 if (section.__typename === 'ContentfulSection' && section.sideImage) {
                     return (
@@ -193,6 +200,9 @@ export const pageQuery = graphql`
                             fluid(maxWidth: 2000) {
                                 ...GatsbyContentfulFluid_noBase64
                             }
+                        }
+                        claimHero {
+                            claimHero
                         }
                         ctaButton {
                             label
