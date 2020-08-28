@@ -12,7 +12,11 @@ export default ({ sections }) => {
                     <div key={idx} className={style.section}>
                         {icon && (
                             <div className={style.illustration_container}>
-                                <Illustration illustration={icon.type} className={style.illustration} />
+                                <Illustration
+                                    illustration={icon.type}
+                                    file={icon.file}
+                                    className={style.illustration}
+                                />
                             </div>
                         )}
                         {aboveHeading ? <p className={style.sub_title}>{aboveHeading}</p> : null}
