@@ -5,15 +5,17 @@
 .sections {
     @media (min-width: @breakSections) {
         display: flex;
+        justify-content: center;
         flex-direction: row;
         margin: -2rem;
+        flex-wrap: wrap;
     }
 }
 
 .section {
     @media (min-width: @breakSections) {
         margin: 2rem;
-        width: 33.33%;
+        width: calc(33.33% - 4rem);
     }
 
     @media (max-width: @breakSections) {
