@@ -5,13 +5,13 @@ import classNames from 'classnames';
 
 export default class IllustratedSection extends React.Component {
     render() {
-        const { illustration, title } = this.props;
+        const { icon, title } = this.props;
         const className = classNames(this.props.className, style.section);
 
         return (
             <section className={className}>
                 <div className={style['illustration-wrap']}>
-                    <Illustration illustration={illustration} className={style.illustration} />
+                    <Illustration illustration={icon.type} file={icon.file} className={style.illustration} />
                     <h2 className={style.title}>{title}</h2>
                 </div>
                 <div className={style.text}>{this.props.children}</div>

@@ -13,7 +13,7 @@ export default ({ title, children, bubbleText, icons }) => {
             </div>
             <div className={style.icons}>
                 {icons.map((icon) => {
-                    return <Illustration key={icon.type} illustration={icon.type} />;
+                    return <Illustration key={icon.type} illustration={icon.type} file={icon.file} />;
                 })}
             </div>
             <h2 className={style.title}>{title}</h2>

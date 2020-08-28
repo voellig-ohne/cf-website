@@ -69,7 +69,7 @@ export default ({ data: { contentfulPage }, location: { pathname } }) => {
                                     <IllustratedSection
                                         title={horizontalSection.title}
                                         subTitle={horizontalSection.subTitle}
-                                        illustration={horizontalSection.icon.type}
+                                        icon={horizontalSection.icon}
                                         key={idx}
                                     >
                                         {contentfulRichText(horizontalSection?.body?.json)}
@@ -162,6 +162,12 @@ export const pageQuery = graphql`
                             }
                             icon {
                                 type
+                                file {
+                                    file {
+                                        url
+                                    }
+                                    title
+                                }
                             }
                             title
                         }
@@ -172,6 +178,12 @@ export const pageQuery = graphql`
                             }
                             icon {
                                 type
+                                file {
+                                    file {
+                                        url
+                                    }
+                                    title
+                                }
                             }
                             title
                         }
@@ -182,6 +194,12 @@ export const pageQuery = graphql`
                             }
                             icons {
                                 type
+                                file {
+                                    file {
+                                        url
+                                    }
+                                    title
+                                }
                             }
                             body {
                                 json
