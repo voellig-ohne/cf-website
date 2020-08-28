@@ -6,6 +6,7 @@ import Button from '../Button';
 import SectionIconStrip from '../SectionIconStrip';
 import QuoteSection from '../QuoteSection';
 import style from './style.module.less';
+import { FooterItem } from '../Footer';
 
 export default (json) => {
     const options = {
@@ -61,6 +62,9 @@ export default (json) => {
                 }
                 if (contentTypeId === 'quote') {
                     return <QuoteSection author={fieldsMapped.source}>{fieldsMapped.quote}</QuoteSection>;
+                }
+                if (contentTypeId === 'footerItem') {
+                    return <FooterItem {...fieldsMapped} />;
                 }
             },
         },

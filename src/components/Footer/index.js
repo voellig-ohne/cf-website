@@ -1,85 +1,48 @@
 import React from 'react';
-import { map } from 'lodash';
 import './style.less';
 import Illustration from '../Illustration';
+import contentfulRichText, { mapFields } from '../contentfulRichText';
+import { addForwardSlashToSlug } from '../utils';
+import { Link } from 'gatsby';
+import classNames from 'classnames';
 
-export default class Footer extends React.Component {
-    render() {
-        const socialMedia = [
-            {
-                icon: 'twitter',
-                link: 'https://twitter.com/FuchsUndWald',
-                title: '@FuchsUndWald',
-            },
-            {
-                icon: 'xing',
-                link: 'http://xing.to/christianfuchs',
-                title: 'christianfuchs',
-            },
-            {
-                icon: 'facebook',
-                link: 'https://www.facebook.com/fuchsundwald',
-                title: 'fuchs+wald',
-            },
-            {
-                icon: 'home',
-                title: (
-                    <span>
-                        fuchs+wald
-                        <br />
-                        c/o Christian Fuchs
-                        <br />
-                        Sonnenallee 200
-                        <br />
-                        12059 Berlin
-                    </span>
-                ),
-            },
-            {
-                iconChar: '§',
-                link: '/impressum/',
-                title: 'Impressum',
-            },
-            {
-                icon: 'sternchen',
-                link: 'https://volligohne.de/projekte/fuchsundwald/',
-                title: (
-                    <span className="footer-credit">
-                        gestaltung & code:
-                        <br />
-                        völlig ohne
-                    </span>
-                ),
-                className: 'footer-credit-row',
-            },
-        ];
+export default ({ leftColumn, rightColumn }) => (
+    <footer className="footer" id="footer">
+        <section className="footer-section footer-imprint">{contentfulRichText(leftColumn.json)}</section>
+        <section className="footer-section">{contentfulRichText(rightColumn.json)}</section>
+    </footer>
+);
 
-        return (
-            <footer className="footer" id="footer">
-                <section className="footer-section footer-imprint">
-                    <p>
-                        fuchs+wald
-                        <br />
-                        <em>Digitaldialoge</em>
-                    </p>
-                    <dl>
-                        {map(socialMedia, (info, idx) => {
-                            return (
-                                <div key={idx} className={info.className}>
-                                    <dt>{info.iconChar ? info.iconChar : <Illustration illustration={info.icon} />}</dt>
-                                    <dd>{!info.link ? info.title : <a href={info.link}>{info.title}</a>}</dd>
-                                </div>
-                            );
-                        })}
-                    </dl>
-                </section>
-                <section className="footer-section">
-                    <h2>kontakt</h2>
-                    <a href="mailto:projektanfrage@undwald.de" className="cta">
-                        Projektanfrage senden
-                    </a>
-                </section>
-            </footer>
-        );
+export const FooterItem = ({ label, targetLink, icon, targetPage, iconCharacter, thinText }) => {
+    let inner = addLineBreaks(label);
+
+    if (targetLink) {
+        inner = <a href={targetLink}>{addLineBreaks(label)}</a>;
     }
-}
+
+    if (targetPage) {
+        let linktToPage = addForwardSlashToSlug(targetPage.slug ? targetPage.slug : mapFields(targetPage.fields).slug);
+
+        inner = <Link to={linktToPage}>{addLineBreaks(label)}</Link>;
+    }
+
+    return (
+        <div className={classNames('footer-item', { 'footer-item-thin': thinText })}>
+            <dt>{iconCharacter ? iconCharacter : <Illustration illustration={icon} />}</dt>
+            <dd>{inner}</dd>
+        </div>
+    );
+};
+
+const addLineBreaks = (string) => (
+    <>
+        {string.split('\n').map((item, key, allItems) => {
+            return (
+                <React.Fragment key={key}>
+                    {item}
+                    {allItems.length - 1 !== key && <br />}
+                </React.Fragment>
+            );
+        })}
+    </>
+);
