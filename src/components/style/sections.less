@@ -2,14 +2,18 @@
 
 .section_content {
     padding: 2rem;
-    
+
+    h3 {
+        color: @red;
+    }
+
     @media (max-width: @break) {
         padding: 1rem;
         margin-bottom: 1rem;
     }
 
     @media (min-width: @break) {
-        display: flex;      
+        display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-direction: row;
@@ -23,7 +27,7 @@
                     margin-left: 2rem;
                 }
             }
-            
+
             &:nth-of-type(odd) {
                 .section_content-main {
                     margin-right: 2rem;
@@ -84,7 +88,7 @@
         max-width: ~"calc(@{width} - 1rem)";
 
         h1 {
-            margin: 1rem 0; 
+            margin: 1rem 0;
         }
 
         @media (max-width: @break) {
