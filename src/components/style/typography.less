@@ -20,6 +20,12 @@ h2 {
     font-weight: normal;
 }
 
+h3 {
+    @media (min-width: 400px) {
+        font-size: @font-size-m;
+    }
+}
+
 a {
     color: inherit;
 }
@@ -73,7 +79,7 @@ dt {
 
 blockquote {
     quotes: "«" "»" "‘" "’";
-    
+
     &:before {
         content: open-quote;
     }
